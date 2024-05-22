@@ -1,0 +1,26 @@
+html {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    color: #020202;
+}
+
+h1 span {
+    color: rgb(68, 146, 207);
+}
+
+p.italic,
+h2.italic {
+    font-style: italic;
+}
+
+.green-anchor {
+    color: rgb(85, 135, 39);
+    
+}
+
+.bold {
+    font-weight: 800;
+}
