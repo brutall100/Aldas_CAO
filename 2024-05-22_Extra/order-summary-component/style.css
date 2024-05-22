@@ -1,0 +1,13 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  --primary-color: #ffffff;
+}
+
+body {
+  background-color: #7e97bc;
+}
+
