@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: aqua;
+    /* background-image: url('/img/floWer5.png'); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 500px;
+    background: #243b85;
+    color: #fffcfc;
+}
+
+.p-inline{
+    display: inline;
+}
+
+.btn-sub{
+    width: 200px;
+    height: 50px;
+}
+
+.header-container{
+    width: 100%;
+}
+
+.home-anchor{
+    width: 3em;
+    position: relative;
+    top: -.9em;
+}
+
+/* Footer  */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(160, 174, 189);
+    bottom: 0;
+    height: auto;
+    font-size: x-large;
+}
+
+.foter-logo{
+    width: 2em;
+    height: 2em;
+    margin-right: .5em;
+}
+
+.foter-logo:hover{
+    transform: scalex(1.2);
+    cursor: pointer;
+}
+
+.social-icons img {
+    width: 50px;  /* Set the width as needed */
+    height: auto; /* Keeps the aspect ratio intact */
+}
+
+
+
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+    background-color: #05020f;
+}
+
+.footer-nav ul li {
+    display: inline;
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+/* // index.html */
+.index-main-container {
+    border: 1em solid rgb(133, 45, 160);
+    background: #00ffc8;
+    border-radius: 1.3em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em; 
+   
+}
+
+.index-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.index-h1{
+    color: rgb(215, 216, 198);
+    font-size: 2em;
+    padding: .5em;
+    border: #2800c7 10px solid;
+    box-shadow: .5em .5em .5em .1em #11073b;
+    text-shadow: .4em .4em .3em #cf1dc6;
+}
+.index-h2{
+    color: rgb(8, 8, 8);
+    font-size: 2.3em;
+}
+.index-h3{
+    color: aliceblue;
+    margin-top: .6em;
+    font-size: 1em;
+}
+
+.index-hiden-ul li{
+    background-color: #a58ae7;
+    border: 3PX solid yellowgreen;
+    padding: .3em;
+    margin: 1em 0;
+}
+
+.index-btn{
+    background-color: #4800ff;
+    font-size: 1em;
+    padding: .5em 1em;
+    color: antiquewhite;
+    margin-top: 1.5em;
+}
+
+.html-section, 
+.css-section, 
+.javascript-section {
+    border: 10px solid yellowgreen;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    width: 80%;
+    background-color: #a58ae7;
+}
+
+blockquote{
+    border: .4em solid #243b85;
+    padding: .4em;
+}
+
+
+/* Apie mane */
+.me-apie-mane{
+    background-color: #a58ae7;
+    padding: 3em;
+    line-height: 1.5;
+    font-size: 1.4em;
+}
+
+mark{
+    color: #0c774e;
+    background: #eef7f3;
+}
+
+.me-li::first-letter{
+    color: rgb(149, 13, 202);
+}
+
+/* Darbai */
+.darbai-main section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px; 
+    padding: 20px; 
+}
+
+.darbai-main img {
+    width: 100%;
+    height: auto; 
+}
+
+
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2em 0;
+    background-color: #4800ff;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 2em;
+    margin-left: 1em;
+    
+}
+
+nav ul li.right {
+    float: right;
+    margin-right: 1em;
+}
+
+nav ul li a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.hobiai-container{
+    border: 7px solid green;
+    padding: 2em;
+    background: #00ffc8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+
