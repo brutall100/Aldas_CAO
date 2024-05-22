@@ -1,0 +1,175 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  --primary-color: #010215;
+  --contrast-color: #DBB700;
+  --secondary-color: #00154C;
+}
+
+/* body {
+  width: 100vw;
+  height: 100vh;
+} */
+
+header{
+  background-color: var(--primary-color);
+  /* width: 100vw; */
+  text-align: center;
+}
+
+header>img{
+  width: 10em;
+}
+
+.main-title{
+  color: white;
+  /* background-color: #3b3724; */
+  width: 80%;
+  text-align: start;
+  margin: 0 auto;
+  padding-bottom: .4em;
+  font-weight: 300;
+}
+
+/* Header */
+header nav{
+  background-color: var(--contrast-color);
+  width: 80%;
+  height: 3em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+header nav ul{
+  margin-right: 1em;
+}
+
+header nav ul li{
+  display: inline;
+  list-style-type: none;
+  padding: .5em;
+}
+
+header nav ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+/* main about */
+.about{
+  width:80%;
+  height: 30%;
+  margin: 0 auto;
+  
+}
+
+.about-title{
+  font-weight: 900;
+}
+
+.btn-container{
+  text-align: center;
+  text-underline-offset: 3px;
+}
+
+.btn-go-down{
+  display: inline-block;
+  text-decoration: underline;
+  padding: .3em 1em;
+  background-color: #E20000;
+  border: none;
+  border-radius: .5em;
+  color: white;
+}
+
+/* main table */
+.table{
+  background-color: var(--secondary-color);
+  text-align: center;
+  margin-top: .7em;
+  padding-bottom: 1em;
+}
+
+.table-title{
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  text-align: start;
+  padding-top: 1em;
+  padding-bottom: .5em;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+    color: #ffffff; 
+}
+
+thead{
+  font-weight: 800;
+  font-size: .8em;
+}
+
+tbody td{
+  padding: .4em;
+}
+
+tbody td:nth-child(2){
+  text-align: end;
+}
+
+td {
+    border: 1px solid red;
+}
+
+tfoot td {
+  text-align: end;
+  padding-right: .5em;
+  font-size: 1em;
+}
+
+/* main contacts */
+/* .contacts{
+
+} */
+
+.contacts-title{
+  color: var(--primary-color);
+  font-weight: 800;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.contact-info{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+.contact-info a{
+  color: black;
+}
+
+.btn-go-up{
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: blue;
+  margin-bottom: 1em;
+}
+
+/* footer */
+footer{
+  background-color: var(--contrast-color);
+  height: 3em;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+}

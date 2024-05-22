@@ -1,0 +1,39 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  --primary-color: #ffffff;
+}
+
+body {
+  background-color: #a4b3c8;
+}
+
+table{
+  /* border-collapse: collapse; */
+  /* border-spacing: 2rem; */
+  width: 60%;
+
+}
+
+thead{
+  background-color: aqua;
+}
+
+tbody{
+  background-color: rgb(229, 211, 113);
+}
+
+tfoot{
+  background-color: bisque;
+}
+
+th, tr, td{
+  border: 2px solid rgb(142, 8, 77);
+}
+
+tfoot{
+  text-align: center;
+}
