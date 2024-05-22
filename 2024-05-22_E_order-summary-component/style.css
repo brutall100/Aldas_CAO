@@ -8,6 +8,20 @@ html {
 }
 
 body {
-  background-color: #7e97bc;
+  background-color: #c3d3ea;
+  background-image: url(/2024-05-22_E_order-summary-component/img/pattern-background-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100vw;
+  height: 100vh;
 }
 
+.container{
+  width: 30vw;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+}
