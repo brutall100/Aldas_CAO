@@ -1,0 +1,166 @@
+html {
+  --background-color: hsl(30, 54%, 90%);
+  --container-color: hsl(0, 0%, 100%);
+  --primary-color: hsl(14, 45%, 36%);
+  --secondary-color: hsl(332, 51%, 32%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  background-color: var(--background-color);
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container{
+    width: 40%;
+    margin: 2em auto;
+    /* border: 10px solid rgb(4, 0, 128); */
+    padding: 1.4em;
+    background-color: var(--container-color);
+    border-radius: 1em;
+}
+
+span{
+  color: black;
+  font-weight: 600;
+}
+
+ul, ol {
+  list-style-position: outside; 
+}
+
+li {
+  padding-left: 20px; 
+}
+
+ol li::marker{
+  color: var(--primary-color);
+  font-weight: 600 ;
+}
+
+ol>li{
+  font-size: .8em;
+}
+
+p{
+  font-size: .8em;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+header img{
+    width: 100%;
+    border-radius: .5em;
+    
+}
+
+header h1{
+   font-family: "Young Serif", serif;
+   font-size: 1.7em;
+   font-weight: 400;
+   margin-top: .5em;
+}
+
+.preparation-time{
+  margin:1.5em 2.5em;
+}
+
+.secondary-h2{
+  color: var(--secondary-color);
+  font-size: 1.1em;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  padding: .5em;
+  margin-left: -1.7em;
+}
+
+.preparation-time ul li{
+ line-height: 1.5;
+}
+
+.ingredients, .instructions, footer{
+  margin: 2em 1em;
+  line-height: 1.6;
+}
+
+
+.main-h2{
+  color: var(--primary-color);
+  font-size: 1.4em;
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  margin-left: -.9em;
+  margin-bottom: .5em;
+}
+
+footer>p{
+  font-size: .7em;
+  padding-bottom: 1em;
+  margin-left: -2em;
+}
+
+table{
+  margin-left: 1em;
+  width: 105%;
+  border-collapse: collapse;
+  margin-left: -1em;
+}
+
+table tr{
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+table tr:last-child{
+  border-bottom: none;
+}
+
+table td{
+  font-size: .7em;
+}
+
+td:first-child{
+  padding: .5em 2em;
+}
+td:nth-child(2){
+  color: var(--primary-color);
+  font-weight: 700;
+  padding-left: 6em;
+}
+
+
+
+
+
+
+
+
+/* Nutmeg: hsl(14, 45%, 36%)
+Dark Raspberry: hsl(332, 51%, 32%)
+Neutral
+White: hsl(0, 0%, 100%)
+Rose White: hsl(330, 100%, 98%)
+Eggshell: hsl(30, 54%, 90%)
+Light Grey: hsl(30, 18%, 87%)
+Wenge Brown: hsl(30, 10%, 34%)
+Dark Charcoal: hsl(24, 5%, 18%)
+Typography
+Body Copy
+Font size (paragraph): 16px
+Fonts
+Family: Young Serif
+
+Weights: 400
+
+Family: Outfit
+
+Weights: 400, 600, 700  */

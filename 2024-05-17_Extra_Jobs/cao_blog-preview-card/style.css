@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@800&display=swap');
+
+html {
+  --primary-color: hsl(47, 88%, 63%)
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main card */
+.card{
+    border: 1px solid black;
+    width: 370px;
+    height: 490px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1em;
+    box-shadow: 8px 8px 1px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    margin: 0;
+    padding: .3em .5em;
+    border-radius: .2em;
+    display: inline-block;
+    font-size: 1em;
+    background-color: var(--primary-color) ;
+}
+
+p{
+    font-size: .8em;
+    font-weight: 100;
+    color: hsl(0, 0%, 50%);
+    line-height: 1.5;
+}
+
+/* card header */
+.header-div {
+    margin: 1em 1.2em;
+    /* padding: 1em; */
+    border-radius: .4em;
+}
+.header-div img {
+    border-radius: .7em;
+    width: 100%;
+}
+
+
+/* Main */
+main{
+    padding: 0 1.5em;
+}
+
+.learning p{
+    color: hsl(0, 0%, 7%);
+}
+
+
+
+/* Footer section */
+footer{
+    width: 90%;
+}
+
+.footer-div{
+    display: flex;
+    align-items: flex-end;
+
+}
+.footer-div img{
+    margin-right: 5px;
+    padding-top: 10px ;
+    width: 30px;
+}
+.footer-div h2{
+    background: none;
+    font-size: .8em;
+    margin-bottom: 5px;
+}
