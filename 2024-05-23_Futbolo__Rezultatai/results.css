@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  --primary-color: #ffffff;
+}
+
+body {
+  background-color: #18273e;
+  font-family: 'Roboto', serif;
+}
+
+.container {
+  max-width: 1330px;
+}
+
+.star::before {
+  content: '★';
+  color: gold;
+  margin-right: 5px;
+}
