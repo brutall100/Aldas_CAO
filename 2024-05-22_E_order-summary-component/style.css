@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 html {
-  --primary-color: #ffffff;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 body {
@@ -14,15 +15,16 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .container{
-  width: 35vw;
-  min-width: 400px;
-  margin: 2em auto;
-  border: 2px solid green;
-  border-radius: 1.5em;
+  width: 30vw;
+  min-width:300px;
+  margin: 1% auto;
+  background-color: hsl(225, 100%, 98%);
+  /* border: 2px solid green; */
+  border-radius: 1em;
 }
 
 /*  */
@@ -33,35 +35,90 @@ img{
 
 /*  */
 .order-wrapper{
-  padding: 1em;
-  border: 1px solid yellowgreen;
-
+  padding: .5em 2em;
+  margin: 0;
 }
 
 .order-title{
   text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 .order-pargraph{
   text-align: center;
+  font-size: .6em;
+  color: hsl(223, 17%, 72%);
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 /*  */
 .payment-wrapper{
-  border: 1px solid red;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-color: #F8F9FE;
+  margin: 0 auto;
+  padding: 0 2em 1em;
+
 }
 
 .payment-summary{
   display: flex;
+  /* justify-content: space-around; */
+  padding-right: 7em;
 
 }
-.payment-summary>img{
+.payment-summary .music-note{
   width: 50px;
   height: 50px;
-  padding-left: 10px;
+  margin: auto;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+h2.payment-plan, p.payment-sum {
+  margin: 0;
+}
+h2.payment-plan {
+  font-size: 1em;
+}
+
+p.payment-sum {
+  color: hsl(223, 47%, 23%);
+}
 
 
+/*  */
+.proced-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100px;
+  
+}
+
+.btn{
+  width: 70%;
+  margin: 0 auto;
+  padding: .6em 1em;
+  border-radius: .5em;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-proceed{
+  background-color: hsl(245, 75%, 52%);
+  /* box-shadow: 0px 34px 1
+  00px 0px hsla(245, 75%, 52%, 0.67); */
+  color: white
+  
+}
+
+.btn-cancel{
+  background: none;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
 }
