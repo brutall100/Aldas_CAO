@@ -2,7 +2,6 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -12,18 +11,25 @@ html {
 body {
   background-color: #18273e;
   font-family: 'Roboto', serif;
-  height: 100vh;
 }
 
 .container {
   max-width: 1330px;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
 }
 
+.className {
+  border: 1px solid rgba(235, 12, 12, 0.805);
+}
+
+#id {
+  border: 1px dotted rgba(34, 242, 34, 0.874);
+}
+
+div {
+  color: var(--primary-color);
+}
 
 
 .star::before {

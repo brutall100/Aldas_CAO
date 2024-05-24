@@ -1,6 +1,5 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -14,7 +13,12 @@ body {
 }
 
 .container {
-  height: 100vh;
+  max-width: 1300px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.page{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +26,18 @@ body {
 }
 
 /* Header */
+.header-wrapper{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.header-content{
+  padding: 0 10em;
+}
+
 .header-title{
+  text-align: center;
   color: #449DCC;
 }
 
@@ -31,27 +46,26 @@ body {
 }
 
 .header-logo{
-  height: 150px;
-  padding: 1em;
+  height: 120px;
+  
+  padding: .5em 5em;
   background-color:#FFFFFF;
   border-radius: 1em;
+  text-align: center;
 }
 
 .header-text{
   color: #F96579;
   font-weight: 200;
   font-size: 1em;
+  text-align: center;
 }
 
 
-
-
-
 table{
-  /* border: #FFF843 1px solid; */
-  width: 600px;
-  height: 300px;
-  border-spacing: .2em;
+  width: 80vw;
+
+  border-spacing: .15em;
   text-align: center;
   font-weight: 100;
 }
@@ -72,9 +86,16 @@ tbody td:first-child{
   color: #F96579;
 }
 
+tbody td:last-child{
+  text-align: start;
+  padding-left: .5em;
+}
+
 .win, .los, .eql{
-  padding: .5em;
+  padding: 0 5px;
   border-radius: .2em;
+ font-size: .9em;
+
 }
 
 .win{
@@ -83,6 +104,7 @@ tbody td:first-child{
 
 .los{
   background-color: #F96579;
+  padding: 0 .175em;
 }
 
 .eql{
