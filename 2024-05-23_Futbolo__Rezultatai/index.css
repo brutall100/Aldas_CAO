@@ -86,6 +86,16 @@ tbody td:first-child{
   color: #F96579;
 }
 
+
+tbody > tr > td:nth-child(2) > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+tbody > tr > td:nth-child(2) > a:hover {
+  color: #d2d1fb;
+}
+
 tbody td:last-child{
   text-align: start;
   padding-left: .5em;
