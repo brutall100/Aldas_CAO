@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #18273e;
+  background-color: #324d59;
   font-family: 'Roboto', serif;
 }
 
@@ -19,16 +19,36 @@ body {
   margin-right: 0;
 }
 
-.className {
-  border: 1px solid rgba(235, 12, 12, 0.805);
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 80%;
+  border: 1px solid red;
 }
 
-#id {
-  border: 1px dotted rgba(34, 242, 34, 0.874);
+header {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
 }
 
-div {
-  color: var(--primary-color);
+.navi {
+  padding-left: 1em;
+}
+
+header nav ul li{
+  display: inline;
+  list-style-type: none;
+  margin-right: .5em;
+}
+ 
+header nav ul li a{
+  color:#C3C8C9;
+  text-decoration: none;
+  font-weight: 600; 
 }
 
 
