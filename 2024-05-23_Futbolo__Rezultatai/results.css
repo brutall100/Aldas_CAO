@@ -51,9 +51,172 @@ header nav ul li a{
   font-weight: 600; 
 }
 
+/*  */
+.title-golden{
+  color: #FFCD00;
+  display: inline-flex;
+  align-items: center;
+}
 
-.star::before {
-  content: '★';
-  color: gold;
+.title-golden::before{
+    content: '★';
+    color: transparent; 
+    color: #FFCD00;
+    margin-right:10px;
+}
+
+.title-golden span::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  background-image: url('/2024-05-23_Futbolo__Rezultatai/img/Flag_of_England.svg'); 
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.title-golden span {
+  text-transform: uppercase;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: none; 
+  position: relative;
+}
+
+/* tr:nth-child(even) {
+  border-bottom: 1px solid black; 
+} */
+
+tr{
+  padding: 8px; 
+  position: relative;
+
+}
+
+tr:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left:5%; 
+  width: 90%; 
+  border-bottom: 1px solid black;
+}
+
+
+/* td::before {
+  content: '';
+  display: inline-block;
   margin-right: 5px;
+  vertical-align: middle;
+} */
+
+
+
+td {
+  padding: 8px; 
+  position: relative; 
+}
+
+td:last-child::after {
+  content: "";
+  position: absolute;
+  top: 25%; 
+  bottom: 25%; 
+  width: 1px;
+  background: red;
+}
+
+
+
+
+
+th::before {
+  content: '★';
+  color: transparent; 
+  -webkit-text-stroke: .5px rgb(255, 255, 255); 
+  margin-right: 5px;
+}
+
+
+td::before {
+  content: '';
+  display: inline-block;
+  width: 15px; 
+  height: 15px; 
+  background-size: cover;
+  margin-right:10px;
+  vertical-align: middle;
+}
+
+.arsenal::before {
+  background-image: url('/2024-05-23_Futbolo__Rezultatai/img/Arsenal_FC.svg');
+}
+
+.everton::before {
+  background-image: url('/2024-05-23_Futbolo__Rezultatai/img/Everton_FC_logo.svg');
+}
+
+.brentford::before {
+  content: '🐶'; 
+}
+
+.leeds::before {
+  content: '🪳'; 
+}
+
+.brighton::before {
+  content: '🪰'; 
+}
+
+.west-ham::before {
+  content: '🐞'; 
+}
+
+.burnley::before {
+  content: '🐝'; 
+}
+
+.newcastle::before {
+  content: '🍏'; 
+}
+
+.chelsea::before {
+  content: '🦎'; 
+}
+
+.watford::before {
+  content: '🐢'; 
+}
+
+.crystal-palace::before {
+  content: '🐇'; 
+}
+
+.manchester-united::before {
+  content: '🦊'; 
+}
+
+.leicester::before {
+  content: '🐭'; 
+}
+
+.southampton::before {
+  content: '🦝'; 
+}
+
+.liverpool::before {
+  content: '🐱'; 
+}
+
+.wolves::before {
+  content: '🐵'; 
 }
