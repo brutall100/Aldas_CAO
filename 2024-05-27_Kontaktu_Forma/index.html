@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktu forma</title>
+    <meta name="description" content="A brief description of the page content">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Template">
+    <meta name="author" content="Aldas">
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="page">
+
+            <form action="#">
+                <h1 class="main-title">Contact Us!</h1>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Aldas" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="aldas@aldas.lt" required>
+
+                <label for="referance">Referance Number:</label>
+                <input type="number" id="referance" placeholder="123456" max="500" required>
+
+                <label for="msg"></label>
+                <textarea name="msg" id="msg" placeholder="Your message goes here.."></textarea>
+
+                <button class="btn" type="submit">Send!</button>
+
+            </form>
+
+        </div>
+    </div>
+    <script src="path/to/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    --primary-color: #ffffff;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1553152531-b98a2fc8d3bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1300px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    max-width: 600px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #ffffff;
+    padding: 2em;
+
+}
+
+.main-title{
+    text-align: center;
+}
+
+label{
+    font-weight: 700;
+    margin-bottom: .2em;
+    margin-top: 1.5em;
+}
+
+input, textarea {
+    border: none;
+    border-bottom: 1px solid #000000;
+
+ }
+
+ .btn{
+    margin: 2em 0;
+    width: 20%;
+    padding: .5em;
+    background-color: #545353;
+    color: #ffffff;
+    border: none;
+    border-radius: .2em;
+
+ }
