@@ -1,0 +1,89 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+    max-width: 1330px;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{
+    width: 450px;
+    background-color: #2F4F4F;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    border-radius: .3em;
+}
+
+.main-title{
+    text-align: center;
+    font-size: 2.3em;
+
+}
+
+.intro{
+    margin-top: 0;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.intro span{
+    background-color: rgb(193, 83, 179);
+}
+
+
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+label{
+    border: none;
+    font-size: 1.2em;
+}
+
+input, textarea{
+    padding: .2em;
+    margin: .2em 6em;
+}
+input:required, textarea {
+    border-left:2px solid #EE81EE;
+    border-right:2px solid #FF0000;
+    border-top:2px solid #FF0000;
+    border-bottom: 2px solid #FF0000;
+}
+
+input[type="text"]{
+    background-color: #A9A9A9;
+}
+
+input[type="number"]{
+    margin: 0 10.5em;
+}
+
+textarea{
+    margin: 0 4.5em;
+}
+
+fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
