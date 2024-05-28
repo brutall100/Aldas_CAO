@@ -6,17 +6,25 @@
 
 html {
   --primary-color: #ffffff;
+  --secondary-color: #6A7073;
 }
 
 body {
-  background-color: #324d59;
+  background-color: #00141E;
+  color: var(--primary-color);
   font-family: 'Roboto', serif;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
-  max-width: 1330px;
-  margin-left: 0;
-  margin-right: 0;
+  max-width:1000px;
+  margin: auto;
+  height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #ff7b00 2px solid;
 }
 
 .page{
@@ -24,11 +32,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 80%;
-  border: 1px solid red;
+  width: 100%;
+  border: #FFCD00 2px solid;
 }
 
+
+/*  */
 header {
   display: flex;
   width: 100%;
@@ -36,24 +45,37 @@ header {
 }
 
 .navi {
-  padding-left: 1em;
+  padding-left: 2em;
+  background-color: #031721;
+  width: 100%;
+  padding: 1em;
 }
 
-header nav ul li{
+.navi-li{
   display: inline;
   list-style-type: none;
-  margin-right: .5em;
+  margin-right: 1em;
 }
  
-header nav ul li a{
+.navi-a{
   color:#C3C8C9;
   text-decoration: none;
   font-weight: 600; 
+  font-size: 1.3em ;
 }
 
 /*  */
+.table-wrapper {
+  width: 100%;
+  flex-basis: 1;
+}
+
 .title-golden{
   color: #FFCD00;
+  background-color: #011D28 ;
+  width: 96%;
+  border-radius: .4em;
+  padding: .5em;
   display: inline-flex;
   align-items: center;
 }
@@ -70,7 +92,7 @@ header nav ul li a{
   display: inline-block;
   width: 20px;
   height: 15px;
-  background-image: url('/2024-05-23_Futbolo__Rezultatai/img/Flag_of_England.svg'); 
+  background-image: url('/img/Flag_of_England.svg'); 
   background-size: cover;
   margin-right: 10px;
 }
@@ -80,6 +102,8 @@ header nav ul li a{
 }
 
 
+
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -87,14 +111,15 @@ table {
 
 th, td {
   padding: 8px;
-  text-align: left;
+  text-align: center;
   border: none; 
   position: relative;
 }
 
-/* tr:nth-child(even) {
-  border-bottom: 1px solid black; 
-} */
+th{
+  color: var(--secondary-color);
+  font-size: 1.2em;
+}
 
 tr{
   padding: 8px; 
@@ -108,7 +133,7 @@ tr:nth-child(even)::after {
   bottom: 0;
   left:5%; 
   width: 90%; 
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #102C37;
 }
 
 
@@ -119,20 +144,23 @@ tr:nth-child(even)::after {
   vertical-align: middle;
 } */
 
-
+.border{
+  padding-right: 10em;
+}
 
 td {
   padding: 8px; 
   position: relative; 
 }
 
-td:last-child::after {
+.border:last-child::after {
   content: "";
   position: absolute;
-  top: 25%; 
-  bottom: 25%; 
+  height: 75%;
+  top: 50%;
   width: 1px;
-  background: red;
+  background: #102C37;
+  transform: translateY(-50%);
 }
 
 
@@ -158,11 +186,11 @@ td::before {
 }
 
 .arsenal::before {
-  background-image: url('/2024-05-23_Futbolo__Rezultatai/img/Arsenal_FC.svg');
+  content: '🐇';
 }
 
 .everton::before {
-  background-image: url('/2024-05-23_Futbolo__Rezultatai/img/Everton_FC_logo.svg');
+  content: '🐝'; ;
 }
 
 .brentford::before {
