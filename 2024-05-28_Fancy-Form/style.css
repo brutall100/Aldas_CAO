@@ -75,15 +75,47 @@ input[type="text"]{
 }
 
 input[type="number"]{
-    margin: 0 10.5em;
+    margin: .5em 10.5em;
 }
+
+input[type="number"]:valid:not(:placeholder-shown) {
+    background-color: #92dc80;
+    border: 2px solid rgb(182, 223, 178);
+}
+
+input[type="number"]:invalid:not(:placeholder-shown) {
+    background-color: #dc8080;
+    border: 2px solid red;
+}
+
 
 textarea{
     margin: 0 4.5em;
 }
 
-fieldset{
+fieldset {
     border: none;
-    margin: 0;
+    margin: 1em 0 0 0;
     padding: 0;
+}
+
+input[type="checkbox"] {
+    margin: .1em;
+}
+
+input[type="checkbox"]:checked  + label {
+    color: #0228c1;
+}
+
+button {
+    padding: .5em;
+    margin: 1em 8em;
+    color: #ffffff;
+    background: #008001;
+}
+
+button:hover {
+    background-color: #2F4F4F;
+    cursor: pointer;
+    transform: scale(1.1); 
 }
