@@ -93,16 +93,11 @@ input[type="number"]{
     margin: .5em 10.5em;
 }
 
-input[type="number"]:valid:not(:placeholder-shown) {
-    background-color: #92dc80;
-    border: 2px solid rgb(182, 223, 178);
+input:valid,
+textarea:valid,
+input:in-range {
+  border: 2px solid green;
 }
-
-input[type="number"]:invalid:not(:placeholder-shown) {
-    background-color: #dc8080;
-    border: 2px solid red;
-}
-
 
 textarea{
     margin: 0 4.5em;
