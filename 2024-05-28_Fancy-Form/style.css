@@ -74,6 +74,21 @@ input[type="text"]{
     background-color: #A9A9A9;
 }
 
+
+input[type="email"]:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+    background-color: #dc8080;
+}
+
+input[type="email"]:valid:not(:placeholder-shown) {
+    border: 2px solid green;
+    background-color: #92dc80;
+}
+
+
+
+
+
 input[type="number"]{
     margin: .5em 10.5em;
 }
