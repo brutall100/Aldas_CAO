@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -7,61 +9,144 @@ html {
 }
 
 body {
-  background-color: #18273e;
-  /* width: 100vw;
-  height: 100vh; */
+  background: url(/img/moroccan-flower.png);
 }
 
-/* .container {
-  max-width: 1200px;
-  
-} */
-
-/* .full-page {
-  height: 100vh;
-} */
-
-.page-content{
-    width: 100vw;
-    
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/*  */
 header {
-    background-color: #B1CD00;
-    color: var(--primary-color);
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #B1CD00;
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.logo img {
+ width:  200px;
+ padding: .5em 1em;
 
 }
 
-
-
-
-.logo img{
-   height: 100px;
-   /* padding: 1em;
-   margin-left: 2em; */
-}
-
-.nav{
-    height: auto;
-    width: 100%;
+.nav {
+  height: auto;
+  width: 100%;
 }
 
 .nav ul {
-    display: flex;
-    padding: 0;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 2em;
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 2em;
 
 }
+
 .nav ul {
-    list-style-type: none;
+  list-style-type: none;
 }
-.nav ul li a{
-    margin-left: 2em;
+
+.nav ul li a {
+  margin-left: 2em;
+}
+.nav ul li:hover {
+  cursor: pointer;
+}
+
+/*  */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0 3em;
+  align-items: baseline;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+aside {
+  width: 40%;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section {
+  width: 60%;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.img-with-with-text {
+  display: flex;
+}
+
+
+.wolf-img {
+  width: 50%;
+  height: 50%;
+  padding-right: 1em;
+  margin-top: 1.3em;
+  float: left;
+}
+
+aside div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+
+
+menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+menu ul {
+  padding-left: 2em;
+  padding: 0 0 0 2em;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 2em;
+}
+
+
+
+
+
+button {
+  background-color: #B2CD00;
+  color: white;
+  padding: 1em;
+  margin-top: 1em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*  */
+footer div {
+  text-align: center;
+  padding: .3em 0;
+  font-size: 1.4em;
 }
