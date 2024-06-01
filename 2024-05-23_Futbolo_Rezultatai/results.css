@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #00141E;
+  background-color: #020A0E;
   color: var(--primary-color);
   font-family: 'Roboto', serif;
   width: 100%;
@@ -24,7 +24,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #ff7b00 2px solid;
 }
 
 .page{
@@ -33,7 +32,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: #FFCD00 2px solid;
 }
 
 
@@ -41,14 +39,14 @@ body {
 header {
   display: flex;
   width: 100%;
+  border-radius: .5em ;
   align-items: flex-start;
+  background-color: #031721;
+  margin-bottom: .8em;
 }
 
 .navi {
-  padding-left: 2em;
-  background-color: #031721;
   width: 100%;
-  padding: 1em;
 }
 
 .navi-li{
@@ -62,19 +60,44 @@ header {
   text-decoration: none;
   font-weight: 600; 
   font-size: 1.3em ;
+  letter-spacing: 1px;
+}
+
+.results{
+  border-bottom: 4px solid #F60045;
+  padding-bottom: .5em;
 }
 
 /*  */
 .table-wrapper {
   width: 100%;
-  flex-basis: 1;
+  background-color:#00141E;
+  padding: 1em;
+  border-radius: .5em;
+}
+
+.league-title{
+  display: flex;
+  justify-content: space-between;
+  background-color: #011D28 ;
+  width: 99%;
+  height: 3em;
+  align-items: center;
+  border-radius: .4em;
+}
+
+.league-title p{
+  text-decoration: underline;
+  margin-right: 1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  color: #adacac;
+
 }
 
 .title-golden{
   color: #FFCD00;
-  background-color: #011D28 ;
-  width: 96%;
-  border-radius: .4em;
   padding: .5em;
   display: inline-flex;
   align-items: center;
@@ -101,12 +124,24 @@ header {
   text-transform: uppercase;
 }
 
-
-
+caption {
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: .4em;
+  background-color: #011D28 ;
+  color: #adacac;
+  margin-bottom: 1em;
+  width: 99%;
+  border-radius: .3em;
+  padding: .5em;
+}
 
 table {
-  width: 100%;
+  width:100%;
+  border-radius: .3em;
   border-collapse: collapse;
+ 
 }
 
 th, td {
@@ -137,12 +172,9 @@ tr:nth-child(even)::after {
 }
 
 
-/* td::before {
-  content: '';
-  display: inline-block;
-  margin-right: 5px;
-  vertical-align: middle;
-} */
+.accent-color {
+  color: #adacac;
+}
 
 .border{
   padding-right: 10em;
@@ -195,6 +227,11 @@ td::before {
 
 .brentford::before {
   content: '🐶'; 
+}
+
+.brentford::after {
+  content: '🐶'; 
+  padding-left: 5px;
 }
 
 .leeds::before {
