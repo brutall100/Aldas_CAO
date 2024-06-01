@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name="description" content="A brief description of the page content">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Template">
+  <meta name="author" content="Aldas">
+  <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="task-edit.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="page">
+      <main>
+        <h1>Edit Task</h1>
+
+        <div class="task-section">
+          <div class="task-rows">
+            <h2>Task Id</h2>
+            <input type="number" value="987654321" readonly>
+          </div>
+
+          <div class="task-rows">
+            <h2>Name</h2>
+            <input type="text" value="Wash wife car.">
+          </div>
+
+          <div class="task-rows">
+            <h2>Completed</h2>
+            <input type="checkbox">
+          </div>
+        </div>
+        <button>Edit</button>
+        <p class="error-msg">Some kind of error</p>
+      </main>
+      <a href="/">Back to task list</a>
+    </div>
+  </div>
+  <script src="path/to/script.js"></script>
+</body>
+
+</html>
