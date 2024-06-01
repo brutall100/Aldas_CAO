@@ -57,7 +57,7 @@ nav {
 }
 
 .facebook-icon, .twitter-icon, .linkedin-icon {
-    color: #1a9ac9; 
+    color: var(--btn-main-color); 
 }
 
 
@@ -121,7 +121,7 @@ input:focus {
 .input-div button {
     padding: 10px 40px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: var(--btn-main-color);
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -138,7 +138,7 @@ input:focus {
 }
 
 .input-div button:hover {
-    background-color: var(--btn-main-color);
+    background-color: #7f7fff;
 }
 
 .error-msg {

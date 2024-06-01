@@ -56,7 +56,7 @@ nav {
 }
 
 .facebook-icon, .twitter-icon, .linkedin-icon {
-  color: #1a9ac9; 
+  color:var(--btn-main-color); 
 }
 
 .page {
