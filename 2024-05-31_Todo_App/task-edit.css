@@ -19,18 +19,53 @@ body {
   font-family: 'Roboto', serif;
 }
 
-/* .container {
-  max-width: 1330px;
-  margin-left: 0;
-  margin-right: 0;
-} */
+.container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5em;
+  margin-bottom: 2em;
+  background-color: var(--bg-color);
+}
+
+header div h3 {
+  margin-left: 1em;
+}
+
+header h3 span {
+  color: var(--btn-main-color);
+}
+
+nav {
+  gap: 1em;
+}
+
+.header-nav{
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  margin: 0 2em 0 0;
+  padding: 0;
+}
+
+.facebook-icon, .twitter-icon, .linkedin-icon {
+  color: #1a9ac9; 
+}
+
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 main {
@@ -134,6 +169,11 @@ button{
     border-radius: 5px;
 }
 
+button:hover{
+    background-color: #7f7fff;
+    transform: scale(1.05);
+}
+
 .error-msg{
     color: var(--error-msg-color);
     font-size: 13px;
@@ -143,14 +183,18 @@ button{
 
 }
 
-a{
+.go-home{
     text-decoration: none;
-    color: var(--btn-main-color);
+    color: white;
     background-color: var(--text-color);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     padding:.5em 3em;
     border-radius: 3px;
     margin-top: 2em;
+}
 
+.go-home:hover{
+    background-color: var(--btn-main-color);
+    transform: scale(1.1);
 }

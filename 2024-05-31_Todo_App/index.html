@@ -12,12 +12,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="page">
+            <header>
+                <div>
+                    <h3>Best <span>ToDo</span> App</h3>
+                </div>
+                <nav>
+                    <ul class="header-nav">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook facebook-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com" target="_blank">
+                                <i class="fab fa-twitter twitter-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com" target="_blank">
+                                <i class="fab fa-linkedin linkedin-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
             <main>
                 <div class="main-tasks">
                     <h1>Your Tasks</h1>
@@ -83,11 +109,11 @@
     </div>
     <script>
         document.querySelectorAll('.edit-btn').forEach(function(btn) {
-          btn.addEventListener('click', function() {
-            window.location.href = 'task-edit.html';
-          });
+            btn.addEventListener('click', function() {
+                window.location.href = 'task-edit.html';
+            });
         });
-      </script>
+    </script>
     <script src="path/to/script.js"></script>
 </body>
 

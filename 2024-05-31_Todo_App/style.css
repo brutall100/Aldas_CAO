@@ -16,12 +16,50 @@ body {
   background-color: var(--bg-color);
   background-image: url(/img/bg.webp);
   font-family: 'Roboto', serif;
+  width: 100vw;
 }
 
 
 .container {
- margin: 5vh auto;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4em;
+    margin-bottom: 2em;
+    background-color: var(--bg-color);
+}
+
+header div h3 {
+    margin-left: 1em;
+}
+
+header h3 span {
+    color: var(--btn-main-color);
+}
+
+nav {
+    gap: 1em;
+}
+
+.header-nav{
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    margin: 0 2em 0 0;
+    padding: 0;
+}
+
+.facebook-icon, .twitter-icon, .linkedin-icon {
+    color: #1a9ac9; 
+}
+
 
 .page {
     display: flex;
@@ -29,7 +67,6 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
 }
 
 main {
