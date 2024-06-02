@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    --primary-color: hsl(263, 55%, 52%) ;
+    --secondary-color: hsl(217, 19%, 35%) ;
+    --third-color: hsl(219, 29%, 14%)  ;
+    --four-color: hsl(0, 0%, 100%) ;
+}
+
+body {
+    background-image: url(/img/fabric_1.png);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px; 
+    grid-template-areas: 
+        "big1 big1 small1 tall"
+        "small2 big2 big2 tall";
+}
+
+.card {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.big {
+    grid-column: span 2; /* Big card spans 2 columns */
+}
+
+.tall {
+    grid-row: span 2; /* Tall card spans 2 rows */
+}
+
+.daniel {
+    grid-area: big1;
+}
+
+.jonathan {
+    grid-area: small1;
+}
+
+.jeanette {
+    grid-area: small2;
+}
+
+.patrick {
+    grid-area: big2;
+}
+
+.kira {
+    grid-area: tall;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-title h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.user-title h4 {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.5;
+    color: gray;
+}
+
+
+/* Author card */
+.author{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-left: 2em;
+}
+
+img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+p{
+    opacity: 0.7;
+}
+
+
+
+.daniel{
+    background-color: var(--primary-color);
+    color: hsl(0, 0%, 81%);
+    background-image: url(/img/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 1%;
+}
+
+.jonathan{
+    background-color: var(--secondary-color);
+    color: hsl(0, 0%, 81%);
+}
+
+.jeanette{
+    background-color: var(--four-color);
+    color: #000;
+}
+
+.patrick{
+    background-color: var(--third-color);
+    color: hsl(0, 0%, 81%);
+}
+
+.kira{
+    background-color: var(--four-color);
+}
+
+
+/*  */
