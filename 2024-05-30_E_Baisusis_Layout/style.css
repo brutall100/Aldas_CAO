@@ -29,10 +29,7 @@ body {
 .page {
     display: flex;
     align-items: center;
-    /* padding: 2em; */
-    /* background-color: yellow; */
     padding: 5em 0;
-    /* height: 700px; */
 }
 
 main {
@@ -40,7 +37,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    /* background-color: aqua; */
 }
 
 aside {
@@ -52,21 +48,13 @@ aside {
 section {
     display: flex;
     gap: 1em;
-    /* background-color: rgb(119, 12, 129); */
 }
 
 .card{
-    /* border: 1px solid red; */
     border-radius: 1em;
     padding: 1em;
 }
 
-/* .big{
-
-} */
-/* .small{
-
-} */
 .tall{
     padding: 4em 1em;
 
