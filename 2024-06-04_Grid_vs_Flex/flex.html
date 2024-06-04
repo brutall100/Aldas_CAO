@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name="description" content="A brief description of the page content">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Template">
+  <meta name="author" content="Aldas">
+  <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    *, *::before, *::after{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20vh;
+    }
+
+    .flex-wrapper{
+        display: flex;
+        background-color: #ffffff;
+        justify-content: space-between;
+        height: 50vh;
+    }
+    
+    .div-item {
+        height: calc(100% - 1px);
+        width: calc(100% - 1px);
+        background-color: #a45c3d;
+        text-align: center;
+    }
+   
+    .a-side {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .b-side {
+        width: 50%;
+    }
+
+    .top {
+        width: calc(100% - 1px);
+        height: 50%;
+    }
+
+    .bottom {
+        width: calc(100% - 2px);
+        display: flex;
+        gap: 1px;
+        height: 50%;
+    }
+
+    .bottom .div-item {
+        width: 50%;
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-wrapper">
+            <div class="a-side">
+                <div class="div-item">1</div>
+            </div>
+
+            <div class="b-side">
+                <div class="top">
+                    <div class="div-item">2</div>
+                </div>
+                <div class="bottom">
+                    <div class="div-item">3</div>
+                    <div class="div-item">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
