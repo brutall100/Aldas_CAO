@@ -7,9 +7,12 @@
 
 :root {
   --bg-color: #f4fdfd;
-  --primary-color: #212121;
-  --btn-main: #FE52C0;
-  --text-color: #c5a9a9;
+  --btn-main: hsl(322, 100%, 66%);
+  --footer: hsl(192, 100%, 9%);
+  --border-style: 3px solid rgba(210, 206, 206, 0.722);
+  
+
+
 }
 
 html {
@@ -32,6 +35,7 @@ header {
   background-color: var(--bg-color);
   background-image: url("/img/bg-hero-desktop.svg");
   padding: 1rem 2rem 3rem;
+  margin-bottom: 5em;
 
 }
 
@@ -119,5 +123,115 @@ header {
   max-width: 600px;
 }
 
+/* main */
+main{
+  /* display: flex; */
+}
+
+.main-card-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1em;
+  column-gap: 3em;
+  border: var(--border-style);
+  border-radius: 10px;
+  padding: 3em 2em;
+}
 
 
+
+
+.main-card-img{
+  /* width: 100%; */
+  height: 10em;
+ 
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-style);
+  border-radius: 10px;
+  padding: 1em 2em 2em;
+  margin: 12em;
+  align-items: center;
+  margin-top: 5em;
+}
+
+.hero .hero-title{
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+
+/*// footer */
+.footer-content{
+  background-color: var(--footer);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-ctn{
+  width: calc(100% / 3); 
+  padding: 3em;
+}
+
+/* ? */
+.footer-a{
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 3em;
+}
+
+
+
+/* ? */
+.footer-b-nav{
+  display: flex;
+  padding:1em;
+  gap: 3em;
+  align-items: center;
+  align-self: center;
+}
+
+.footer-b-nav div{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.footer-b-nav a{
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+/* ? */
+.footer-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding: 3em;
+  width: 100%;
+  height: 300px;
+}
+
+.footer-social {
+  
+  width: 100%;
+  display: flex;
+}
+
+.footer-social .social-link{
+  color: #ffffff;
+  margin-right: 5px;
+
+} 
