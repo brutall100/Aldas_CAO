@@ -6,10 +6,10 @@
   }
 
 :root {
-  --bg-color: #f4fdfd;
+  --bg-color: #ffffff;
   --btn-main: hsl(322, 100%, 66%);
   --footer: hsl(192, 100%, 9%);
-  --border-style: 3px solid rgba(210, 206, 206, 0.722);
+  --border-style: 3px solid rgba(243, 240, 240, 0.465);
   
 
 
@@ -24,15 +24,18 @@ body {
     /* background-image: url("/img/bg-hero-desktop.svg"); */
 }
 
-/* .container {
+.container {
     max-width: 1330px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
     
-} */
+}
 
 
 
 header {
-  background-color: var(--bg-color);
+  background-color: rgb(214, 241, 247);
   background-image: url("/img/bg-hero-desktop.svg");
   padding: 1rem 2rem 3rem;
   margin-bottom: 5em;
@@ -65,7 +68,12 @@ header {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+}
 
+.btn-reg:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease;
 }
 
 
@@ -105,7 +113,7 @@ header {
 .btn-main {
     background-color: var(--btn-main);
     color: white;
-    padding: 0.7em 3em;
+    padding: 1em 3em;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
@@ -125,7 +133,8 @@ header {
 
 /* main */
 main{
-  /* display: flex; */
+  margin: 0 4em;
+  position: relative;
 }
 
 .main-card-wrapper {
@@ -135,15 +144,28 @@ main{
   margin-top: 1em;
   column-gap: 3em;
   border: var(--border-style);
-  border-radius: 10px;
+  border-radius: 1em;
   padding: 3em 2em;
 }
 
 
+.main-card-title{
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
 
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-card-text{
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #999999;
+  line-height: 1.3;
+}
 
 .main-card-img{
-  /* width: 100%; */
   height: 10em;
  
 }
@@ -153,16 +175,20 @@ main{
   flex-direction: column;
   border: var(--border-style);
   border-radius: 10px;
-  padding: 1em 2em 2em;
-  margin: 12em;
+  padding: 3em 2em ;
+  margin: 0 10em;
+  background-color: #ffffff;
   align-items: center;
-  margin-top: 5em;
+  position: relative;
+  top: 5em;
 }
 
 .hero .hero-title{
   font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   color: var(--primary-color);
+  
 }
 
 
@@ -171,29 +197,67 @@ main{
   background-color: var(--footer);
   color: #ffffff;
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.footer-ctn{
-  width: calc(100% / 3); 
-  padding: 3em;
+  padding-top: 5em;
 }
 
 /* ? */
 .footer-a{
-  color: #ffffff;
+  width: 35%;
+  color: #c7c7c7;
   font-weight: 400;
-  margin-top: 3em;
+  font-size: .7em;
+  padding: 3em;
+}
+
+.hard-logo{
+  font-size: 2.3em;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+.hard-logo::before{
+  content: "\f0e0";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 20px;
+ 
+}
+
+.footer-addres-text{
+  display: flex;
+  gap: .1em;
+  margin-top: 2em;
+}
+
+.footer-addres-text::before{
+  content: "\f041";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.footer-tel-text::before{
+  content: "\f095";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.footer-email-text::before{
+  content: "\f0e0";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  margin-right: 20px;
 }
 
 
 
 /* ? */
 .footer-b-nav{
+  width: 35%;
   display: flex;
-  padding:1em;
+  padding: 3em;
   gap: 3em;
   align-items: center;
   align-self: center;
@@ -206,32 +270,33 @@ main{
 }
 
 .footer-b-nav a{
-  color: #ffffff;
-  font-weight: 400;
+  color: #c7c7c7;
+  font-size: .7em;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* ? */
 .footer-c{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   align-items: flex-start;
-  padding: 3em;
-  width: 100%;
-  height: 300px;
-}
-
-.footer-social {
-  
-  width: 100%;
-  display: flex;
+  justify-content: space-evenly;
+  padding: 3em 2em 3em 0;
 }
 
 .footer-social .social-link{
   color: #ffffff;
-  margin-right: 5px;
-
+  background-color: transparent;
 } 
+
+.footer-social .social-link i{
+  margin-right: 10px;
+  font-size: larger;
+} 
+
+small{
+  font-size: 0.6rem;
+  margin-top: 6vh;
+  font-weight: 200;
+}
