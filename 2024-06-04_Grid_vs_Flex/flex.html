@@ -26,42 +26,45 @@
 
     .flex-wrapper{
         display: flex;
-        background-color: #ffffff;
+        background-color: #484040;
         justify-content: space-between;
-        height: 50vh;
+        height: 40vh;
     }
     
     .div-item {
-        height: calc(100% - 1px);
-        width: calc(100% - 1px);
+        height: calc(100% - 10px);
+        width: calc(100% - 10px);
         background-color: #a45c3d;
-        text-align: center;
     }
    
     .a-side {
         width: 50%;
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
     
     .b-side {
         width: 50%;
+        text-align: center;
     }
 
     .top {
-        width: calc(100% - 1px);
         height: 50%;
     }
 
+    .top .div-item{
+        width: calc(100%);
+    }
+
     .bottom {
-        width: calc(100% - 2px);
         display: flex;
-        gap: 1px;
+        column-gap: 10px;
         height: 50%;
     }
 
     .bottom .div-item {
-        width: 50%;
+        width: calc(100% - 50px);
     }
 
 
