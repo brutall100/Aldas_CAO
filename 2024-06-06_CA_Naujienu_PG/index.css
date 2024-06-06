@@ -1,0 +1,163 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-main: #F2F2F2;
+  --bg-color-accent: #fff;
+  --primary-color: #212121;
+  --accent-color: #ff5722;
+  --text-color: #333333;
+  --spacing: 30px;
+}
+
+
+
+body {
+    font-family: 'Bw Gradual', Arial, sans-serif;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* .container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 20px;
+} */
+
+/* ELEMENTS */
+/* ANCHOR BTN */
+.big-anchor-btn {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color-accent); /* var(--bg-color) */
+  width: calc(70% - (var(--spacing) * 0.7));
+  font-size: 2em;
+  font-weight: 800;
+  padding: 1em 2em;
+  margin-top: 1em;
+  border-radius: .4em;
+  cursor: pointer;
+}
+
+.big-anchor-btn a {
+  /* display: block;  */
+  /* height: 100%;  */
+  /* text-align: center;  */
+  padding: 20px; 
+  box-sizing: border-box; 
+  text-decoration: none; 
+  color: inherit; 
+  letter-spacing: 2px;
+}
+
+.big-anchor-btn span {
+  margin-right: 10px; 
+  
+}
+
+.big-anchor-btn span i {
+  font-size: 2em; 
+}
+
+
+
+
+body {
+  font-family: 'Bw Gradual', Arial, sans-serif;
+  background-color: var(--bg-color-main); 
+}
+
+/* SECTION 1 */
+section{
+  width: calc(70% - (var(--spacing) * 0.7));
+}
+
+.news-ctn {
+  display: flex;
+  gap: var(--spacing);
+}
+
+.news-ctn-a, .news-ctn-b{
+    width: calc(500% - (var(--spacing) * 0.5));
+}
+
+.news-ctn-card {
+  padding: calc(var(--spacing) / 2);
+
+}
+.news-ctn-card-top{
+  background-color: var(--bg-color-accent);
+   height: 40%;   
+}
+
+
+.news-ctn-card-link-top{
+    display: flex;
+    flex-direction: column;
+
+}
+.news-ctn-card-link{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+}
+
+
+.news-img {
+  width: 100%;
+  height: 222px;
+  object-fit: cover;
+}
+
+
+
+
+/* SECTION 2 */
+.vaizdo-irasai {
+  width: calc(70% - (var(--spacing) * 0.7));
+  background-color: violet;
+  margin-top: 3em;
+  
+}
+
+.vaizdo-grid-ctn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: var(--spacing);
+  width: 100%;
+}
+
+.vaizdo-card {
+  width: 100%; /* Make sure the card takes full width */
+}
+
+.vaizdo-card:first-of-type {
+  background-color: var(--bg-color-accent);
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  /* padding: calc(var(--spacing)); */
+}
+.vaizdo-card-link iframe {
+  width: 100%; /* Ensure iframe takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+aside {
+  width: calc(30% - (var(--spacing) * 0.3));
+}
+
