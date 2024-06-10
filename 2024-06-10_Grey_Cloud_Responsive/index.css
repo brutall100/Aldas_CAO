@@ -111,6 +111,11 @@ header .image-wrapper .brand-logo {
   
 
 /* Navigation styles */
+.content-grid .navi{
+    display: flex;
+    align-items: center;
+}
+
 .content-grid .navi nav ul {
     display: flex;
     flex-direction: row;
