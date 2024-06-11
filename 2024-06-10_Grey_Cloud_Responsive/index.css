@@ -25,6 +25,16 @@ header .image-wrapper {
 header .image-wrapper .brand-logo {
   width: 100px;
 }
+@media (max-width: 768px) {
+  header .image-wrapper .brand-logo {
+    width: 80px;
+  }
+  .main-title {
+    font-size: 1.5em;
+    color: rgb(110, 108, 108);
+  }
+  
+}
 
 
 /* Main container */
@@ -122,7 +132,7 @@ header .image-wrapper .brand-logo {
     list-style-type: none;
     justify-content: flex-start;
     gap: 30px;
-    margin: .3em 0;
+    /* margin: .3em 0; */
     padding: 0;
   }
   
@@ -138,20 +148,26 @@ header .image-wrapper .brand-logo {
     .content-grid {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
-      gap: 30px;
+      /* gap: 30px; */
     }
   
+    .content-grid .navi nav {
+      width: 100%;
+    }
+
     .content-grid .navi nav ul {
       flex-direction: column;
+      margin: 0;
+      gap: 0;
     }
     
     .content-grid .navi nav ul li {
       border-bottom: 1px solid #d1d1d1;
-        padding: 1.1em 0;
+      padding: 1em 0;
     }
     .content-grid .navi nav ul li:last-child {
       border-bottom: none;
-        padding: 1.1em 0;
+        /* padding: 1.1em 0; */
     }
 
     .content-grid .navi nav ul li a {
