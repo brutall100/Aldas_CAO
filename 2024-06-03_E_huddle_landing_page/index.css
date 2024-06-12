@@ -27,9 +27,7 @@ body {
 .container {
     max-width: 1330px;
     margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-    
+    margin-right: auto;   
 }
 
 
@@ -299,4 +297,160 @@ small{
   font-size: 0.6rem;
   margin-top: 6vh;
   font-weight: 200;
+}
+
+
+
+/* DESKTOP FIRST */
+@media screen and (max-width: 799px) {
+  .top-wrapper {
+    margin: 0;
+  }
+
+  img {
+    width: 140px;
+  }
+
+  button.btn-reg {
+    padding: .5em 2em;
+  }
+
+  button.btn-main.btn-reg {
+    padding: 1em 3em;
+  }
+
+  .top-content {
+    flex-direction: column;
+    padding-top: 5em;
+  }
+
+  .top-text {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  h1.top-title {
+    text-align: center;
+  }
+
+  p.top-intro {
+    text-align: center;
+  }
+
+  img.top-banner-img {
+    width: 68vw;
+    margin-left: -5em;
+  }
+
+  .main-card-wrapper {
+    flex-direction: column-reverse;
+}
+
+.main-card-wrapper.midle-main-card-wrapper {
+  flex-direction: column;
+}
+
+main {
+  margin: 1em;
+}
+
+
+img.main-card-img {
+    width: 100%;
+}
+
+.main-card {
+    text-align: center;
+}
+
+.main-card-wrapper.midle-main-card-wrapper {
+  flex-direction: column;
+}
+
+.hero {
+  margin: 0;
+  padding: 2.5em 1.5em;
+}
+
+h2.hero-title {
+  text-align: center;
+}
+.hero .hero-title {
+  text-align: center;
+  font-size: 1em;
+}
+
+
+footer.footer-content {
+  flex-direction: column;
+}
+
+.footer-ctn.footer-a {
+  width: 100%;
+}
+
+.footer-ctn.footer-b-nav {
+  width: 100%;
+  flex-direction: column;
+  padding: 0 0 0 2em;
+  row-gap: 1em;
+  align-items: flex-start;
+}
+
+.footer-b-nav div{
+  row-gap: 1em;
+}
+
+
+
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding: 1em;
+  }
+
+  img {
+    width: 120px;
+  }
+
+  button.btn-reg {
+    padding: .4em 1em;
+  }
+
+  .top-content {
+    flex-direction: column;
+    padding-top: 2.5em;
+  }
+
+  .top-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  .top-banner {
+    padding: 0;
+  }
+
+  img.top-banner-img {
+    width: 60vw;
+    margin-left: -3.8em;
+  }
+
+  .top-banner {
+    margin-top: 1em;
+  }
+
+  button.btn-main.btn-reg {
+    margin: 1.7em 0;
+}
+
+main {
+    margin: .5em;
+}
+
+
+
+
 }
