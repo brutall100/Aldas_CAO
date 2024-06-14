@@ -291,7 +291,7 @@ section{
 
     /* grid-gap: 1em;
     margin: 1em; */
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
 }
 .galery h2{
     place-self: center;
@@ -299,15 +299,107 @@ section{
     letter-spacing: 2px;
 }
 
-.galery-imges img, .galery-imges .galery-footer{
+.galery-imges img{
     width: 100%;
     height: 200px;
     object-fit: cover;
     object-position: center;
-  
 }
 
 
+
+
+
+
+
+.galery-footer{
+    width: 100%;
+    min-height: 200px;
+    background-color: var(--primary-color);
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    display: flex; 
+    align-items: center;
+}
+.galery-footer .galery-left {
+    width: calc(45%); /* Adjusted for half of the padding/margin */
+    color: var(--bg-color);
+}
+.galery-footer .galery-left h2{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5em .2em;
+    margin: 0;
+}
+.galery-footer .galery-left a{
+    font-size: .7em;
+    letter-spacing: 0;
+    color: var(--bg-color);
+    text-transform: capitalize;
+    text-align: left;
+
+}
+.galery-footer .galery-left p {
+    margin: 0;
+    padding-left: 1em;
+}
+
+
+
+
+
+
+.galery-right {
+    width: 55%;
+    margin: auto; 
+}
+
+.email-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+}
+
+.email-form input[type="email"] {
+    font-size: .7em;  
+    padding: 1em .8em; 
+    background-color: var(--bg-color);
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    border: none;
+    margin: 0; 
+    height: 1.5em;
+    box-sizing: border-box; 
+}
+.email-form input[type="email"]::placeholder {
+    text-transform: uppercase;
+
+}
+
+.email-form button {
+    font-size: .7em; 
+    background-color: #EFF0EE;
+    border: none;
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: 0;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    margin: 0 1em 0 0;
+    padding: 1em .8em; 
+    height: 1.5em; 
+    line-height: 0;
+    
+}
+
+
+.email-form button:hover {
+    background-color: rgb(216, 214, 214);
+}
 
 
 
