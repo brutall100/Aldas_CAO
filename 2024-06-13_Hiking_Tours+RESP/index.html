@@ -1,179 +1,218 @@
 <!DOCTYPE html>
 <html lang="lt">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <meta name="description" content="A brief description of the page content">
-  <meta name="keywords" content="HTML, CSS, JavaScript, Template">
-  <meta name="author" content="Aldas">
-  <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="A brief description of the page content">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Template">
+    <meta name="author" content="Aldas">
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="page">
-      <header>
-        <div class="header-top">
-            <h2>Hiking <span>Tours</span></h2>
-            <nav>
-                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-            </nav>
-        </div>
-        <div class="header-bottom">
-            <h1 class="main-title">Continue Exploring</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum consectetur sit minima beatae quidem.</p>
-            <button class="explore-btn">Explore Tours</button>
-        </div>        
-      </header>
+    <div class="container">
+        <div class="page">
+            <header>
+                <div class="header-top" >
+                    <h2>Hiking <span>Tours</span></h2>
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Featured</a></li>
+                            <li><a href="#">Gallery</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="social-top">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+                <div class="header-bottom">
+                    <h1 class="main-title">Continue Exploring</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum consectetur sit minima
+                        beatae quidem.</p>
+                    <button class="explore-btn">Explore Tours</button>
+                </div>
+            </header>
 
-      <main>
-        <section>
-            <div class="about-content">
-                <h2 class="content-title">About <span>us</span></h2>
-                <img src="/img/trey-hollins-Ty9c5tgkiZ0-unsplash.jpg" alt="Sea and island">
-                <div class="content-text">
-                    <h3>Explore The Difference</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti facere fuga voluptate eveniet fugit nihil.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti facere fuga voluptate eveniet fugit nihil.</p>
-                    <a href="#"><span>Read more</span></a>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="services-content">
-                <h2 class="content-title">Our <span>Services</span></h2>
-                <div class="services">
-                    <div class="service">
-                        <i class="fas fa-wallet"></i>
-                        <h3>Saving Money</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-hiking"></i>
-                        <h3>Endless hiking</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-mug-hot"></i>
-                        <h3>Amazing comfort</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="tours-content">
-                <h2 class="content-title">Featured <span>Tours</span></h2>
-                <div class="tours">
-                    <div class="tour">
-                        <img src="/img/trey-hollins-dmyJ-G8aQ78-unsplash.jpg" alt="Mountain">
-                        <h3>tibet adventure</h3>
-                        <div class="tour-footer">
-                            <div class="country-info">   
-                                <p><i class="fas fa-flag"></i> China</p>
+            <main>
+                <section>
+                    <div class="about-content">
+                        <h2 class="content-title">About <span>us</span></h2>
+                        <div class="about-content-wraper">
+                            <div class="img-box-border">
+                                <img src="/img/trey-hollins-Ty9c5tgkiZ0-unsplash.jpg" class="about-content-wraper-img" alt="Sea and island">
                             </div>
-                            <div class="country-price">   
-                                <span>6 Days From $2100</span>
+                            <div class="content-text">
+                                <h3>Explore The Difference</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti facere fuga
+                                    voluptate eveniet fugit nihil.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, corrupti facere fuga
+                                    voluptate eveniet fugit nihil.</p>
+                                <a href="#"><span>Read more</span></a>
                             </div>
                         </div>
-                        <div class="tour-date">August 14th, 2022</div>
                     </div>
-                    <div class="tour">
-                        <img src="/img/joseph-corl-ZKI0BlXBXos-unsplash.jpg" alt="Mountain">
-                        <h3>best of java</h3>
-                        <div class="tour-footer">
-                            <div class="country-info">   
-                                <p><i class="fas fa-flag"></i> China</p>
+                </section>
+                <section>
+                    <div class="services-content">
+                        <h2 class="content-title">Our <span>Services</span></h2>
+                        <div class="services">
+                            <div class="service">
+                                <i class="fas fa-wallet"></i>
+                                <h3>Saving Money</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                             </div>
-                            <div class="country-price">   
-                                <span>6 Days From $2100</span>
+                            <div class="service">
+                                <i class="fas fa-hiking"></i>
+                                <h3>Endless hiking</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            </div>
+                            <div class="service">
+                                <i class="fas fa-mug-hot"></i>
+                                <h3>Amazing comfort</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                             </div>
                         </div>
-                        <div class="tour-date">Feb 28th, 2022</div>
                     </div>
-                    <div class="tour">
-                        <img src="/img/karsten-winegeart-_c2O_GfQVDg-unsplash.jpg" alt="Mountain">
-                        <h3>explore hong kong</h3>
-                        <div class="tour-footer">
-                            <div class="country-info">   
-                                <p><i class="fas fa-flag"></i> China</p>
-                            </div>
-                            <div class="country-price">   
-                                <span>6 Days From $2100</span>
-                            </div>
-                        </div>
-                        <div class="tour-date">June 1th, 2022</div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <div class="wild">
-            <h2 class="content-title"><span> All Tours</span></h2>
-        </div>
-        <section>
-            <div class="galery">
-                <h2>OUR <span>Gallery</span></h2>
-                <div class="galery-imges">
-                    <img src="/img/fotis-PCqDYOWQ4zo-unsplash.jpg" alt="">
-                    <img src="/img/fotis-uAoud_jJtQ4-unsplash.jpg" alt="">
-                    <img src="/img/jean-carlo-emer--woXxRTDdkY-unsplash.jpg" alt="">
-                    <img src="/img/karsten-winegeart-TrpXHYrBgeE-unsplash.jpg" alt="">
-                    <div class="galery-footer">
-                        <div class="galery-left">
-                            <h2 class="galery-title">want latest tour info and updates?</h2>
+                </section>
+                <section>
+                    <div class="tours-content">
+                        <h2 class="content-title">Featured <span>Tours</span></h2>
+                        <div class="tours">
                             <a href="#">
-                                <p>Sign up for newsletter and stay up to date</p>
+                                <div class="tour">
+                                    <img src="/img/trey-hollins-Ty9c5tgkiZ0-unsplash (1).jpg" alt="Mountain">
+                                    <h3>tibet adventure</h3>
+                                    <div class="tour-footer">
+                                        <div class="country-info">
+                                            <p><i class="fas fa-flag"></i> China</p>
+                                        </div>
+                                        <div class="country-price">
+                                            <span>6 Days From $25850</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-date">July 23th, 2028</div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="tour">
+                                    <img src="/img/trey-hollins-dmyJ-G8aQ78-unsplash.jpg" alt="Mountain">
+                                    <h3>tibet adventure</h3>
+                                    <div class="tour-footer">
+                                        <div class="country-info">
+                                            <p><i class="fas fa-flag"></i> China</p>
+                                        </div>
+                                        <div class="country-price">
+                                            <span>6 Days From $2100</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-date">August 14th, 2022</div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="tour">
+                                    <img src="/img/joseph-corl-ZKI0BlXBXos-unsplash.jpg" alt="Mountain">
+                                    <h3>best of java</h3>
+                                    <div class="tour-footer">
+                                        <div class="country-info">
+                                            <p><i class="fas fa-flag"></i> China</p>
+                                        </div>
+                                        <div class="country-price">
+                                            <span>6 Days From $2100</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-date">Feb 28th, 2022</div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="tour">
+                                    <img src="/img/karsten-winegeart-_c2O_GfQVDg-unsplash.jpg" alt="Mountain">
+                                    <h3>explore hong kong</h3>
+                                    <div class="tour-footer">
+                                        <div class="country-info">
+                                            <p><i class="fas fa-flag"></i> China</p>
+                                        </div>
+                                        <div class="country-price">
+                                            <span>6 Days From $2100</span>
+                                        </div>
+                                    </div>
+                                    <div class="tour-date">June 1th, 2022</div>
+                                </div>
                             </a>
                         </div>
-                        <div class="galery-right">
-                            <form class="email-form">
-                                <input type="email" placeholder="your email" required>
-                                <button type="submit">submit</button>
-                            </form>
-                        </div>
-                        
-                        
                     </div>
-
+                </section>
+                <div class="wild">
+                    <a href="#">
+                        <h2 class="content-title"><span> All Tours</span></h2>
+                    </a>
                 </div>
-            </div>
-        </section>
+                <section>
+                    <div class="galery">
+                        <h2>OUR <span>Gallery</span></h2>
+                        <div class="galery-imges">
+                            <img src="/img/fotis-PCqDYOWQ4zo-unsplash.jpg" alt="">
+                            <img src="/img/fotis-uAoud_jJtQ4-unsplash.jpg" alt="">
+                            <img src="/img/jean-carlo-emer--woXxRTDdkY-unsplash.jpg" alt="">
+                            <img src="/img/karsten-winegeart-TrpXHYrBgeE-unsplash.jpg" alt="">
+                            <div class="galery-footer">
+                                <div class="galery-left">
+                                    <h2 class="galery-title">want latest tour info and updates?</h2>
+                                    <a href="#">
+                                        <p>Sign up for newsletter and stay up to date</p>
+                                    </a>
+                                </div>
+                                <div class="galery-right">
+                                    <form class="email-form">
+                                        <input type="email" placeholder="your email" required>
+                                        <button type="submit">submit</button>
+                                    </form>
+                                </div>
 
-      </main>
+                            </div>
 
-      <footer>
-       <div class="footer-content">
-           <div class="footer-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Gallery</a></li>
-            </ul>        
-           </div>
-           <div class="footer-social">
-                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-           </div>
-           <div class="footer-copyright">
-               <small>Copyright &copy; Hiking Tours 2022. All rights reserved.</small>
-           </div>
-       </div>
-   </footer>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Featured</a></li>
+                            <li><a href="#">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-copyright">
+                        <small>Copyright &copy; Hiking Tours 2022. All rights reserved.</small>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-  </div>
 
-  <!-- <script src="path/to/script.js"></script> -->
+    <!-- <script src="path/to/script.js"></script> -->
 </body>
+
 </html>
