@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-html{
+:root{
     --bg-color: #f2f7ff;
     --shadow:  10px 10px 10px rgba(0, 0, 0, 0.3);
-    --btn-main-color: #a0a0ef;
-    --error-msg-color: #dc3545;
+    --btn-main-color: #6161E4;
+    --error-msg-color: #E4002E;
     --text-color: #000000;
 }
 

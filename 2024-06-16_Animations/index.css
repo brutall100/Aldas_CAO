@@ -1,0 +1,29 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.btn {
+  background-color: #797979;
+  border-radius: 3px;
+  font-size: 1em;
+  color: #dedede;
+  padding: 0 1em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  will-change: transform, background-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background-color: #636363;
+  transform: scale(1.01);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  background-color: #262626;
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.btn:focus {
+  outline: 1px solid #373737;
+  box-shadow: inset 0 0 0 1px #515151;
+}
