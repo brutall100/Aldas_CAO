@@ -26,6 +26,7 @@ body {
 
 img{
   display: block;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,6 +108,11 @@ nav ul li a:hover {
   border: none;
   padding: 1em;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.bottom-btn button:hover {
+ background-color: rgb(91, 91, 91);
 }
 
 .bottom-btn img {
@@ -163,7 +169,7 @@ nav ul li a:hover {
 .shop-button {
   display: flex;
   align-items: center;
-  gap: 20px; /* Adjust spacing between text and SVG */
+  gap: 30px; 
   padding: 10px 0;
   letter-spacing: 6px;
   text-transform: uppercase;
@@ -171,13 +177,21 @@ nav ul li a:hover {
   background-color: transparent;
   color: var(--text-color);
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
   padding: 2em 0 3em;
+  transition: transform 0.3s ease, color 0.5s ease, margin-left 0.3s ease, color 1s ease-in-out;
 }
 
+.shop-button:hover {
+  color: var(--accent-color);
+  transform: scale(1.01);
+  margin-left: 0.05em;
+}
+
+
 .shop-button img {
-  width: 1.5em; /* Adjust SVG size */
+  width: 2.5em; 
   height: auto;
 }
 
