@@ -140,6 +140,11 @@ nav ul li a:hover {
 }
 
 /* main */
+/* section{
+  background-color: violet;
+} */
+
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -148,7 +153,10 @@ nav ul li a:hover {
   text-align: left;
   padding: 0em 1.3em;
   height: 100%;
+  /* width: 70%; */
 }
+
+
 
 .hero-text {
   padding-bottom: 2em;
@@ -224,11 +232,34 @@ header {
 
 section {
   display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .hero {
   width: 40%;
+
 }
+
+.hero-text p {
+  font-size: .7em;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  width: 30%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 
