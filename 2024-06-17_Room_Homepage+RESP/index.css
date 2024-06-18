@@ -4,7 +4,7 @@
 
 :root {
   --bg-color: #ffffff;
-  --primary-color: #212121;
+  --primary-color: #000000;
   --accent-color: #ff5722;
   --text-color: #333333;
   --spacing: 30px;
@@ -25,26 +25,109 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-color);
 }
 
-.page {
+header {
     background-image: url('/img/desktop-image-hero-1.jpg');
     background-size: cover; 
     background-position: center;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    position: relative;
+    
+    height: 300px;
+  }
+  
+.top-nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  align-items: center;
+
+  display: none;
+
+}
+
+header .close-sign{
+    color: rgba(85, 85, 85, 0.4);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: .5em;
+
+
 }
 
 nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    list-style-type: none;
+    padding: 1em 0;
     margin: 0;
+
+}
+nav ul li{
+    margin: 0 .4em;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.bottom-btn {
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-btn button {
+  background: none;
+  border: none;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.bottom-btn img {
+  width: 1em; 
+  height: auto;
+}
+
+.bottom-btn button:focus {
+  outline: none;
+}
+
+/* main */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  text-align: left;
+  padding: 0 20px;
+  height: 100%;
 }
 
 
+.shop-button {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between text and SVG */
+  padding: 10px 0;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1.3em;
+  cursor: pointer;
+  border-radius: 5px; /* Optional: for rounded corners */
+}
 
-
-
+.shop-button img {
+  width: 1.5em; /* Adjust SVG size */
+  height: auto;
+}
 
 
 
