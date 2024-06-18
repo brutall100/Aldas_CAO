@@ -209,6 +209,30 @@ nav ul li a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .top-wrapper {
+    display: flex;
+}
+
+header {
+    width: 60%;
+    height: 60%;
+}
+
+.hero-right {
+    width: 40%;
+}
+
+section {
+  display: flex;
+}
+
+.hero {
+  width: 40%;
+}
+
+
+
+
 
 
 }
