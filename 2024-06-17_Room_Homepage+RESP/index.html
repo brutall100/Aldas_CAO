@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="lt">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,25 +19,28 @@
   <div class="container">
     <div class="page">
       <header>
-        <div class="top-nav">
-          <span class="close-sign">&times;</span>
+        <div class="top-nav" id="topNav">
+          <span class="close-sign" id="closeNav">&times;</span>
           <nav>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-              </ul>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
           </nav>
         </div>
+        <button id="hamburgerBtn" class="hamburger-icon">
+          <img src="/img/icon-hamburger.svg" alt="Hamburger Menu">
+        </button>
         <div class="bottom-btn">
           <button aria-label="Swipe left">
-              <img src="/img/icon-angle-left.svg" alt="Button to swipe left">
+            <img src="/img/icon-angle-left.svg" alt="Button to swipe left">
           </button>
           <button aria-label="Swipe right">
-              <img src="/img/icon-angle-right.svg" alt="Button to swipe right">
+            <img src="/img/icon-angle-right.svg" alt="Button to swipe right">
           </button>
-      </div>
+        </div>
       </header>
 
       <main>
@@ -44,28 +48,29 @@
           <div class="hero">
             <div class="hero-text">
               <h1>Discover innovative ways to decorate</h1>
-              <p>We provide unmatched quality, comfort, and style for property owners across the country. 
-                Our experts combine form and function in bringing your vision to life. Create a room in your 
+              <p>We provide unmatched quality, comfort, and style for property owners across the country.
+                Our experts combine form and function in bringing your vision to life. Create a room in your
                 own style with our collection and make your property a reflection of you and what you love.</p>
-                <button class="shop-button">
-                  <span>Shop now</span>
-                  <img src="/img/icon-arrow.svg" alt="Shop Icon">
-                </button>
+              <button class="shop-button">
+                <span>Shop now</span>
+                <img src="/img/icon-arrow.svg" alt="Shop Icon">
+              </button>
             </div>
             <div class="hero-image">
               <img src="/img/image-about-dark.jpg" alt="Hero Image">
-           </div>
+            </div>
           </div>
           <div class="hero">
             <div class="hero-text">
-              <h2>We are available all across the globe</h2>
-              <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-                Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-                store locator. Any questions? Don't hesitate to contact us today.</p>
+              <h2>About our furniture</h2>
+              <p>Our multifunctional collection blends design and function to suit your individual taste.
+                Make each room unique, or pick a cohesive theme that best express your interests and what
+                inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                or anything in between. Product specialists are available to help you create your dream space.</p>
             </div>
             <div class="hero-image">
               <img src="/img/image-about-light.jpg" alt="Hero Image">
-           </div>
+            </div>
           </div>
         </section>
       </main>
@@ -77,6 +82,7 @@
       </footer>
     </div>
   </div>
-  <script src="path/to/script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

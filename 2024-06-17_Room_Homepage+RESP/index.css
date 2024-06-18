@@ -2,10 +2,12 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 :root {
   --bg-color: #ffffff;
   --primary-color: #000000;
-  --accent-color: #ff5722;
+  --accent-color: rgba(40, 40, 40, 0.4);
   --text-color: #333333;
   --spacing: 30px;
 }
@@ -13,6 +15,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: "League Spartan", sans-serif;
 }
 
 /* .container {
@@ -21,58 +24,76 @@ body {
   padding: 0 20px;
 } */
 
+img{
+  display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--primary-color);
 }
 
+p {
+  font-size: 1.1em;
+  line-height: 1.3;
+  color: var(--accent-color);
+}
+
 header {
-    background-image: url('/img/desktop-image-hero-1.jpg');
-    background-size: cover; 
-    background-position: center;
-    width: 100%;
-    position: relative;
-    
-    height: 300px;
-  }
-  
-.top-nav{
-  display: flex;
+  background-image: url('/img/mobile-image-hero-1.jpg');
+  background-size: cover; 
+  background-position: center;
+  width: 100%;
+  position: relative;
+  padding: 15em 0;
+}
+
+.top-nav {
+  display: none; 
   justify-content: space-between;
   background-color: #FFFFFF;
   align-items: center;
-
-  display: none;
-
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 2em 0;
 }
 
-header .close-sign{
-    color: rgba(85, 85, 85, 0.4);
-    font-size: 2rem;
-    font-weight: bold;
-    margin-left: .5em;
-
-
+header .close-sign {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: .7em;
+  cursor: pointer;
 }
 
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    padding: 1em 0;
-    margin: 0;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 1em 0;
+  margin: 0;
+}
 
+nav ul li {
+  margin: 0 .5em;
 }
-nav ul li{
-    margin: 0 .4em;
 
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: lowercase;
+  transition: transform 0.3s ease, color 0.5s ease;
+  display: inline-block; 
 }
-nav ul li a{
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-    text-transform: lowercase;
+
+nav ul li a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+  transform: scale(1.2); 
 }
+
 
 .bottom-btn {
   background-color: #000000;
@@ -84,7 +105,7 @@ nav ul li a{
 .bottom-btn button {
   background: none;
   border: none;
-  padding: .5em;
+  padding: 1em;
   cursor: pointer;
 }
 
@@ -97,6 +118,21 @@ nav ul li a{
   outline: none;
 }
 
+.hamburger-icon {
+  position: absolute;
+  padding: 3em 1.5em;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-icon img {
+  width: 2em;
+  height: auto;
+}
+
 /* main */
 .hero {
   display: flex;
@@ -104,8 +140,23 @@ nav ul li a{
   justify-content: right;
   align-items: center;
   text-align: left;
-  padding: 0 20px;
+  padding: 0em 1.3em;
   height: 100%;
+}
+
+.hero-text {
+  padding-bottom: 2em;
+}
+
+.hero-text h1 {
+  font-size: 2em;
+  line-height: 1.2;
+  margin-bottom: .5em;
+}
+.hero-text h2 {
+  font-size:1.4em;
+  line-height: 1.2;
+  padding: 1em 0 .1em;
 }
 
 
@@ -119,9 +170,10 @@ nav ul li a{
   border: none;
   background-color: transparent;
   color: var(--text-color);
-  font-size: 1.3em;
+  font-size: 1.1em;
+  font-weight: 700;
   cursor: pointer;
-  border-radius: 5px; /* Optional: for rounded corners */
+  padding: 2em 0 3em;
 }
 
 .shop-button img {
