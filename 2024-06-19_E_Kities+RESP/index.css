@@ -11,3 +11,23 @@
     height: 200px;
     object-fit: cover;
 }
+
+.fancy-btn {
+    color: #343a40;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.fancy-btn button { 
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}

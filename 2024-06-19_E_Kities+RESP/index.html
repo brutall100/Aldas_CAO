@@ -119,6 +119,43 @@
                 <h2 class="h1 text-primary fw-bold text-center m-5">Pavadinimas 2</h2>
 
 
+                <!-- Sidebar -->
+                <div class="fancy-btn">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        Meniu
+                    </button>
+                </div>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    Link with href
+                </a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    Button with data-bs-target
+                </button>
+                
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                        </div>
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Dropdown button
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+
+
 
                 <!-- MODAL -->
                 <div class="modal" id="myModal1" tabindex="-1">
@@ -216,27 +253,27 @@
                 
             </main>
 
-            <footer class="bg-dark-subtle p-5 d-flex gap-3 d-flex justify-content-between ">
+            <footer class="bg-dark p-5 d-flex gap-3 d-flex justify-content-between ">
                 <ul class="list-group list-group-flush ">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item bg-success">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item bg-dark text-white">An item</li>
+                    <li class="list-group-item bg-dark text-white">A second item</li>
+                    <li class="list-group-item bg-dark text-white">A third item</li>
+                    <li class="list-group-item bg-dark text-white">A fourth item</li>
+                    <li class="list-group-item bg-dark text-white">And a fifth one</li>
+                  </ul> 
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark text-white">An item</li>
+                    <li class="list-group-item bg-dark text-white">A second item</li>
+                    <li class="list-group-item bg-dark text-white">A third item</li>
+                    <li class="list-group-item bg-dark text-white">A fourth item</li>
+                    <li class="list-group-item bg-dark text-white">And a fifth one</li>
                   </ul>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
-                  </ul>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item bg-dark text-white">An item</li>
+                    <li class="list-group-item bg-dark text-white">A second item</li>
+                    <li class="list-group-item bg-dark text-white">A third item</li>
+                    <li class="list-group-item bg-dark text-white">A fourth item</li>
+                    <li class="list-group-item bg-dark text-white">And a fifth one</li>
                   </ul>
             </footer>
         </div>
