@@ -7,7 +7,7 @@
     object-fit: cover;
 }
 
-.card-group img{
+.card-group-custom img{
     height: 200px;
     object-fit: cover;
 }
