@@ -8,7 +8,6 @@
     --primary-txt-color: #C542FF;
     --accent-txt-color: #3F2257;
     --text-color: #ffffff;
-    /* --spacing: 30px; */
     --gradient-bg: linear-gradient(
       90deg,
       hsl(292deg 100% 63%) 0%,
@@ -24,7 +23,7 @@
     );
   }
 
-body {
+body{
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: "Rubik", sans-serif;
@@ -33,7 +32,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Make sure the body is the reference for the absolute positioning */
+    position: relative; 
   }
 
   body::before {
@@ -61,17 +60,15 @@ body {
     z-index: -1; 
   }
 
-/* .container {
+.container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
-} */
+}
 
 .mobile {
-  width: 300px;
-  /* height: 60vh; */
+  max-width: 300px;
   margin: 0 auto;
-  padding: 1em;
+  padding: .7em;
   background-color:var(--mobile-bg-color);
   border-radius: 2em;
 }
@@ -80,7 +77,7 @@ body {
     background-color: rgb(234, 234, 234);
     width: 100%;
     height: 100%;
-    border-radius: 2em;
+    border-radius: 2em 2em 1.5em 1.5em;
 
 }
 /* // Mobile Header  */
@@ -99,7 +96,7 @@ body {
     background-color: rgb(255, 255, 255);
     border-radius: 2em;
     position: absolute;
-    top: -20%;
+    top: -12%;
 }
 
 .mobile-header-content {
@@ -161,8 +158,6 @@ body {
   background-color: transparent;
   padding: 0;
 }
-
-
 
 .mobile-main {
   width: 100%;
@@ -243,20 +238,95 @@ body {
   font-size: 1.2em;
 }
 
+/* Mobile Footer */
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
 
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 1.5em;
+  margin: .5em;
+  outline: none;
+}
 
+.input-container button {
+  padding: 10px;
+  background-color: var(--accent-txt-color);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: .5em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  right: 2em;
+}
 
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+.input-container button i {
+  pointer-events: none;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+}
+.text-container h1{
+  color: var(--accent-txt-color);
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 1em;
+}
+.text-container p{
+  color: rgba(128, 128, 128, 0.697);
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 1em;
+  margin-bottom: 2.5em;
+  max-width: 500px;
+}
 
 
 /* MOBILE FIRST */
-@media screen and (min-width: 300px) {
-
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
 }
 
-@media screen and (min-width: 500px) {
 
 }
+@media screen and (min-width: 850px) {
+  body::before {
+    width: 60%;
+    height: 140%;
+  }
+  main {
+    gap: 10vw;
+    
+ }
 
-@media screen and (min-width: 800px) {
+
+}
+@media screen and (min-width: 1000px) {
+  body::before {
+    width: 55%;
+    height: 140%;
+  }
 
 }
