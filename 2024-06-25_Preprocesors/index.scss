@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --primary-color: #212121;
+  --accent-color: #ff5722;
+  --text-color: #333333;
+  --spacing: 30px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+aside {
+  width: calc(30% - (var(--spacing) * 0.3));
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--spacing);
+}
+
+// npm install -g sass
