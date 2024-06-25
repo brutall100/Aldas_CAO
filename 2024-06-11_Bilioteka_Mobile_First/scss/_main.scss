@@ -1,0 +1,23 @@
+@use './variables' as v;
+
+/* MAIN */
+.books-content {
+    background-color: v.$primary-color;
+    padding: .4em 1em 2em 1em;
+    margin: 1em;
+    border-radius: .5em;
+    color: v.$main-text-color;  
+}
+
+.books-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.books-content table th, td {
+    text-align: left;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 1em .2em;
+}
+.books-content table td:last-child {
+    margin-bottom: 20em;
+}
