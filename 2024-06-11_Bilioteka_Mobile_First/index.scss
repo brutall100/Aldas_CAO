@@ -2,22 +2,23 @@
 @use './scss/header';
 @use './scss/main';
 @use './scss/footer';
+@use './scss/base';
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//     box-sizing: border-box;
+// }
 
-body {
-    background-color: v.$bg-color;
-    color: v.$main-text-color;
-}
+// body {
+//     background-color: v.$bg-color;
+//     color: v.$main-text-color;
+// }
 
-.container {
-    max-width: 1330px;
-    margin: 0 auto;
-}
+// .container {
+//     max-width: 1330px;
+//     margin: 0 auto;
+// }
 
 
 

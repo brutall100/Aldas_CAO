@@ -7,17 +7,19 @@
     margin: 1em;
     border-radius: .5em;
     color: v.$main-text-color;  
-}
 
-.books-content table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.books-content table th, td {
-    text-align: left;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-    padding: 1em .2em;
-}
-.books-content table td:last-child {
-    margin-bottom: 20em;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            text-align: left;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+            padding: 1em .2em;
+        }
+
+        td:last-child {
+            margin-bottom: 20em;
+        }
+    }
 }

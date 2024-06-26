@@ -1,11 +1,11 @@
 @use './variables' as v;
 
 /* Footer */
-footer div {
-    padding:0  1em;
-    text-align: center;
-    color: v.$main-text-color;
-    font-size: 1.2em;
+footer {
+    div {
+        padding: 0 1em;
+        text-align: center;
+        color: v.$main-text-color;
+        font-size: 1.2em;
+    }
 }
-
-

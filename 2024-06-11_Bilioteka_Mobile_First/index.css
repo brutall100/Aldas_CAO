@@ -5,16 +5,11 @@
   grid-template-columns: 1fr;
   grid-template-rows: 160px 100px;
 }
-
 .header-wrapper img {
   height: 220px;
   margin-top: 1em;
-}
-
-.header-wrapper img {
   place-self: center;
 }
-
 .header-wrapper ul {
   padding: 2em 0;
   place-self: center;
@@ -22,7 +17,6 @@
   text-align: center;
   padding: 0;
 }
-
 .header-wrapper ul a {
   text-decoration: none;
   font-size: 1.5em;
@@ -39,18 +33,15 @@
   border-radius: 0.5em;
   color: #63696B;
 }
-
 .books-content table {
   width: 100%;
   border-collapse: collapse;
 }
-
-.books-content table th, td {
+.books-content table th, .books-content table td {
   text-align: left;
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
   padding: 1em 0.2em;
 }
-
 .books-content table td:last-child {
   margin-bottom: 20em;
 }
