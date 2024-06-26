@@ -1,6 +1,6 @@
 /* Header */
 .header-wrapper {
-  background-color: #ffffff;
+  background-color: #fffafa;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 160px 100px;
@@ -20,14 +20,14 @@
 .header-wrapper ul a {
   text-decoration: none;
   font-size: 1.5em;
-  color: #5d0c4e;
+  color: #5e0e4f;
   font-weight: 700;
   line-height: 1.5;
 }
 
 /* MAIN */
 .books-content {
-  background-color: #ffffff;
+  background-color: #fffafa;
   padding: 0.4em 1em 2em 1em;
   margin: 1em;
   border-radius: 0.5em;
@@ -61,7 +61,7 @@ footer div {
 }
 
 body {
-  background-color: #cac9c9;
+  background-color: #dbdbdb;
   color: #63696B;
 }
 
