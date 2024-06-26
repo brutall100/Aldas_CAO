@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+.page main {
+  background-color: black;
+}
+.page main h2 {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 4em;
+}
+.page main p {
+  color: white;
+  font-size: 1.2em;
+}
+.page main .years-content {
+  margin-top: 2em;
+  display: grid;
+}
+.page main .years-content .years-grid {
+  display: grid;
+  grid-template-columns: 10em 1fr;
+  padding: 10px;
+  border-radius: 5px;
+}
+.page main .years-content .years-grid .programer-title,
+.page main .years-content .years-grid .programer-exp {
+  margin: 0;
+  padding: 10px;
+}
+.page main .years-content .years-grid .programer-title {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.page main .years-content .years-grid .programer-exp {
+  background-color: transparent;
+  position: relative;
+}
+.page main .years-content .years-grid .programer-exp::after {
+  content: "";
+  display: block;
+  height: 40%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+.page main .years-content .years-grid .programer-exp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: white;
+}
+.page main .years-content .years-grid:nth-child(1) .programer-exp::after {
+  background-color: #1200FF;
+  width: 25%;
+  border-radius: 20px;
+}
+.page main .years-content .years-grid:nth-child(2) .programer-exp::after {
+  background-color: #FF00E9;
+  width: 50%;
+  border-radius: 20px;
+}
+.page main .years-content .years-grid:nth-child(3) .programer-exp::after {
+  background-color: #00FFFF;
+  width: 100%;
+  border-radius: 20px;
+}
+.page main .years-content .years-grid:last-child {
+  display: grid;
+}
+.page main .years-content .years-grid:last-child .years-title {
+  flex-basis: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+}
+.page main .years-content .years-grid:last-child dd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+}
+.page main .years-content .years-grid:last-child span {
+  padding: 2px 5px;
+  margin: 2px;
+}/*# sourceMappingURL=index.css.map */
