@@ -101,7 +101,6 @@ button{
 }
 
 /* MAIN */
-
 main {
     /* display: flex;
     flex-wrap: wrap;
@@ -111,7 +110,7 @@ main {
    
 }
 
-
+/*// A-SECTION */
 .a-section {
     display: flex;
     width: 100%;
@@ -158,13 +157,48 @@ main {
 
 }
 
-
+/*// B-SECTION */
 .b-section {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
+
+.accent-card{
+    background-color: violet;
+}
+
+.cards-ctn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);       
+}
+
+
+
+
+/*// C-SECTION */
+.c-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* // D-SECTION */
+.d-section-ctn {
+    display: grid;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
 
 
 
