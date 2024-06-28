@@ -89,13 +89,19 @@ nav ul li {
     list-style-type: none;
 
 }
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: var(--elements-tx-color);
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
+    transition: .5s ease-in-out;
 }
+
+nav ul li a:hover {
+    color: var(--elements-bg-color);
+}
+
 button{
     background-color: var(--elements-bg-color);
     color: var(--bg-color);
