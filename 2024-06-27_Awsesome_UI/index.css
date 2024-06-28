@@ -15,7 +15,8 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Lato", sans-serif;
 }
 
 .btn{
@@ -30,31 +31,31 @@ body {
     margin-top: 2em;
 }
 
-.container {
+/* .container {
   max-width: 1440px;
   min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
-}
+} */
 .page{
 
     /* del a section */
     position: relative;
 }
 
-/* HEADER */
+/*// HEADER */
 header {
     color: var(--elements-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 3em;
     /* gap: 390px; */
 }
 
-/*// HEADER K */
+/*?? HEADER K */
 .logo {
     display: flex;
     align-items: center;
@@ -63,15 +64,21 @@ header {
 
 .logo img {
     height: 50px;
+    margin-left: 8.7em;
 }
 
 .logo h2 {
     font-size: 14.88px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1.2px;
 }
 
-/* //HEADER D */
+/*??HEADER D */
+nav {
+  margin-right: 8.7em;
+}
+
 nav ul {
     display: flex;
     gap: 3em;
@@ -116,15 +123,12 @@ main {
     width: 100%;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .hero {
-    width: 495px;
-    /* height: 375px; */
-    /* position: absolute;
-    top: 264px;
-    left: 180px; */
+    width: 34.5%;
+    margin-top: 3.3em;
+    margin-left: 2.5em;
     background-image: url("/img/Ellipse\ 116.svg");
     background-repeat: no-repeat;
     background-position: 40% 0;
@@ -137,10 +141,12 @@ main {
     font-weight: 500;
     color: var(--elements-tx-color);
     text-transform: uppercase;
-
-
     line-height: 1.2;
     font-size: 2.5em;
+}
+.hero h1::first-letter {
+    font-size: 1.4em;
+    font-weight: 300;
 }
 
 .hero p {
@@ -152,9 +158,14 @@ main {
     margin: 0;
 }
 
-.hero button {
-   
+/* .hero button { 
+} */
 
+.cool-svg{
+    margin-top:2.5em;
+    margin-right: 5em;
+
+    /* background-color: #4F4F4F; */
 }
 
 /*// B-SECTION */
@@ -166,7 +177,16 @@ main {
 }
 
 .accent-card{
+    width: calc(50% - 15px);
+
+
+    /* background-color: violet;
+    padding: 1em; */
+}
+
+.accent-card-top{
     background-color: violet;
+    padding: 1em;
 }
 
 .cards-ctn{
