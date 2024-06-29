@@ -502,6 +502,81 @@ main {
 
 
 
+/* // F-SECTION */
+.f-section {
+    margin-top: 8.4em;
+
+
+    /* background-color: rgba(100,123,100,1); */
+}
+/* .f-section-ctn{
+  background-color: #5c2424;
+} */
+
+.f-section-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8.5em;
+
+
+    /* background-color: #5c2424; */
+}
+
+.f-section-top-right small{
+    color: var(--goldenrod-color);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 17px;
+    
+}
+.f-section-top-right h2{
+    color: var(--elements-bg-color);
+    font-size: 2.5625em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+    
+}
+
+.f-section-top-left .button-container{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  
+ 
+}
+.f-section-top-left .button-container button{
+    height: 100%;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+ 
+}
+.f-section-top-left .button-container button img{
+    background-color: white;
+    padding: 2em; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
