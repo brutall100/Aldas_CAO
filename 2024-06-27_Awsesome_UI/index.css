@@ -129,6 +129,10 @@ main {
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    /* background: rgb(235,220,212);
+    background: radial-gradient(circle at 60% 60%, rgba(235,220,212,1) 35%, rgba(255,255,255,1) 100%); */
+
+    
 }
 
 .hero {
@@ -180,20 +184,81 @@ main {
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    gap: 90px;
+    margin-top: 8.5em;
+
 }
 
 .accent-card{
-    width: calc(50% - 15px);
+    width: calc(50%);
+    overflow: hidden;
 
 
-    /* background-color: violet;
-    padding: 1em; */
+
+    /* border: 1px solid var(--elements-bg-color); */
 }
 
 .accent-card-top{
-    background-color: violet;
-    padding: 1em;
+    background: rgb(235,220,212);
+    background: linear-gradient(180deg, rgba(235,220,212,1) 23%, rgba(247,241,238,1) 82%);
+    width: 717px;
+    height: 153px;
+    text-align: left;
+    padding-left: 8.5em;
+} 
+
+.accent-card-top span{
+    color: hsla(34, 86%, 67%, 1);
+    font-size: 24px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 17px;
+
+    /* background-color: #333333; */
 }
+.accent-card-top h2{
+    color: var(--elements-bg-color);
+    font-size: 41px;
+    text-transform: uppercase;
+    margin: 0;
+
+    /* background-color: #333333; */
+}
+
+/* // */
+.accent-card-bottom{
+    text-align: left;
+    padding-left: 8.5em;
+}
+.accent-card-bottom p{
+    color: var(--elements-tx-second-color);
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    margin-bottom: 2.5em;
+
+    /* background-color: #333333; */
+}
+.accent-card .accent-card-bottom-btn{
+    padding: 1.7em;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cards-ctn{
     display: grid;
