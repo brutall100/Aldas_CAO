@@ -586,14 +586,14 @@ main {
     gap: 2em;
     margin-left: 8.75em;
     overflow: hidden;
+    height: 420px;
 
 
     /* background-color: #5c2424; */
-    margin-bottom: 200px;
-    height: 420px;
+    /* margin-bottom: 200px; */
 }
 
-.f-section-bottom-card{
+.f-section-bottom-card {
     display: grid;
     height: 100%;
     grid-template-columns: 140px 1fr;
@@ -603,14 +603,15 @@ main {
     border-radius: .5em;
     background: rgb(234,237,234);
     background: linear-gradient(0deg, rgba(234,237,234,1) 0%, rgba(255,255,255,1) 100%);
+    transition: background .55s ease-in-out, box-shadow .55s ease-in-out, transform .55s ease-in-out;
 }
 
 .f-section-bottom-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background: rgb(234, 237, 234);
     background: linear-gradient(0deg, rgba(230, 230, 230, 1) 3%, rgba(255, 255, 255, 1) 100%);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #648864;
 }
 
 
@@ -661,6 +662,187 @@ main {
 
 
 
+
+/* //FOOTER */
+.footer-section {
+    margin-top: 10.6em;
+    line-height: 1.5;
+    background-color: #f0dcc5;
+    padding: 40px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-ctn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 3em;
+}
+
+.footer-section-a, .footer-section-b, .footer-section-c, .footer-section-d {
+    /* flex: 1 1 200px; */
+
+    /* margin: 50px; */
+}
+
+.footer-section-a{
+    width: 22%;
+    margin-left: 6.1em;
+}
+
+.footer-section-a .footer-logo {
+    margin-top: 3.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-section-a .footer-logo img {
+    margin-right: 10px;
+    height: 2.1875em;
+}
+
+
+.footer-section-a h2 {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--elements-bg-color);
+    text-transform: uppercase;
+
+}
+
+.footer-section-a p {
+    margin-top: .7em;
+    font-size:  0.875em;
+    color: var(--elements-tx-second-color);
+
+
+    /* background-color: #333333; */
+}
+.footer-section-a p:nth-child(3){    
+    margin:1em 0 .5em 0;
+
+
+    /* background-color: #491a1a; */
+}
+
+.social-icons {
+    margin-top: 1.1875em;
+    display: flex;
+    gap: 1em; 
+}
+
+.social-icons a {
+    width: 32px;
+    height: 32px;
+    color:var(--elements-bg-color);
+    transition: all .5s ease-in-out;
+}
+.social-icons a i{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(100, 123, 100, 0.101);
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    color:rgb(61, 71, 61);
+    background-color: rgba(100, 123, 100, 0.311);
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+
+.footer-section-b, .footer-section-c {
+    margin-top: 2.5em;
+    margin-left: .9em;
+    width: 19%;
+}
+
+.footer-section-b h2, .footer-section-c h2 {
+    text-transform: capitalize;
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: var(--elements-bg-color);
+}
+
+.footer-section-b ul, .footer-section-c ul {
+    
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section-b ul li, .footer-section-c ul li {
+    margin: 0.75em 0;
+    line-height: 1.5;
+    
+}
+
+.footer-section-b ul li a, .footer-section-c ul li a {
+    text-decoration: none;
+    color: var(--elements-tx-second-color);
+    font-size: 1em;
+}
+
+
+
+.footer-section-d {
+    margin-top: 2.5em;
+    width: 21%;
+    margin-right: 6.5em;
+
+
+    /* max-width: 283px; */
+
+
+    /* margin-right: 10em ; */
+}
+
+.footer-section-d textarea {
+    /* width: 100%; */
+    height: 7.0625em;
+}
+
+.footer-section-d h2 {
+    color: var(--elements-bg-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.footer-section-d textarea {
+    border: none;
+    padding:1em 2em; 
+    width: 100%; 
+}
+
+.footer-section-d textarea::placeholder {
+    color: var(--elements-tx-second-color);
+    font-size: 0.875em;
+
+}
+.footer-section-d textarea:focus {
+    outline-color: var(--elements-bg-color);
+    color: var(--elements-bg-color);
+
+
+}
+
+.footer-section-d .btn {
+    height: 55px;
+    width: 100%;
+    
+    margin-top: 20px;
+   
+}
 
 
 
