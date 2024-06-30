@@ -19,6 +19,7 @@ body {
     color: var(--text-color);
     /* font-family: "Poppins", sans-serif; */
     font-family: "Lato", sans-serif;
+    overflow: hidden;
 }
 
 .btn {
@@ -49,8 +50,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 /* .container {
-  max-width: 1440px;
-  min-height: 100vh;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -130,6 +130,17 @@ nav ul li a:hover {
     padding: 10px 15px;
     text-transform: capitalize;
 }
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger img {
+    height: 1.75em;
+}
+
+
+
 
 /* MAIN */
 main {
@@ -865,17 +876,88 @@ main {
 
 
 
+/* DESKTOP FIRST */
+@media screen and (max-width: 1300px) {
 
-/* DESKTOP FIRST */   
-/* @media screen and (max-width: 799px) {
+    /* Header */
+    nav {
+        margin: auto;
+    }
+
+    nav ul {
+        gap: 1.7em;
+    }
+
+
 
 }
 
-@media screen and (max-width: 499px) {
+@media (max-width: 900px) {
+
+    /* Header */
+    .logo img {
+        margin-left: 10%;
+    }
+
+    nav {
+        margin: 0 10%;
+    }
+
+    nav ul {
+        gap: 1em;
+    }
+
+    nav ul .reg-btn {
+        padding: 5px 5px 5px 17px;
+    }
+
+    nav ul li a {
+        gap: 1em;
+        font-size: 1em;
+    }
 
 }
 
-@media screen and (max-width: 299px) {
+@media screen and (max-width: 800px) {
+    /* Header */
+    .logo img {
+        margin-left: 20%;
+    }
+    /* .logo h2 {
+       word-break: normal;
+    
+    } */
 
-} */
+    nav {
+        margin: 0 10%;
+    }
+    
+    .nav-links {
+        /* padding-right: 20%; */
+        padding: 0;
+        margin-right: 20%;
+        display: none;
+        flex-direction: column;
+    }
 
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 4em;
+        right: 1.5em;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    /* Header */
+    .logo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
