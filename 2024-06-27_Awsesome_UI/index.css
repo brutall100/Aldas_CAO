@@ -58,9 +58,9 @@ body {
 } */
 .page{
 
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(248, 236, 230) 5%, rgb(246, 243, 242) 20%, rgba(255,255,255,1) 100%);
-    position: relative;
+   
+    /* position: relative; */
+    z-index: 20;
 }
 
 /*// HEADER */
@@ -147,9 +147,8 @@ main {
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    /* background: rgb(235,220,212);
-    background: radial-gradient(circle at 60% 60%, rgba(235,220,212,1) 35%, rgba(255,255,255,1) 100%); */
-
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(248, 236, 230) 35%, rgb(249, 238, 234) 70%, rgba(255,255,255,1) 100%);
     
 }
 
@@ -408,7 +407,7 @@ main {
 .d-section-evcard .extra-img-right {
     position: absolute;
     bottom: -40px; 
-    left: 100%;
+    left: 91%;
     transform: translateX(-50%);
     z-index: -10;
     display: block; 
