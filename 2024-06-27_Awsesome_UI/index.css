@@ -21,9 +21,11 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.btn{
+.btn {
     width: 350px;
-    color: #FEFEFE;
+    color: var(--bg-color);
+    background: rgb(100,123,100);
+    background: linear-gradient(90deg, rgba(100,123,100,1) 35%, rgba(102,172,102,1) 100%);
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
@@ -32,8 +34,20 @@ body {
     border: none;
     margin-top: 2em;
     cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
 }
 
+.btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
 /* .container {
   max-width: 1440px;
   min-height: 100vh;
@@ -44,7 +58,8 @@ body {
 } */
 .page{
 
-    /* del a section */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(248, 236, 230) 5%, rgb(246, 243, 242) 20%, rgba(255,255,255,1) 100%);
     position: relative;
 }
 
@@ -105,11 +120,11 @@ nav ul li a:hover {
     color: var(--elements-bg-color);
 }
 
-button{
+.reg-btn{
     background-color: var(--elements-bg-color);
     color: var(--bg-color);
-    background: rgb(100,123,100);
-    background: linear-gradient(90deg, rgba(100,123,100,1) 35%, rgba(102,172,102,1) 100%);
+    width: 93px;
+    margin: 0;
     border: none;
     border-radius: 3px;
     padding: 10px 15px;
@@ -189,7 +204,7 @@ main {
     gap: 90px;
     margin-top: 8.5em;
 
-    background-color: rgb(244, 245, 242);
+    /* background-color: rgb(244, 245, 242); */
 
 }
 
@@ -390,15 +405,14 @@ main {
     display: block; 
 }
 
-/* .d-section-evcard .extra-img-right{
+.d-section-evcard .extra-img-right {
     position: absolute;
     bottom: -40px; 
-    left: 0;
-    transform: translateX(50%);
+    left: 100%;
+    transform: translateX(-50%);
     z-index: -10;
     display: block; 
-} */
-
+}
 
 .d-section-evcard:hover {
     background: var(--elements-bg-color);
