@@ -90,6 +90,7 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    white-space: nowrap;
 }
 
 /*??HEADER D */
@@ -221,7 +222,7 @@ main {
 /* ??Left side B */
 .accent-card{
     width: calc(50%);
-    overflow: hidden;
+    /* overflow: hidden; */
 
     /* border: 1px solid var(--elements-bg-color); */
 }
@@ -324,27 +325,6 @@ main {
     margin-top: 0;
 }
 
-
-/* !! MAN sitas graziau. */
-/* .card:hover{
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-    transition: .5s ease-in-out;
-    transform: scale(1.1);
-    z-index: 1;
-    background-color: var(--elements-bg-color);
-    border-radius: 1em;
-    padding: 1em;
-    margin: 0;
-    color: var(--bg-color);
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 1px;
-    word-wrap: break-word;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-} */
 
 
 
@@ -463,9 +443,6 @@ main {
 /* // E-SECTION */
 .e-section {
     margin-top: 10.5em;
-
-
-    /* background-color: rgba(100,123,100,1); */
 }
 
 .e-section-ctn {
@@ -488,9 +465,6 @@ main {
 .e-section-txt-ctn{
     width: 31%;
     margin-right: 7em;
-
-
-    /* background-color: yellow; */
 }
 .e-section-txt-ctn small{
     color: var(--goldenrod-color);
@@ -507,8 +481,6 @@ main {
     font-weight: 500;
     text-transform: uppercase;
     margin: 0 0 24px 0;
-
-    /* background-color: #333333; */
 }
 
 .e-section-txt-ctn p{
@@ -517,8 +489,6 @@ main {
     text-transform: uppercase;
     line-height: 1.5;
     font-size: 1em;
-
-    /* background-color: #333333; */
 }
 .e-section-txt-ctn button{
    margin-top: 2.5em;
@@ -529,9 +499,6 @@ main {
 /* // F-SECTION */
 .f-section {
     margin-top: 8.4em;
-
-
-    /* background-color: rgba(100,123,100,1); */
 }
 /* .f-section-ctn{
   background-color: #5c2424;
@@ -901,6 +868,33 @@ main {
         font-size: 1em;
     }
 
+    /* A section */
+    .hero {
+        margin-left: 1.8125em;
+        width: 80%;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 0.625em;
+    }
+    .hero .btn {
+        border-radius: 1px;
+        font-size: 0.625em;
+        font-weight: 600;
+        width: 80%;
+    }
+
+    .cool-svg {
+        margin-left: 0;
+        width:10%;
+    }
+    .cool-svg img {
+       height: 304px;
+        overflow: hidden;
+    }
+
     /* Footer */
     .footer-section-a {
         width: 30%;
@@ -936,8 +930,8 @@ main {
     .hamburger {
         display: block;
         position: absolute;
-        top: 4em;
-        right: 1.5em;
+        top: 2.625em;
+        right: 2em;
     }
 
     .nav-links.active {
@@ -1001,11 +995,221 @@ main {
     }
 }
 
+@media screen and (max-width: 500px) {
+
+    /* Header */
+    .logo {
+        justify-content: start;
+    }
+    .logo img{
+        height: 33px;
+    }
+    .logo h2 {
+        font-size: 10px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    /* A section */
+    .hero {
+        margin-top: 0;
+        margin-left: 1.8125em;
+        width: 100%;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+
+    }
+    .hero p {
+        font-size: 0.625em;
+    }
+    .hero .btn {
+        border-radius: 1px;
+        font-size: 0.625em;
+        font-weight: 600;
+        width: 70%;
+    }
+
+    .cool-svg {
+        margin-left: 0;
+        width:4%;
+    }
+    .cool-svg img {
+       height: 304px;
+        overflow: hidden;
+    }
+
+    /* B section */
+    .b-section {
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    .accent-card-top {
+        padding-left: 2em;
+        height: 4.25em;
+        margin-right: 200em;
+        width: 140%;
+    }
+    
+    .accent-card-top span {
+        font-size: 0.8125em;
+        font-weight: 500;
+        margin: 10px 0 0;
+    }
+    .accent-card-top h2 {
+        font-size: 1.25em;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+
+    .accent-card-bottom {
+        padding-left: 2em;
+        width: 170%;
+    }
+    .accent-card-bottom p{
+        font-size: 0.625em;
+    }
+
+    .accent-card-bottom .accent-card-bottom-btn{
+        border-radius: 1px;
+        font-size: 0.625em;
+        width: 80%;
+        height: 5em;
+    }
+
+    .cards-ctn {
+        gap: 2em;
+        margin: 0;
+        margin-top: 3em;
+        padding: 1em;
+    }
+
+    /* C section */
+    .c-section {
+        margin-top: 2em;
+    } 
+
+    .c-section small {
+        font-size: 0.8125em;
+    }
+    .c-section h2 {
+        font-size: 1.25em;
+        font-weight: 500;
+    }
+
+    /* D section */
+    .d-section {
+        margin-top: 1em;
+        overflow: hidden;
+        margin-bottom: 2em;
+    }
+    
+    .d-section-ctn {
+        justify-content: flex-start;
+        gap: 1em;
+        margin-left: 3em;
+    }
+
+    .d-section-evcard{
+    
+        width: 400px;
+        height: 150px;
+        padding: 1em 3em;
+    
+    }
+    .d-section-evcard img{
+        height: 28px;
+    
+    }
+    .d-section-evcard h2{
+        font-size: 0.625em;
+        font-weight: 500;
+    
+    }
+    .d-section-evcard p{
+        font-size: 0.5em;
+        font-weight: 500;
+    
+    }
+
+   .d-section-evcard .extra-img img {
+        height: 100px;
+        width: 100px;
+        overflow:visible;
+    }   
+    .extra-img-right {
+        display: none;
+    } 
+    
+    /* E section */
+    .e-section {
+        margin-top: 2em;
+    }
+    
+    .e-section-img-ctn{
+        margin: 0;
+    }
+    .e-section-img-ctn img{
+        margin: 0;
+        display: none;
+    }
+
+    .e-section-txt-ctn{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .e-section-txt-ctn small{
+        font-size: 13px;
+        
+    }
+    .e-section-txt-ctn h2{
+        font-size: 20px;
+        
+    }
+    .e-section-txt-ctn p{
+        font-size: 10px;
+        
+    }
+    .e-section-txt-ctn button{
+        font-size: 10px;
+        border-radius: 1px;
+        width: 100%;
+        
+    }
+
+    /* F section */ 
+    .f-section {
+        margin: 0;
+        margin-top: 5em;
+
+
+        padding: 0;
+    }
+
+    .f-section-ctn, .f-section-top, .f-section-bottom{
+        margin: 0;
+        padding: 0;
+    }
+
+    .f-section-top small{
+        font-size: 13px;
+        
+    }
+    .f-section-top h2{
+        font-size: 20px;
+        
+    }
+
+
+}
+
 @media screen and (max-width: 350px) {
 
     /* Header */
     .logo {
-        flex-wrap: wrap;
         justify-content: center;
     }
 }
