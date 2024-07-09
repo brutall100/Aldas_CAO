@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+  <meta name="description" content="A brief description of the page content">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Template">
+  <meta name="author" content="Aldas">
+</head>
+
+<body>
+
+  <script>
+    let arr = [2, 3, 4,]
+        console.log(arr)
+        arr.unshift(1)
+        console.log(arr)
+
+
+    const arr2 = [1, 2, 2, 3, 3, 3, 4]
+    console.log(arr2)
+    const uniqueArr = []
+    for (let i = 0; i < arr2.length; i++){
+        if (!uniqueArr.includes(arr2[i])){
+            uniqueArr.push(arr2[i])
+            console.log(uniqueArr)
+        }   
+    }
+
+
+    const arr3 = [-3, 1, -2, 4, -5, 6]
+    const positiveArr = []
+    for (let i = 0; i <arr3.length; i++){
+        if (arr3[i] > 0){
+            positiveArr.push(arr3[i])
+            console.log(positiveArr)
+        }
+    }
+
+
+    const arr4 = [1, 2, 3, 5, 4, 5];
+    const element = 5;
+    const indexRepeat = arr4.indexOf(element) !== arr4.lastIndexOf(element)
+    console.log(indexRepeat)
+
+
+    const arr5 = [1, 2, 3, 4, 5]
+    for (let i = 0; i < arr5.length; i++){
+        if (arr5[i] % 2 === 0){
+            arr5[i] = arr5[i] / 2
+            console.log(arr5[i])
+        } else {
+            arr5[i] = arr5[i] * 3
+            console.log(arr5[i])
+        }                                                               
+    }
+
+
+  </script>
+</body>
+</html>
