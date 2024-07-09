@@ -1,61 +1,60 @@
 // SLAPTAŽODIS:
-let password = '12ggwwwwwdddddddddd#wwe456'
-let protection = '#'
+// let password = '12ggwwwwwdddddddddd#wwe456'
+// let protection = '#'
 
-if (password.length <= 16) {
-   console.log('Slaptažodis yra per trumpas')
-} else if (password.length > 20) {
-   console.log('Slaptažodis ok')
-   if (password.includes(protection)) {
-      console.log('Slaptažodis turi #')
-   } else {
-      console.log('Slaptažodis neturi #')
-   }
-} else if (password.length > 15) {
-   console.log('Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.')
-} else {
-   console.log('Slaptažodis lievas')
-}
+// if (password.length <= 16) {
+//    console.log('Slaptažodis yra per trumpas')
+// } else if (password.length > 20) {
+//    console.log('Slaptažodis ok')
+//    if (password.includes(protection)) {
+//       console.log('Slaptažodis turi #')
+//    } else {
+//       console.log('Slaptažodis neturi #')
+//    }
+// } else if (password.length > 15) {
+//    console.log('Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.')
+// } else {
+//    console.log('Slaptažodis lievas')
+// }
 
 // AMŽIUS
-const schoolHumanAge = prompt('Įveskite vaiko amžių:');
-const numericAge = Math.floor(Number(schoolHumanAge));
+// const schoolHumanAge = prompt('Įveskite vaiko amžių:');
+// const numericAge = Math.floor(Number(schoolHumanAge));
 
-console.log(numericAge);
+// console.log(numericAge);
 
 
-if (numericAge <= 0 || numericAge > 120) {
-   console.log('Klaida. Netinkamas amžius.')
-} else if (numericAge === 6) {
-   console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.')
-} else if (numericAge === 10) {
-   console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.')
-} else if (numericAge === 14) {
-   console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.')
-} else if (numericAge === 18) {
-   console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.')
-} else {
-   if (numericAge < 7) {
-      console.log('Jūsų vaikas dar neįstojęs į mokyklą')
-   } else if (numericAge >= 7 && numericAge <= 10) {
-      console.log('Eina į pradinę klasę.')
-   } else if (numericAge >= 11 && numericAge <= 14) {
-      console.log('Eina į pagrindinę.')
-   } else if (numericAge >= 15 && numericAge <= 18) {
-      console.log('Eina į gimnaziją.')
-   } else {
-      console.log('Jūsų vaikas jau baigė mokyklą')
-   }
-}
+// if (numericAge <= 0 || numericAge > 120) {
+//    console.log('Klaida. Netinkamas amžius.')
+// } else if (numericAge === 6) {
+//    console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.')
+// } else if (numericAge === 10) {
+//    console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.')
+// } else if (numericAge === 14) {
+//    console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.')
+// } else if (numericAge === 18) {
+//    console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.')
+// } else {
+//    if (numericAge < 7) {
+//       console.log('Jūsų vaikas dar neįstojęs į mokyklą')
+//    } else if (numericAge >= 7 && numericAge <= 10) {
+//       console.log('Eina į pradinę klasę.')
+//    } else if (numericAge >= 11 && numericAge <= 14) {
+//       console.log('Eina į pagrindinę.')
+//    } else if (numericAge >= 15 && numericAge <= 18) {
+//       console.log('Eina į gimnaziją.')
+//    } else {
+//       console.log('Jūsų vaikas jau baigė mokyklą')
+//    }
+// }
 
 // GALVOSŪKIS
+// //// 1 lygis
 // const gameFirstLvl = 1
 // const gameSecondLvl = 2
 // const gameThirdLvl = 3
 
 // let userAnswer1, userAnswer2, userAnswer3
-
-// //// 1 lygis
 // if (gameFirstLvl == 1) {
 //    userAnswer1 = +prompt('Kiek yra 1 + 1?')
 //    console.log(userAnswer1)
@@ -133,24 +132,24 @@ if (numericAge <= 0 || numericAge > 120) {
 // }
 
 // PASISVEIKINIMAS:
-// let isLoggedIn = true
-// let userName = 'Aldas'
-// let time = new Date().getHours()
-// console.log(time)
-// let isBirthday = true
+let isLoggedIn = true
+let userName = 'Aldas'
+let time = new Date().getHours()
+console.log(time)
+let isBirthday = true
 
-// if (isLoggedIn === true) {
-//    console.log(`Sveiki atvykę,! ${userName}`)
-//    if (time >= 5 && time <= 12) {
-//       console.log(`Labas rytas, šiuo metu yra ${time} h.`)
-//    } else if (time >= 13 && time <= 18) {
-//       console.log(`Labas diena, šiuo metu yra ${time} h.`)
-//    } else {
-//       console.log(`Labas vakaras, šiuo metu yra ${time} h.`)
-//    }
-// } else {
-//    console.log(`Sveiki sveiki sveiki`)
-// }
-// if (isLoggedIn === true && isBirthday === true) {
-//    console.log(`${userName} Sveikiname su gimtadieniu!`)
-// }
+if (isLoggedIn) {
+   console.log(`Sveiki atvykę,! ${userName}`)
+   if (time >= 5 && time <= 12) {
+      console.log(`Labas rytas, šiuo metu yra ${time} h.`)
+   } else if (time >= 13 && time <= 18) {
+      console.log(`Labas diena, šiuo metu yra ${time} h.`)
+   } else {
+      console.log(`Labas vakaras, šiuo metu yra ${time} h.`)
+   }
+} else {
+   console.log(`Sveiki sveiki sveiki`)
+}
+if (isLoggedIn  && isBirthday) {
+   console.log(`${userName} Sveikiname su gimtadieniu!`)
+}
