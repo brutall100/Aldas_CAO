@@ -144,3 +144,67 @@ let a = 2, b = 2
 let resultt = (a + b < 4) ? 'Maziau' : (a + b == 4) ? 'Lygu' : 'Daugiau'
 console.log(resultt)
 
+login = 'Director'
+let message = (login == 'Employee')? 'Hello' : 
+(login== 'Director') ? 'Greetings' : 
+(login == '') ? 'No login' : ''
+console.log(message)
+
+
+let legalAge = 20
+let clientAge = 17
+if(clientAge >= legalAge){
+    console.log(`Welcome, you are ${clientAge}. Enough to enter `)
+} else{
+    console.log(`You are ${legalAge}. Too young`)
+}
+
+
+let name = 'Varnis'
+if(name.length >= 6){
+    console.log('Per ilgas vardasis')
+} else{
+    console.log('Vardas tinka')
+}
+
+
+let age = -20
+if(age <= 0 || age > 100)
+console.log('Netinkamas amzius')
+else{
+    if(age >= 1 && age <= 18){
+        console.log('Zmogus yra nepilnametis')
+    }else{
+        console.log('Zmogus yra pilnametis')
+    }
+}
+
+
+const car = 'Mini'
+const vwGroup = new Array('VW', 'Audi', 'Bentley', 'Bugatti', 'Lamborghini', 'Porsche')
+const bmwGroup = new Array('BMW', 'Mini', 'Rolls-Royce')
+
+if(vwGroup.includes(car)){
+    console.log('VW Group')
+} else if(bmwGroup.includes(car)){
+    console.log('BMW Group')
+} else{
+    console.log('Unknown')
+}
+
+
+let nameOfDog = 'Rdsdex'
+console.log(nameOfDog.length > 5 ? 'Vardas ilgas' : 'Vardas trumpas')
+
+
+
+clientAge = 17
+legalAge = 18
+const canDrive = clientAge < 0 || clientAge > 120 ? 'Netinkamas amzius' : clientAge >= legalAge ? 'Gali vairuoti' : 'Negali vairuoti'
+console.log(canDrive)
+
+
+
+let phone = 'iphone'
+let isIphoneUser = phone === 'iphone' ? 'Iphone user' : 'Not an Iphone user'
+console.log(isIphoneUser)
