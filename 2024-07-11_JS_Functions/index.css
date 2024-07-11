@@ -1,0 +1,17 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #bfc5baaf;
+  --primary-color: #212121;
+  --accent-color: #ff5722;
+  --text-color: #333333;
+  --spacing: 30px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
