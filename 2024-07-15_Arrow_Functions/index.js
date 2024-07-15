@@ -110,3 +110,106 @@ let isLeapYear = year => {
 }
 console.log(isLeapYear(2020)) 
 console.log(isLeapYear(2021)) 
+
+
+
+
+const findMaxInArray = arr => {
+    let max = arr[0]
+    for (let i = 1; i < arr.length; i++){
+        if (arr[i] > max){
+            max = arr[i]
+        }
+    }
+    return max
+}
+
+console.log(findMaxInArray([1, 3, 2, 5, 4])); 
+console.log(findMaxInArray([-1, -3, -2, -5, -4])); 
+
+
+
+
+const sumArray = (arrr) => {
+    let sum = 0
+    for (let i = 0; i < arrr.length; i++){
+        sum += arrr[i]
+    }
+    return sum
+}
+console.log(sumArray([1, 2, 3, 4, 5, 56, -10])); 
+
+
+
+
+
+const arMasyvaiLygūs = (arr1, arr2) => {
+    if (arr1.length !== arr2.length){
+        return false
+    }
+    for (let i = 0; i < arr1.length; i++){
+        if (arr1[i] !== arr2[i]){
+            return false
+        }
+    }
+    return true
+}
+console.log(arMasyvaiLygūs([1, 2, 3], [1, 2, 3]));
+console.log(arMasyvaiLygūs([1, 2, 3], [1, 2, 4])); 
+
+
+
+
+const reverseString = str => {
+    let reversedStr =''
+    for (let i = str.length -1; i >=0; i--){
+        reversedStr += str[i]
+    }
+    return reversedStr.trim().toLocaleUpperCase()
+}
+console.log(reverseString('Aldas      '))
+
+
+
+
+const isPalindrome = (str) => {
+   let lowerCaseStr = str.toLowerCase().trim()
+   let reversedStr = ''
+   for (let i = lowerCaseStr.length - 1; i >= 0; i--) {
+      reversedStr += lowerCaseStr[i]
+   }
+   return lowerCaseStr === reversedStr
+}
+
+console.log(isPalindrome('Savas '))
+console.log(isPalindrome('   mom'))
+console.log(isPalindrome('svetimas')) 
+
+
+
+const printPyramid = (height) => {
+    for (let i = 1; i <= height; i++) {
+        let line = '';
+        for (let j = 0; j < i; j++) {
+            line += i;
+        }
+        console.log(line);
+    }
+};
+
+printPyramid(5)
+
+
+
+
+
+const sizeA = 7;
+const sizeB = 5;
+
+for (let i = 0; i < sizeA; i++){
+    let linija = ''
+    for (let j = 0; j < sizeB; j++){
+        linija += '*'
+    }
+    console.log(linija)
+}
