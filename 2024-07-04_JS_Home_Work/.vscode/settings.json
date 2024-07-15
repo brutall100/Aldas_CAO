@@ -1,5 +1,5 @@
 {
-   "prettier.bracketSameLine": true,
-   "prettier.printWidth": 150,
-   "prettier.tabWidth": 3
+    "prettier.bracketSameLine": true,
+    "prettier.printWidth": 150,
+    "prettier.tabWidth": 3
 }
