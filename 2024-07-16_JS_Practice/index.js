@@ -141,8 +141,6 @@ console.log(formatedDate(1, 'weeks'))
 console.log(formatedDate(1, 'months'))
 console.log(formatedDate(1, 'years'))
 
-
-
 // // 9
 const clearDivide = (dalinys, daliklis) => {
    if (typeof dalinys !== 'number' || typeof daliklis !== 'number') return 'Error: dalinys ir daliklis turi būti skaičiai'
@@ -156,17 +154,14 @@ const clearDivide = (dalinys, daliklis) => {
 
 console.log(clearDivide(10, 'Hi, kas cia?'))
 console.log(clearDivide(10, 5))
-console.log(clearDivide(11, 5))  
-
-
-
+console.log(clearDivide(11, 5))
 
 // // 10
 const hasEvenLength = (text) => {
-    if (typeof text !== 'string') return 'Error: text must be string'
-    let trimedText = text.trim()
-    if (trimedText.length % 2 === 0) return true
-    return false
+   if (typeof text !== 'string') return 'Error: text must be string'
+   let trimedText = text.trim()
+   if (trimedText.length % 2 === 0) return true
+   return false
 }
 
 console.log(hasEvenLength(1))
@@ -175,24 +170,83 @@ console.log(hasEvenLength('Hello World'))
 console.log(hasEvenLength('12'))
 console.log(hasEvenLength('12            '))
 
-
 // // 11 Su daug GPT pagalbos
 const letterChecker = (text, number) => {
-    if (typeof text !== 'string') return 'Error: text must be a string';
-    if (typeof number !== 'number') return 'Error: number must be a number';
-    if (number <= 0) return `Teksto "${text}" ${number} raidė nuo galo yra "${text[text.length + number]}"`;
-    if (number > text.length) return `Tekstas "${text}" turi ${text.length} simbolius, o jūs nurodėte grąžinti ${number}.`;
-    if (text.trim().length === 0) return 'Error: text cannot be empty';
+   if (typeof text !== 'string') return 'Error: text must be a string'
+   if (typeof number !== 'number') return 'Error: number must be a number'
+   if (number <= 0) return `Teksto "${text}" ${number} raidė nuo galo yra "${text[text.length + number]}"`
+   if (number > text.length) return `Tekstas "${text}" turi ${text.length} simbolius, o jūs nurodėte grąžinti ${number}.`
+   if (text.trim().length === 0) return 'Error: text cannot be empty'
 
-    let sentence = `Teksto "${text}" ${number} raide yra "${text[number - 1]}"`;
+   let sentence = `Teksto "${text}" ${number} raide yra "${text[number - 1]}"`
 
-    return sentence;
+   return sentence
 }
 
-console.log(letterChecker('Hello World', 1));  
-console.log(letterChecker('Hello World', 3));  
-console.log(letterChecker('Hello World', -1));  
-console.log(letterChecker('', 5));              
-console.log(letterChecker(123, 2));             
-console.log(letterChecker('Hello', 'abc'));     
+console.log(letterChecker('Hello World', 1))
+console.log(letterChecker('Hello World', 3))
+console.log(letterChecker('Hello World', -1))
+console.log(letterChecker('', 5))
+console.log(letterChecker(123, 2))
+console.log(letterChecker('Hello', 'abc'))
 
+// // 12 Romano masyvai
+// 1. Sukurti funkciją, kuri į masyvo pabaigą įdeda naują narį.
+// Ši funkcija priima du parametrus: duomenų masyvą ir naują narį.
+// Ši funkciją grąžina naują masyvą, kuriame į pradinių duomenų masyvo pabaigą, jau įdėtas ir naujas narys.
+// Šioje funkcijoje negalima naudoti metodų push ar splice, kurie leistų tiesiogiai įdėti narį į masyvo pabaigą.
+ 
+// 2. Sukurti funkciją, kuri į masyvo pradžią įdeda naują narį.
+// Ši funkcija priima du parametrus: duomenų masyvą ir naują narį.
+// Ši funkciją grąžina naują masyvą, kuriame į pradinių duomenų masyvo pradžią, jau įdėtas ir naujas narys.
+// Šioje funkcijoje negalima naudoti metodų unshift ar splice, kurie leistų tiesiogiai įdėti narį į masyvo pradžią. 
+// Užuomina: reikės leisti ciklą per masyvą ir visus masyvo narius perkelti per vieną poziciją į dešinę pusę, tam kad nulinis indeksas liktų tuščias ir galėtume į jį įdėti naują narį.
+ 
+// 3. Sukurti funkciją, kuri yra analogišką antrąjai funkcijai, tačiau ji priima dar vieną parametrą - indeksą, į kurią masyvo vietą reikia pridėti naują narį.
+
+
+//?? A
+const addToArrayEnd = (array, newMember) => {
+   let newArray = new Array(array.length + 1)
+   for (let i = 0; i < array.length; i++) {
+      newArray[i] = array[i]
+   }
+   newArray[array.length] = newMember
+   return newArray
+}
+console.log(addToArrayEnd([1, 2, 3], 4))
+console.log(addToArrayEnd(['a', 'b', 'c'], 'd'))
+console.log(addToArrayEnd([], 5))
+
+
+//?? B
+const addToArrayStart = (array, newMember) => {
+   let newArray = new Array(array.length + 1)
+   newArray[0] = newMember
+   for (let i = 0; i < array.length; i++){
+      newArray[i + 1] = array[i]
+   }
+   return newArray
+}
+console.log(addToArrayStart([1, 2, 3], 0))
+console.log(addToArrayStart(['a', 'b', 'c'], 'k'))
+console.log(addToArrayStart([], 5))
+
+
+//?? C
+const addToArrayIndex = (array, newMember, index) => {
+   if (index < 0 || index > array.length) return 'Error: index is out of range'
+   let newArray = new Array(array.length + 1)
+   for (let i = 0; i < index; i++) {
+      newArray[i] = array[i]
+   }
+   newArray[index] = newMember
+   for (let i = index; i < array.length; i++) {
+      newArray[i + 1] = array[i]
+   }
+   return newArray
+}
+
+console.log(addToArrayIndex([1, 2, 3], 4, 0))
+console.log(addToArrayIndex(['a', 'b', 'c'], 'd', 2))
+console.log(addToArrayIndex([], 5, 20))
