@@ -43,6 +43,46 @@ console.log(capitalizeFIrstLetter("labas rytas, pasauli! kaip sekasi?"));
 
 
 
+const censorCurseWords = (text, curseWords) => {
+   let result = text;
+   
+   // Iterate over each curse word in the array
+   for (let i = 0; i < curseWords.length; i++) {
+       const badWord = curseWords[i];
+       
+       // Replace all occurrences of the bad word
+       while (result.includes(badWord)) {
+           result = result.replace(badWord, '*'.repeat(badWord.length));
+       }
+   }
+   
+   return result;
+}
+
+console.log(censorCurseWords("This is a badword and another badword.", ["badword", "is"])); // "Th**** a ****word and another ****word."
 
 
+
+// Number metodai
+const milkPrice = 3.35
+if (Number.isInteger(milkPrice)) {
+   console.log(`Centu nereikia ${milkPrice.toFixed(2)}`)
+} else {
+   console.log(`Centu reikia... ${milkPrice.toFixed(2)}`)
+}
  
+
+const findMax = (numbers) =>{
+   return Math.max(...numbers)
+}
+
+console.log(findMax([1, 2, 3, 41, 5, 6, 7, 8, 9, 10]))
+
+
+// Boolean metodai
+let isLegalAge = 18
+
+if(isLegalAge){
+   console.log('You are legal age')
+   console.log(isLegalAge.toString()) 
+}
