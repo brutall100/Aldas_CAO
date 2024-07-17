@@ -1,3 +1,4 @@
+// s
 function convertToUpperCase(zodis) {
    return zodis.toUpperCase()
 }
@@ -86,3 +87,91 @@ if(isLegalAge){
    console.log('You are legal age')
    console.log(isLegalAge.toString()) 
 }
+
+
+
+// !! Cao 2
+let a = 5
+let b = 10
+let result = a + b
+console.log(result)
+
+
+let year = 2024
+let age = year -38
+console.log(age)
+
+let name = 'Jonas'
+let surname = 'Jonaitis'
+let fullNmae = name + ' ' + surname
+console.log(fullNmae)
+
+const name2 = 'Jonass'
+const surname2 = 'Jonaitiss'
+const fullName = name2.concat(' ', surname2 + '!')
+console.log(fullName)
+
+let text = 'Labas rytas '
+let secondText = 'MOKINIAI'
+let fullText = text.concat( '', secondText)
+console.log(fullText)
+
+let celsijus = 32
+let farenheit = celsijus * 9 / 5 + 32
+console.log(`farenheit: ${farenheit}`)
+
+
+
+let firstBalance = 999.99
+console.log(firstBalance)
+
+let secondBalance = firstBalance + ( 0.09 * firstBalance)
+console.log(secondBalance)
+
+let thirdBalance = secondBalance * 2
+console.log(thirdBalance)
+
+let fourthBalance = thirdBalance -50
+console.log(fourthBalance)
+
+let finalBalance = fourthBalance.toFixed(2)
+console.log(finalBalance)
+
+
+
+
+let textA = 'Vilnius'
+let textB = 'Vilnius'
+const resullt = textA === textB;
+console.log(resullt);
+
+
+let numeris = 5
+let zodis = '5'
+const result2 = numeris === zodis
+console.log(result2)
+
+const result3 = numeris == zodis
+console.log(result3)
+
+const result4 = numeris != zodis
+console.log(result4)
+
+
+let currentBalance = 50
+let transaction = 51
+let balance = currentBalance + transaction >= 0
+console.log(balance)
+
+
+const isDividible = (number) => {
+   return number % 1 === 0
+}
+console.log(isDividible(6.3))
+console.log(isDividible(5))
+
+const aa = 10
+const bb = 5.5
+const dalybaBeliekanos = aa % bb === 0
+
+console.log(dalybaBeliekanos)
