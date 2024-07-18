@@ -13,29 +13,30 @@ Užduotis 4: indexOf
 Parašyk funkciją, kuri suranda pirmo pasikartojančio simbolio vietą duotame string'e.
 
 Užduotis 5: toUpperCase ir toLowerCase
-
 Parašyk funkciją, kuri konvertuoja string'ą į didžiąsias raides, o kitą - į mažąsias raides.
+
 Užduotis 6: slice
-
 Parašyk funkciją, kuri iškerpa dalį string'o nuo tam tikros pozicijos iki galo.
+
 Užduotis 7: substring
-
 Parašyk funkciją, kuri iškerpa dalį string'o tarp dviejų nurodytų pozicijų.
+
 Užduotis 8: split
-
 Parašyk funkciją, kuri padalina string'ą į masyvą pagal nurodytą skyriklį.
+
 Užduotis 9: replace
-
 Parašyk funkciją, kuri pakeičia pirmą pasikartojantį substring'ą duotame string'e kitu substring'u.
-Užduotis 10: trim
 
+Užduotis 10: trim
 Parašyk funkciją, kuri pašalina tuščius tarpus iš string'o pradžios ir pabaigos.
+
+
+
 Sekančios 10 užduočių (sudėtingesnės):
 Užduotis 11: concat
-
 Parašyk funkciją, kuri sujungia du string'us į vieną.
-Užduotis 12: repeat
 
+Užduotis 12: repeat
 Parašyk funkciją, kuri pakartoja string'ą nurodytą skaičių kartų.
 Užduotis 13: startsWith
 

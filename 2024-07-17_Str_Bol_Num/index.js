@@ -76,7 +76,6 @@ if (Number.isInteger(milkPrice)) {
 const findMax = (numbers) =>{
    return Math.max(...numbers)
 }
-
 console.log(findMax([1, 2, 3, 41, 5, 6, 7, 8, 9, 10]))
 
 
@@ -199,3 +198,35 @@ const letterFinder = (text, letter) => text.indexOf(letter)
 
 console.log(letterFinder('sdfga', 'a'))
 console.log(letterFinder('labas', 'a'))
+
+// // 5
+// To uppercase
+const lettersToUpperCase = text => text.toUpperCase()
+console.log(lettersToUpperCase('labas'))
+// To lowercase
+const lettersToLowerCase = text => text.toLowerCase()
+console.log(lettersToLowerCase('LABAS'))
+
+// // 6
+const sliceToTheEnd = (text, start) => text.slice(start)
+console.log(sliceToTheEnd('labas rytas', 2))
+
+// // 7
+const sentenceSlicer = (text, start, end) => text.slice(start, end)
+console.log(sentenceSlicer('labas rytas stai ir as', 1, 8))
+
+// // 8
+const textSpliter = (text, separator) => text.split(separator)
+console.log(textSpliter('labas rytas, stai ir as!', ' '))
+
+// // 9
+const stringReplacer = (text, oldword, newword) => {
+  return text.replace(oldword, newword)}
+console.log(stringReplacer('labas rytas, stai ir as!', 'rytas', 'vakaras'))
+
+// // 10
+const trimer = text => text.trim()
+console.log(trimer('   Kur dingo mano tarpai?   '))
+
+
+
