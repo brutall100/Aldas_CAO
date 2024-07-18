@@ -175,3 +175,27 @@ const bb = 5.5
 const dalybaBeliekanos = aa % bb === 0
 
 console.log(dalybaBeliekanos)
+
+
+// !! Chat Gpt
+// // 1
+const stringLength = text => text.trim().length
+console.log(stringLength('labas rytas    '))
+
+// // 2
+const stringFirstAndLastLetter = (text) => {
+   const trimmedText = text.trim()
+   return trimmedText.charAt(0) + trimmedText.charAt(trimmedText.length -1)}
+console.log(stringFirstAndLastLetter('labay gerai  '))
+
+// // 3
+const checkLetter = (text, letter) => {
+   return text.trim().toLowerCase().includes(letter.trim().toLowerCase())
+}
+console.log(checkLetter('labas', '  LA'))
+
+// // 4
+const letterFinder = (text, letter) => text.indexOf(letter)
+
+console.log(letterFinder('sdfga', 'a'))
+console.log(letterFinder('labas', 'a'))
