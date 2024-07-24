@@ -425,10 +425,130 @@ let itemms = [
  
  console.log(categoryTotals);
 
- 
- 
+
+//  CAO 3
+let goodAnswer = 'Vatikanas'
+const question = 'Koks yra mažiausias pasaulyje miestas?'
+
+if (goodAnswer === 'Vatikanas') {
+   console.log('Atsakymas teisingas')
+} else {
+   console.log('Atsakymas neteisingas')
+}
+
+a = 5
+b = 10
+let result = a + b < 4 ? 'Mažiau' : 'Daugiau'
+console.log(result)
+
+// let message = login == 'Employee' ? 'Hello' : login == 'Director' ? 'Greetings' : login == '' ? 'No login' : ''
+
+let legalAge = 18
+let clientAge = 21
+// let canDrive = clientAge >= legalAge ? 'Yes' : 'No'
+// console.log(canDrive)
+if (clientAge >= legalAge) {
+   console.log('Yes')
+} else { 
+   console.log('No')
+}
 
 
+
+
+
+
+let name = "Antanas"
+if (name.length > 6) {
+    console.log("Ilgas vardas")
+}
+
+
+
+
+
+let myAge = 25;
+if (myAge > 100 || myAge < 0) {
+    console.log("Invalid age");
+} else if (myAge >= 1 && myAge <= 18) {
+    console.log("Child");
+} else if (myAge >= 19 && myAge <= 99) {
+    console.log("Adult");
+}
+
+
+let car = "Porsche";
+if (car === "Volkswagen" || car === "Audi" || car === "Bentley" || car === "Bugatti" || car === "Lamborghini" || car === "Porsche") {
+    console.log("This is a VW Group car");
+} else if (car === "BMW" || car === "Mini" || car === "Rolls-Royce") {
+    console.log("This is a BMW Group car");
+} else {
+    console.log("This is not a VW or BMW group car");
+}
+
+
+
+
+
+let myName = "Gedas";
+if (myName.length < 5) {
+    console.log("Short Name");
+} else {
+    console.log("Long Name");
+}
+
+
+let clientAgeX = 25;
+let legalAgeY = 18;
+
+if (clientAgeX >= legalAgeY) {
+    console.log("Can Drive");
+} else {
+    console.log("Can't drive");
+}
+
+
+let phone = "iPhone";
+let isIphoneUser = (phone === "iPhone") ? true : false;
+console.log(isIphoneUser);
+
+
+
+
+
+let age = 25;
+
+if (age >= 14 && age <= 90) {
+    console.log("Age is valid");
+} else {
+    console.log("Invalid Age");
+}
+
+
+
+
+
+let agee = 10;
+
+if (!(agee >= 14 && agee <= 90)) {
+    console.log("Invalid Age");
+} else {
+    console.log("Age is valid");
+}
+
+
+
+
+
+let browser = 'Chrome';
+
+if (browser === 'Edge') {
+  console.log("RIP Edge!");
+} else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+  console.log('Šios naršykles palaikomos');
+} else {
+  console.log('Tikimės, kad šis puslapis atrodys puikiai!');
+}
 
 
 
