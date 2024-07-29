@@ -1,3 +1,5 @@
+console.group
+
 let mainArray = [4, 5, -5556, 155, 640, '15x', 6789, -5564, 478, 654, 'obuolys', 789, -51, 55, -222, 0, -357, -56, 'trylika', 444, 7778, 4154, 4751]
 console.log(mainArray)
 
@@ -1235,3 +1237,5 @@ function createTitlesArraySortedByBodyLength(arr) {
    console.log(titles);
 }
 createTitlesArraySortedByBodyLength(posts);
+
+console.groupEnd()
