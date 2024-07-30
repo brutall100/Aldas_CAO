@@ -136,3 +136,164 @@ console.log(car.getInfo()); // "Brand: Toyota, Model: Corolla, Engine Type: Petr
 
 const bicycle = new Bicycle("Trek", "Marlin", 2020, true);
 console.log(bicycle.getInfo()); // "Brand: Trek, Model: Marlin, Has Engine: true"
+
+
+console.group('Books library')
+class Book {
+    constructor(tittle, author, year) {
+        this.tittle = tittle
+        this.author = author
+        this.year = year
+    }
+
+    getSummary() {
+        return `${this.tittle} was written by ${this.author} in ${this.year}`
+    }
+}
+
+const bookA = new Book('Book A', 'Author A', 2020)
+const bookB = new Book('Book B', 'Author B', 2021)
+
+console.log(bookA.getSummary())
+console.log(bookB.getSummary())
+
+
+class Library {
+    constructor() {
+        this.books = [];
+        this.lentBooks = new Map();
+    }
+
+    addBook(book) {
+        this.books.push(book);
+    }
+
+    lendBook(bookTitle, userName) {
+        const book = this.books.find(book => book.title === bookTitle);
+        if (book) {
+            this.books = this.books.filter(b => b !== book);
+            this.lentBooks.set(book, userName);
+        } else {
+            console.log("Book not available");
+        }
+    }
+
+    returnBook(bookTitle) {
+        const book = [...this.lentBooks.keys()].find(book => book.title === bookTitle);
+        if (book) {
+            this.books.push(book);
+            this.lentBooks.delete(book);
+        }
+    }
+
+    listAvailableBooks() {
+        console.log("Available Books:");
+        this.books.forEach(book => console.log(book.getSummary()));
+    }
+}
+
+const library = new Library();
+library.addBook(new Book("Book1", "Author1", "2050"));
+library.addBook(new Book("Book2", "Author2", "2060"));
+library.lendBook("Book1", "User1");
+library.listAvailableBooks(); // "Book2 by Author2 published in 2021"
+library.returnBook("Book1");
+library.listAvailableBooks(); // "Book2 by Author2 published in 2021", "Book1 by Author1 published in 2020"
+// ! nelabai supratau, nes nesuprantu kaip veikia, bet veikia
+
+console.groupEnd()
+
+
+class MusicStudent {
+   constructor(name, instrument, level = 'beginner') {
+      this.name = name;
+      this.instrument = instrument;
+      this.levelMapping = ['beginner', 'Intermediate', 'Advanced', 'Master'];
+      this.level = this.levelMapping.indexOf(level);
+   }
+
+   practice() {
+      if (this.level < this.levelMapping.length - 1) {
+        this.level++;
+      }
+   }
+
+   getLevel() {
+     return this.levelMapping[this.level];
+   }
+}
+
+const studentA = new MusicStudent('John', 'Guitar', 'Intermediate');
+studentA.practice();
+
+const studentB = new MusicStudent('Anna', 'piano');
+studentB.practice();
+
+console.log(studentA.getLevel()); // Outputs: "Advanced"
+console.log(studentB.getLevel()); // Outputs: "Intermediate"
+
+
+
+
+class ShoppingCart {
+    constructor() {
+        this.items = []
+    }
+
+    addItem(item) {
+        this.items.push(item)
+    }
+
+    removeItem(item) {
+        this.items = this.items.filter(i => i.name !== item)
+    }
+
+    calculateTotal() {
+        return this.items.reduce((acc, item) => acc + item.price, 0)
+    }
+
+}
+
+const cart = new ShoppingCart();
+cart.addItem({ name: "Apple", price: 0.99 });
+cart.addItem({ name: "Bread", price: 1.29 });
+console.log(cart.calculateTotal().toFixed(2)); // 2.28
+cart.removeItem("Apple");
+console.log(cart.calculateTotal().toFixed(2)); // 1.29
+
+
+
+class MovieTheater {
+    constructor(rows, seatsPerRow){
+        this.rows = rows;
+        this.seatsPerRow = seatsPerRow;
+        this.bookedSeats = {};
+    }
+
+    bookSeat(row, seat) {
+        if (!this.bookedSeats[row]) {
+            this.bookedSeats[row] = {};
+        }
+        this.bookedSeats[row][seat] = true;
+    }
+
+    cancelBooking(row, seat) {
+        if (this.bookedSeats[row]) {
+            delete this.bookedSeats[row][seat];
+        }
+    }
+
+    checkAvailability(row, seat) {
+        return !(this.bookedSeats[row] && this.bookedSeats[row][seat]);
+    }
+}
+
+const theater = new MovieTheater(5, 5);
+theater.bookSeat(2, 3);
+console.log(theater.checkAvailability(2, 3)); // Outputs: false
+theater.cancelBooking(2, 3);
+console.log(theater.checkAvailability(2, 3)); // Outputs: true
+// ! nelabai supratau, nes nesuprantu kaip veikia, bet veikia
+
+
+
