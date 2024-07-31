@@ -297,3 +297,64 @@ console.log(theater.checkAvailability(2, 3)); // Outputs: true
 
 
 
+// CAO 4 kartojimas
+const name = 'AJ'
+for (let i = 0; i < 5; i++) {
+    console.log(name)
+}
+
+
+const nameA = 'Aldas'
+const count = 5
+for (let i = 0; i < count; i++){
+    console.log(nameA)
+}
+
+
+for (let i = 0; i < 5; i++){
+    let userName = 'Ald'
+    console.log(` ${i}. ${userName}`)
+}
+
+
+let countDown = 10
+for (let i = countDown; i >= 0; i--)
+    console.log(i)
+
+
+
+// let timeGone = 2;
+// function timeToRun(i) {
+//     if (i >= 0) {
+//         console.log(i);
+//         setTimeout(() => timeToRun(--i), 1000);
+//     }
+// }
+// timeToRun(timeGone);
+
+ 
+let i = 10
+while (i > 0) {
+    console.log(i)
+    i--
+}
+
+const nameX = 'Azuolas'
+let j = 5
+while (j > 0){
+    console.log(nameX)
+    j--
+}
+
+let combo = ''
+const nameY = 'Aldas'
+let kartai = 3
+do {
+    combo += `[{${nameY} ${kartai}}] `
+    kartai--
+} while (kartai > 0)
+console.log(combo)
+
+
+
+
