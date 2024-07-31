@@ -170,3 +170,111 @@ library.listAvailableBooks(); // "Book2 by Author2 published in 2021"
 library.returnBook("Book1");
 library.listAvailableBooks(); // "Book2 by Author2 published in 2021", "Book1 by Author1 published in 2020"
 // ! Paskutiniai  2 su genie Padaryti
+
+
+// GPT OOP
+class Car{
+    constructor(make, model, year, km){
+        this.make = make
+        this.model = model
+        this.year = year
+        this.km = km
+    }
+
+    kmToMiles(){
+        return this.km * 0.621371
+    }
+
+    carInfo(){
+        return `Gamintoja ${this.make} ${this.model} (${this.year})`
+    }
+
+}
+
+let carAudi = new Car('Audi', 'A4', 2019, 10000)
+let carBmw = new Car('BMW', 'X5', 2020, 333)
+
+console.log(carAudi)
+console.log(carAudi.kmToMiles())
+console.log(carAudi.carInfo())
+
+console.log(carBmw)
+console.log(carBmw.kmToMiles())
+console.log(carBmw.carInfo())
+
+
+
+class Person{
+    constructor(firstNAme, lastName, age){
+        this.firstNAme = firstNAme
+        this.lastName = lastName
+        this.age = age
+    }
+
+    introduce(){
+        return `Hello, my name is ${this.firstNAme} ${this.lastName} and I am ${this.age} years old`
+    }
+}
+
+class Student extends Person{
+    constructor(firstNAme, lastName, age, grade){
+        super(firstNAme, lastName, age)
+        this.grade = grade
+    }
+
+    getGrade(){
+        return `${this.firstNAme} is in grade ${this.grade}`
+    }
+
+    introduce() {
+        return `Hi, I'm ${this.firstNAme} ${this.lastName}, a ${this.age}-year-old student with a grade of ${this.grade}.`;
+    }
+    
+}
+
+let studentJonas = new Student('Jonas', 'Jonaitis', 17, 7)
+console.log(studentJonas)
+console.log(studentJonas.getGrade())
+console.log(studentJonas.introduce())
+
+class Teacher extends Person{
+    constructor(firstNAme, lastName, age, subject){
+        super(firstNAme, lastName, age)
+        this.subject = subject
+    }
+
+    introduce(){
+        return `Hello, I'm ${this.firstNAme} ${this.lastName}, a ${this.age}-year-old teacher of ${this.subject}.`
+    }
+}
+
+let teacherPetras = new Teacher('Petras', 'Petraitis', 45, 'Math')
+
+console.log(teacherPetras)
+console.log(teacherPetras.introduce())
+
+
+
+class Animal {
+    constructor(name = 'Unknown', species = 'Unknown') {
+        this.name = name
+        this.species = species
+    }
+
+    describe() {
+        return `${this.name} is a ${this.species}.`
+    }
+}
+class Animal {
+    constructor(name = 'Unknown', species = 'Unknown') {
+        this.name = name
+        this.species = species
+    }
+
+    describe() {
+        return `${this.name} is a ${this.species}.`
+    }
+}
+
+let myPet = new Animal('Buddy')
+console.log(myPet.describe()) 
