@@ -253,18 +253,6 @@ let teacherPetras = new Teacher('Petras', 'Petraitis', 45, 'Math')
 console.log(teacherPetras)
 console.log(teacherPetras.introduce())
 
-
-
-class Animal {
-    constructor(name = 'Unknown', species = 'Unknown') {
-        this.name = name
-        this.species = species
-    }
-
-    describe() {
-        return `${this.name} is a ${this.species}.`
-    }
-}
 class Animal {
     constructor(name = 'Unknown', species = 'Unknown') {
         this.name = name
