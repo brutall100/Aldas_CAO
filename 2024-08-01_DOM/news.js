@@ -285,3 +285,144 @@ eventsLargeLinkElement.classList.add('large-link');
 eventsLargeLinkElement.setAttribute('href', '#');
 eventsLargeLinkElement.textContent = 'Daugiau';
 eventsSectionElement.append(eventsLargeLinkElement);
+
+
+
+
+
+
+
+
+
+
+
+
+// AI Version 2 
+// function createElement(tag, attributes = {}, children = []) {
+//     const element = document.createElement(tag);
+//     for (const [key, value] of Object.entries(attributes)) {
+//         if (key === 'classList') {
+//             element.classList.add(...value);
+//         } else {
+//             element.setAttribute(key, value);
+//         }
+//     }
+//     for (const child of children) {
+//         if (typeof child === 'string') {
+//             element.appendChild(document.createTextNode(child));
+//         } else {
+//             element.appendChild(child);
+//         }
+//     }
+//     return element;
+// }
+
+// function createNewsItem() {
+//     return createElement('div', { classList: ['news-item'] }, [
+//         createElement('a', { href: '#' }, [
+//             createElement('div', { classList: ['news-item-image-wrapper'] }, [
+//                 createElement('img', {
+//                     classList: ['news-item-image'],
+//                     src: 'https://codeacademy.lt/wp-content/uploads/2024/05/nauja-pauliaus-ft.png',
+//                     alt: ''
+//                 })
+//             ]),
+//             createElement('div', { classList: ['news-item-content'] }, [
+//                 createElement('span', { classList: ['news-item-category'] }, ['Sėkmės istorija']),
+//                 createElement('h2', { classList: ['news-item-title'] }, ['Sėkmės istorija – įsidarbinimas į Asteri']),
+//                 createElement('span', { classList: ['news-item-date'] }, ['2024-05-23'])
+//             ])
+//         ])
+//     ]);
+// }
+
+// function createVideoItem() {
+//     return createElement('div', { classList: ['video-wrapper'] }, [
+//         createElement('h3', { classList: ['video-title'] }, ['#6 Studentės istorija: sėkmė slypi disciplinoje']),
+//         createElement('iframe', {
+//             width: '560',
+//             height: '315',
+//             src: 'https://www.youtube.com/embed/Rz6bswWbPqw?si=0Je3Y085kS2QibIg',
+//             title: 'YouTube video player',
+//             frameborder: '0',
+//             allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+//             referrerpolicy: 'strict-origin-when-cross-origin',
+//             allowfullscreen: 'true'
+//         })
+//     ]);
+// }
+
+// function createPodcastItem() {
+//     return createElement('div', { classList: ['podcast-item'] }, [
+//         createElement('div', { classList: ['podcast-controls'] }, [
+//             createElement('img', {
+//                 classList: ['podcast-image'],
+//                 src: 'https://codeacademy.lt/wp-content/uploads/2021/09/Spotify-300x300.png',
+//                 alt: ''
+//             }),
+//             createElement('span', { classList: ['podcast-length'] }, ['Trukmė: 7:55']),
+//             createElement('button', { classList: ['podcast-play'] }, ['Play'])
+//         ]),
+//         createElement('div', { classList: ['podcast-content'] }, [
+//             createElement('h3', { classList: ['podcast-title'] }, ['Pojūčius pirštų galiukams sugrąžinti gali smegenų implantas']),
+//             createElement('span', { classList: ['podcast-date'] }, ['2021-09-02'])
+//         ])
+//     ]);
+// }
+
+// function createEventItem() {
+//     return createElement('div', { classList: ['event-item'] }, [
+//         createElement('a', { href: '#' }, [
+//             createElement('div', { classList: ['event-item-image-wrapp'] }, [
+//                 createElement('img', {
+//                     classList: ['event-item-image'],
+//                     src: 'https://codeacademy.lt/wp-content/uploads/2024/06/0530_CA_event-768x432.png',
+//                     alt: ''
+//                 })
+//             ]),
+//             createElement('div', { classList: ['event-item-content-wrapper'] }, [
+//                 createElement('div', { classList: ['event-date'] }, [
+//                     createElement('span', { classList: ['event-day'] }, ['30']),
+//                     createElement('span', { classList: ['event-month'] }, ['Geg'])
+//                 ]),
+//                 createElement('div', { classList: ['event-item-content'] }, [
+//                     createElement('span', { classList: ['event-location'] }, ['Upės g. 21, Greenhall 1, 10 aukštas ir Online']),
+//                     createElement('h3', { classList: ['event-title'] }, ['CodeAcademy galimybės verslui'])
+//                 ])
+//             ])
+//         ])
+//     ]);
+// }
+
+// let contentElement = document.querySelector('#content');
+
+// contentElement.append(
+//     createElement('div', { classList: ['container'] }, [
+//         createElement('div', { classList: ['page-content'] }, [
+//             createElement('main', {}, [
+//                 createElement('h1', { classList: ['page-title'] }, ['Naujienos']),
+//                 createElement('section', { classList: ['news-section'] }, [
+//                     createElement('div', { classList: ['main-news'] }, [createNewsItem(), createNewsItem()]),
+//                     createElement('div', { classList: ['secondary-news'] }, [createNewsItem(), createNewsItem(), createNewsItem(), createNewsItem()]),
+//                     createElement('a', { classList: ['large-link'], href: '#' }, ['Visos naujienos'])
+//                 ]),
+//                 createElement('section', { classList: ['video-section'] }, [
+//                     createElement('h2', { classList: ['section-title'] }, ['Vaizdo įrašai']),
+//                     createElement('div', { classList: ['video-list'] }, [createVideoItem(), createVideoItem(), createVideoItem()]),
+//                     createElement('a', { classList: ['large-link'], href: '#' }, ['Visi video'])
+//                 ])
+//             ]),
+//             createElement('aside', {}, [
+//                 createElement('section', { classList: ['podcasts-section'] }, [
+//                     createElement('h2', { classList: ['section-title'] }, ['Podcastai ir radijo laidos']),
+//                     createElement('div', { classList: ['podcasts-list'] }, [createPodcastItem(), createPodcastItem(), createPodcastItem(), createPodcastItem()])
+//                 ]),
+//                 createElement('section', { classList: ['events-section'] }, [
+//                     createElement('h2', { classList: ['section-title'] }, ['Renginiai']),
+//                     createElement('div', { classList: ['events-list'] }, [createEventItem(), createEventItem(), createEventItem()]),
+//                     createElement('a', { classList: ['large-link'], href: '#' }, ['Daugiau'])
+//                 ])
+//             ])
+//         ])
+//     ])
+// );
