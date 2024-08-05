@@ -43,3 +43,50 @@ const vwGroup = secondlistElement.textContent
 
 firstListElement.textContent = bmwGroup
 secondlistElement.textContent = bmwGroup
+
+
+function createList (items) {
+    let ul = document.createElement('ul')
+    items.forEach(item => {
+        let li = document.createElement('li')
+        li.textContent = item
+        ul.appendChild(li)
+    })
+    return ul
+}
+
+
+document.body.appendChild(createList(["Pienas", "Duona", "Kiaušiniai"]));
+
+
+// ! Nukopijuota  pasiziureti labai sunku
+function highlightWinner() {
+    const board = document.querySelectorAll('#tictactoe tr');
+    const matrix = Array.from(board, row => Array.from(row.cells, cell => cell.textContent));
+  
+    function checkAndHighlight(cells, indices) {
+      if (cells[0] !== '' && new Set(cells).size === 1) {
+        indices.forEach(([row, col]) => board[row].cells[col].style.backgroundColor = 'lightgreen');
+        return true;
+      }
+      return false;
+    }
+  
+    // Check rows and columns
+    for (let i = 0; i < 3; i++) {
+      const row = matrix[i];
+      const col = matrix.map(row => row[i]);
+  
+      if (checkAndHighlight(row, [[i, 0], [i, 1], [i, 2]])) return;
+      if (checkAndHighlight(col, [[0, i], [1, i], [2, i]])) return;
+    }
+  
+    // Check diagonals
+    const diag1 = [matrix[0][0], matrix[1][1], matrix[2][2]];
+    const diag2 = [matrix[0][2], matrix[1][1], matrix[2][0]];
+  
+    if (checkAndHighlight(diag1, [[0, 0], [1, 1], [2, 2]])) return;
+    if (checkAndHighlight(diag2, [[0, 2], [1, 1], [2, 0]])) return;
+  }
+  
+  highlightWinner();
