@@ -76,86 +76,148 @@ gradeButton.style.fontSize = '30px'
 gradeButton.style.minWidth = '100px'
 containerElement.append(gradeButton)
 
-const gradesElement = document.createElement('div')
-gradesElement.id = 'grades'
-gradesElement.style.display = 'flex'
-gradesElement.style.alignItems = 'center'
-gradesElement.style.fontSize = '20px'
-gradesElement.innerHTML = 'Grades: &nbsp;&nbsp;'
-containerElement.appendChild(gradesElement)
+const displayGrades = document.createElement('h4')
+displayGrades.textContent = 'Grades: '   
+containerElement.append(displayGrades)
 
-const gradesRemover = document.createElement('button')
-gradesRemover.id = 'grades-remover'
-gradesRemover.textContent = 'Remove Grades'
-gradesRemover.style.fontSize = '30px'
-gradesRemover.style.minWidth = '100px'
-containerElement.append(gradesRemover)
+const texts = ['Vidurkis: ', 'Mediana: ', 'Max grade: ', 'Min grade: '];
+const ids = ['p1', 'p2', 'p3', 'p4'];
+
+texts.forEach((text, index) => {
+    const pElement = document.createElement('p');
+    pElement.textContent = text;
+    pElement.id = ids[index];
+    containerElement.append(pElement);
+});
+
+function calculateAverage(gradesArray) {
+    const sum = gradesArray.reduce((a, b) => a + b, 0);
+    const average = sum / gradesArray.length;
+    return average.toFixed(2);
+}
+
+function calculateMedian(gradesArray) {
+    const sortedArray = gradesArray.slice().sort((a, b) => a - b);
+    const mid = Math.floor(sortedArray.length / 2);
+    const median = sortedArray.length % 2 !== 0 ? sortedArray[mid] : (sortedArray[mid - 1] + sortedArray[mid]) / 2;
+    return median.toFixed(2);
+}
+
+function updateStatistics() {
+    const grades = document.querySelectorAll('#grades li');
+    if (grades.length === 0) {
+        document.getElementById('p1').textContent = 'Vidurkis: ';
+        document.getElementById('p2').textContent = 'Mediana: ';
+        document.getElementById('p3').textContent = 'Max grade: ';
+        document.getElementById('p4').textContent = 'Min grade: ';
+        return;
+    }
+
+    const gradesArray = Array.from(grades).map(grade => parseInt(grade.textContent));
+    const average = calculateAverage(gradesArray);
+    document.getElementById('p1').textContent = 'Vidurkis: ' + average;
+
+    const median = calculateMedian(gradesArray);
+    document.getElementById('p2').textContent = 'Mediana: ' + median;
+
+    const maxGrade = Math.max(...gradesArray);
+    document.getElementById('p3').textContent = 'Max grade: ' + maxGrade;
+
+    const minGrade = Math.min(...gradesArray);
+    document.getElementById('p4').textContent = 'Min grade: ' + minGrade;
+}
+
+const gradesElementUl = document.createElement('ul')
+gradesElementUl.id = 'grades'
+containerElement.append(gradesElementUl)
+
+const removeAllGradesAtOnce = document.createElement('button') 
+removeAllGradesAtOnce.textContent = 'Remove All Grades'
+removeAllGradesAtOnce.style.fontSize = '30px'
+removeAllGradesAtOnce.style.minWidth = '100px'
+containerElement.append(removeAllGradesAtOnce)
 
 function updateNumber(newNumber) {
-   newNumber = Math.min(Math.max(newNumber, 0), 10)
-   mainNumber5.textContent = newNumber
-   numbersInputElement.value = newNumber
+    newNumber = Math.min(Math.max(newNumber, 0), 10)
+    mainNumber5.textContent = newNumber
+    numbersInputElement.value = newNumber
 
-   if (newNumber < 5) {
-      mainNumber5.style.color = 'red'
-   } else {
-      mainNumber5.style.color = 'green'
-   }
+    if (newNumber < 5) {
+        mainNumber5.style.color = 'red'
+    } else {
+        mainNumber5.style.color = 'green'
+    }
 
-   minusButton.disabled = newNumber <= 0
-   minusButton2.disabled = newNumber <= 1
-   minusButton5.disabled = newNumber < 5
-   plusButton.disabled = newNumber >= 10
-   plusButton2.disabled = newNumber >= 8
-   plusButton5.disabled = newNumber > 5
+    minusButton.disabled = newNumber <= 1
+    minusButton2.disabled = newNumber <= 1
+    minusButton5.disabled = newNumber < 5
+    plusButton.disabled = newNumber >= 10
+    plusButton2.disabled = newNumber >= 8
+    plusButton5.disabled = newNumber > 5
 }
 
 minusButton.addEventListener('click', () => {
-   updateNumber(parseInt(mainNumber5.textContent) - 1)
+    updateNumber(parseInt(mainNumber5.textContent) - 1)
 })
 
 minusButton2.addEventListener('click', () => {
-   updateNumber(parseInt(mainNumber5.textContent) - 2)
+    updateNumber(parseInt(mainNumber5.textContent) - 2)
 })
 
 minusButton5.addEventListener('click', () => {
-   updateNumber(parseInt(mainNumber5.textContent) - 5)
+    updateNumber(parseInt(mainNumber5.textContent) - 5)
 })
 
 plusButton.addEventListener('click', () => {
-   updateNumber(parseInt(mainNumber5.textContent) + 1)
+    updateNumber(parseInt(mainNumber5.textContent) + 1)
 })
 
 plusButton2.addEventListener('click', () => {
-   updateNumber(parseInt(mainNumber5.textContent) + 2)
+    updateNumber(parseInt(mainNumber5.textContent) + 2)
 })
 
 plusButton5.addEventListener('click', () => {
-   updateNumber(parseInt(mainNumber5.textContent) + 5)
+    updateNumber(parseInt(mainNumber5.textContent) + 5)
 })
 
 resetButton.addEventListener('click', () => {
-   updateNumber(5)
+    updateNumber(5)
 })
 
 gradeButton.addEventListener('click', () => {
-   let grade = parseInt(mainNumber5.textContent)
-   let gradeElement = document.createElement('h2')
-   gradeElement.innerHTML = grade + '&nbsp;&nbsp;'
-   gradesElement.appendChild(gradeElement)
+    const newGrade = document.createElement('li')
+    newGrade.style.color = mainNumber5.style.color
+    newGrade.textContent = mainNumber5.textContent
+
+    const gradeRemoveButton = document.createElement('button')
+    gradeRemoveButton.textContent = 'X'
+    gradeRemoveButton.style.fontSize = '20px'
+    newGrade.appendChild(gradeRemoveButton)
+    gradesElementUl.appendChild(newGrade)
+
+    updateStatistics()
 })
 
-gradesRemover.addEventListener('click', () => {
-   gradesElement.innerHTML = 'Grades: &nbsp;&nbsp;'
+gradesElementUl.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        e.target.parentElement.remove()
+        updateStatistics()
+    }
 })
 
-// Listen for input changes in numbersInputElement
+removeAllGradesAtOnce.addEventListener('click', () => {
+    gradesElementUl.innerHTML = ''
+    updateStatistics()
+})
+
 numbersInputElement.addEventListener('input', (e) => {
-   let newValue = parseInt(e.target.value)
-   if (!isNaN(newValue)) {
-      updateNumber(newValue)
-   }
+    let newValue = parseInt(e.target.value)
+    if (!isNaN(newValue)) {
+        updateNumber(newValue)
+    }
 })
 
-// Initial call to set button states correctly
 updateNumber(5)
+
+
+// Neapseita su Chat GPT ir Copilot pagalba

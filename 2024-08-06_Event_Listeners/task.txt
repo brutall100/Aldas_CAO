@@ -20,3 +20,29 @@ Užduotis:
 12. Sukurti du naujus mygtukus, kurie:
 12.1. Prideda 5 prie esamos h3 elemento reikšmės.
 12.2. Atima 5 iš esamos h3 elemento reikšmės.
+
+13. Sukurti input elementą (number tipo) ir jame įrašytą skaičių pridėti kaip h3 elemento tekstą.
+
+14. Sukurti naują elementą (h4) ir jį pridėti į „numbers" elemento pabaigą.
+14.1. Šio elemento tekstas turėtų būti „Balai:"
+
+15. Sukurti naują elementą (ul) ir jį pridėti į „numbers" elemento pabaigą.
+15.1. Sukurti naują mygtuką, kurio teksta būtų „Įrašyti balą".
+15.2. Paspaudus šį mygtuką, reikia paimti reikšmę iš h3 elemento ir sukurti naują li elementą bei jį prepend'inti prie ul elemento.
+
+16. Į li elementą įrašytas balas turi būti tos pačios spalvos kaip ir h3 elemente.
+
+17.1. Sukurti mygtuką ir jį įdėti į li elementą.
+17.2. Paspaudus šį mygtuką, li elementas su balu turi būti ištrintas.
+
+18. Po h4 elementu pridėti mygtuką, kurio tekstas būtų „Ištrinti visus balus". Paspaudus šį mygtuką, ištrinami visi li elementai.
+
+
+
+
+
+19. Virš ul elemento, sukurti div elementą.
+19.1. Šio div elemento elemento viduje sukurti p elementą ir jame pridėti tekstą, kuriame nurodomas balų vidurkis: „Vidurkis: 7.5"
+19.2. Šio div elemento elemento viduje sukurti p elementą ir jame pridėti tekstą, kuriame nurodomas balų mediana: „Mediana: 8"
+19.3. Šio div elemento elemento viduje sukurti p elementą ir jame pridėti tekstą, kuriame nurodomas didžiausias balas: „Didžiausias balas: 10"
+19.4. Šio div elemento elemento viduje sukurti p elementą ir jame pridėti tekstą, kuriame nurodomas mažiausias balas: „Mažiausias balas: 10"
