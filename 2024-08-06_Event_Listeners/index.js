@@ -61,8 +61,29 @@ resetButton.style.fontSize = '30px'
 resetButton.style.minWidth = '100px'
 containerElement.append(resetButton)
 
+const gradeButton = document.createElement('button')
+gradeButton.textContent = 'Add Grade'
+gradeButton.style.fontSize = '30px'
+gradeButton.style.minWidth = '100px'
+containerElement.append(gradeButton)
+
+const gradesElement = document.createElement('div')
+gradesElement.id = 'grades'
+gradesElement.style.display = 'flex'
+gradesElement.style.alignItems = 'center'
+gradesElement.style.fontSize = '20px'
+gradesElement.innerHTML = 'Grades: &nbsp;&nbsp;'
+containerElement.appendChild(gradesElement)
+
+const gradesRemover = document.createElement('button')
+gradesRemover.id = 'grades-remover'
+gradesRemover.textContent = 'Remove Grades'
+gradesRemover.style.fontSize = '30px'
+gradesRemover.style.minWidth = '100px'
+containerElement.append(gradesRemover)
+
 function updateNumber(newNumber) {
-   newNumber = Math.min(newNumber, 10)
+   newNumber = Math.min(Math.max(newNumber, 0), 10)
    mainNumber5.textContent = newNumber
 
    if (newNumber < 5) {
@@ -71,12 +92,12 @@ function updateNumber(newNumber) {
       mainNumber5.style.color = 'green'
    }
 
-   minusButton.toggleAttribute('disabled', newNumber <= 1)
-   minusButton2.toggleAttribute('disabled', newNumber <= 2)
-   minusButton5.toggleAttribute('disabled', newNumber < 5)
-   plusButton.toggleAttribute('disabled', newNumber >= 10)
-   plusButton2.toggleAttribute('disabled', newNumber >= 10)
-   plusButton5.toggleAttribute('disabled', newNumber >= 10)
+   minusButton.disabled = newNumber <= 0
+   minusButton2.disabled = newNumber <= 1
+   minusButton5.disabled = newNumber < 5
+   plusButton.disabled = newNumber >= 10
+   plusButton2.disabled = newNumber >= 8
+   plusButton5.disabled = newNumber >= 5
 }
 
 minusButton.addEventListener('click', () => {
@@ -106,3 +127,19 @@ plusButton5.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
    updateNumber(5)
 })
+
+gradeButton.addEventListener('click', () => {
+   let grade = parseInt(mainNumber5.textContent)
+   let gradeElement = document.createElement('h2')
+   gradeElement.innerHTML = grade + '&nbsp;&nbsp;'
+   gradesElement.appendChild(gradeElement)
+})
+
+gradesRemover.addEventListener('click', () => {
+   gradesElement.innerHTML = 'Grades: &nbsp;&nbsp;'
+})
+
+
+
+// Initial call to set button states correctly
+updateNumber(5)
