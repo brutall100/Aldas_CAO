@@ -6,6 +6,15 @@ containerElement.style.alignItems = 'center'
 containerElement.style.height = '100vh'
 containerElement.style.backgroundColor = 'lightblue'
 
+const numbersInputElement = document.createElement('input')
+numbersInputElement.type = 'number'
+numbersInputElement.value = '5'
+numbersInputElement.max = '10'
+numbersInputElement.min = '1'
+numbersInputElement.style.fontSize = '30px'
+numbersInputElement.style.width = '100px'
+containerElement.appendChild(numbersInputElement)
+
 const numbersElement = document.getElementById('numbers')
 numbersElement.style.display = 'flex'
 numbersElement.style.justifyContent = 'space-between'
@@ -85,6 +94,7 @@ containerElement.append(gradesRemover)
 function updateNumber(newNumber) {
    newNumber = Math.min(Math.max(newNumber, 0), 10)
    mainNumber5.textContent = newNumber
+   numbersInputElement.value = newNumber
 
    if (newNumber < 5) {
       mainNumber5.style.color = 'red'
@@ -97,7 +107,7 @@ function updateNumber(newNumber) {
    minusButton5.disabled = newNumber < 5
    plusButton.disabled = newNumber >= 10
    plusButton2.disabled = newNumber >= 8
-   plusButton5.disabled = newNumber >= 5
+   plusButton5.disabled = newNumber > 5
 }
 
 minusButton.addEventListener('click', () => {
@@ -139,7 +149,13 @@ gradesRemover.addEventListener('click', () => {
    gradesElement.innerHTML = 'Grades: &nbsp;&nbsp;'
 })
 
-
+// Listen for input changes in numbersInputElement
+numbersInputElement.addEventListener('input', (e) => {
+   let newValue = parseInt(e.target.value)
+   if (!isNaN(newValue)) {
+      updateNumber(newValue)
+   }
+})
 
 // Initial call to set button states correctly
 updateNumber(5)
