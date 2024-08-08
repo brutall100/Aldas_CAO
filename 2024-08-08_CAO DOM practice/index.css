@@ -4,9 +4,10 @@
 #game-container {
   background-color: aqua;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 60vh;
 }
 
 .grid-container {
