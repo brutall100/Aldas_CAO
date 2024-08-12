@@ -90,35 +90,38 @@ fetchRandomHuman()
 
 
 
-// ! Vestuvės
-// const displayGuests = (guests) => {
-//     const tbody = document.querySelector('tbody');
-//     guests.forEach(guest => {
-//       const name = document.createElement('td');
-//       name.innerText = guest.name;
+// ! Vestuvės cao 
+document.addEventListener('DOMContentLoaded', () => {
+    const displayGuests = (guests) => {
+      const tbody = document.querySelector('tbody');
+      guests.forEach(guest => {
+        const name = document.createElement('td');
+        name.innerText = guest.name;
   
-//       const attending = document.createElement('td');
-//       attending.innerText = guest.attending ? '+' : '-';
+        const attending = document.createElement('td');
+        attending.innerText = guest.attending ? '+' : '-';
   
-//       const plusOne = document.createElement('td');
-//       plusOne.innerText = guest.plusOne ? '+' : '-';
+        const plusOne = document.createElement('td');
+        plusOne.innerText = guest.plusOne ? '+' : '-';
   
-//       const tr = document.createElement('tr');
-//       tr.append(name, attending, plusOne);
-//       tbody.append(tr);
-//     })
-//   }
+        const tr = document.createElement('tr');
+        tr.append(name, attending, plusOne);
+        tbody.append(tr);
+      });
+    }
   
-//   const fetchPartyGuests = async () => {
-//     try {
-//       const response = await fetch('https://party-wedding.glitch.me/v1/wedding');
-//       if (response.ok) {
-//         const guests = await response.json();
-//         displayGuests(guests);
-//       }
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
+    const fetchPartyGuests = async () => {
+      try {
+        const response = await fetch('https://party-wedding.glitch.me/v1/wedding');
+        if (response.ok) {
+          const guests = await response.json();
+          displayGuests(guests);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
   
-//   fetchPartyGuests();
+    fetchPartyGuests();
+  });
+  
