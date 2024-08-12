@@ -35,12 +35,14 @@ document.getElementById('btn2').addEventListener('click', () => {
 });
 
 document.getElementById('btn3').addEventListener('click', () => {
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY')
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=lUt0idzVMjjB7BJ1VFOLrW2n1TVwwhAawP8nanxh')
         .then(res => res.json())
         .then(data => {
             const output = document.getElementById('output3');
-            const photo = data.photos[1]; // Get the first photo
-            if (photo) {
+            const photos = data.photos; // Get the array of photos
+            if (photos.length > 0) {
+                const randomIndex = Math.floor(Math.random() * photos.length); // Get a random index
+                const photo = photos[randomIndex]; // Get the random photo
                 output.innerHTML = `<img src="${photo.img_src}" alt="Mars Rover Photo" style="max-width:100%;">`;
                 output.innerHTML += `<p>Photo taken by ${photo.rover.name} on ${photo.earth_date} using ${photo.camera.full_name}</p>`;
             } else {
@@ -50,4 +52,5 @@ document.getElementById('btn3').addEventListener('click', () => {
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+
 
