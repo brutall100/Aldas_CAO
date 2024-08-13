@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API</title>
+    <title>API_Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>API</h1>
-    <button id="btn">Click me</button>
-    <div id="output"></div> 
 
-    <button id="btn2">Click me</button>
-    <div id="output2"></div> 
-
-    <button id="btn3">Click me</button>
-    <div id="output3"></div> 
+    <div class="container">
+        <h1>API Form</h1>
+        <form id="form">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>

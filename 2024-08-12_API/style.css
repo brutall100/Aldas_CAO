@@ -1,4 +1,26 @@
-.anime {
-    animation: anime 1s infinite;
-    height: 50vh;
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: burlywood;
+}
+
+.form-control{
+    margin-bottom: 20px;
 }

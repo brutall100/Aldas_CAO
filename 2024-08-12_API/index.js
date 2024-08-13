@@ -1,56 +1,63 @@
-const btn = document.getElementById('btn')
-btn.addEventListener('click', () => {
-    fetch('https://api.waifu.im/search?limit=4') 
-        .then(res => res.json())
-        .then(data => {
-            const output = document.getElementById('output')
-            output.innerHTML = '' 
-            data.images.forEach(image => {
-                const imgElement = document.createElement('img')
-                imgElement.src = image.url
-                imgElement.alt = 'waifu'
-                imgElement.className = 'anime'
-                output.appendChild(imgElement)
-            })
-            console.log(output)
-            console.log(data)
-        })
-})
+document.getElementById('form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
+    // Fetching name and logging it
+    const name = document.getElementById('name').value;
+    console.log(name);
 
-
-document.getElementById('btn2').addEventListener('click', () => {
-    fetch('https://api.nasa.gov/planetary/apod?api_key=lUt0idzVMjjB7BJ1VFOLrW2n1TVwwhAawP8nanxh')
-        .then(res => res.json())
-        .then(data => {
-            const output = document.getElementById('output2');
-            if (data.media_type === 'image') {
-                output.innerHTML = `<img src="${data.url}" alt="${data.title}" style="height:70vh;">`;
-            } else if (data.media_type === 'video') {
-                output.innerHTML = `<iframe src="${data.url}" frameborder="0" allowfullscreen style="width:100%; height:400px;"></iframe>`;
+    // Fetching gender probability data
+    fetch(`https://api.genderize.io?name=${name}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-            output.innerHTML += `<h2>${data.title}</h2><p>${data.explanation}</p>`;
-            console.log(data);
+            return response.json();
         })
-        .catch(error => console.error('Error fetching data:', error));
-});
+        .then((result) => {
+            console.log(result);
+            const genderParagraph = document.createElement('p');
+            const formattedProbability = (result.probability * 100).toFixed(2); // Format to 2 decimal places
+            genderParagraph.textContent = `Gender: ${result.name} is most likely ${result.gender}. Tikimybe: ${formattedProbability}%`;
+            document.body.appendChild(genderParagraph);
+        });
 
-document.getElementById('btn3').addEventListener('click', () => {
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=lUt0idzVMjjB7BJ1VFOLrW2n1TVwwhAawP8nanxh')
-        .then(res => res.json())
-        .then(data => {
-            const output = document.getElementById('output3');
-            const photos = data.photos; // Get the array of photos
-            if (photos.length > 0) {
-                const randomIndex = Math.floor(Math.random() * photos.length); // Get a random index
-                const photo = photos[randomIndex]; // Get the random photo
-                output.innerHTML = `<img src="${photo.img_src}" alt="Mars Rover Photo" style="max-width:100%;">`;
-                output.innerHTML += `<p>Photo taken by ${photo.rover.name} on ${photo.earth_date} using ${photo.camera.full_name}</p>`;
-            } else {
-                output.innerHTML = `<p>No photos available for this sol.</p>`;
+    const email = document.getElementById('email').value;
+    console.log(email);
+
+    try {
+        const response = await fetch(`https://api.hunter.io/v2/email-verifier?email=${email}&api_key=bc4ab08e962432bd989a3f68d21177bcc3a677ef`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        console.log(result);
+
+        const scoreParagraph = document.createElement('p');
+        scoreParagraph.textContent = `Score: ${result.data.score}`;
+        document.body.appendChild(scoreParagraph);
+
+        const resultParagraph = document.createElement('p');
+        resultParagraph.textContent = `Address ${result.data.email} :: Result: ${result.data.result}`;
+        document.body.appendChild(resultParagraph);
+
+        console.log(result.data.score);
+        console.log(result.data.result);
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+
+    fetch(`https://api.nationalize.io?name=${name}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-            console.log(data);
+            return response.json();
         })
-        .catch(error => console.error('Error fetching data:', error));
+        .then((result) => {
+            console.log(result);
+            const nationalityParagraph = document.createElement('p');
+            const formattedNationalityProbability = (result.country[0].probability * 100).toFixed(2); // Format to 2 decimal places
+            nationalityParagraph.textContent = `Tautybe: ${result.country[0].country_id} Tikimybe: ${formattedNationalityProbability}%`;
+            document.body.appendChild(nationalityParagraph);
+        });
 });
-
-
