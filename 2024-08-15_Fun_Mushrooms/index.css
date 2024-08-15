@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #484848;
+    background-image: url('/img/carbon_fibre.png');
+    color: #333;
+    font-size: 16px; /* Base font size for rem calculations */
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 100vw;
+}
+
+.apod-container {
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #f0f0f0;
+    border-radius: 0 0 1rem 1rem;
+    margin: 0 2rem;
+    background-image: url('/img/ripples.png');
+}
+
+.apod-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 25rem; /* 400px converted to rem */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+}
+
+.apod-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.apod-image-wrapper:hover .apod-text {
+    opacity: 1;
+}
+
+.apod-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.apod-date {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.apod-explanation {
+    font-size: 1rem;
+    color: #333;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: #CA39C2;
+    font-size: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+main .left-section,
+main .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    background-image: url('/img/ripples.png');
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.mars-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mars-image,
+.space-image {
+    width: 100%;
+    max-width: 37.5rem; /* 600px converted to rem */
+    height: 25rem; /* 400px converted to rem */
+    object-fit: cover;
+    border-radius: 0.8rem; /* 8px converted to rem */
+}
+
+#fetchMarsButton,
+#fetchSpaceButton {
+    display: block;
+    margin: 1rem auto;
+}
+
+input#solInput {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    max-width: 10rem; /* 100px converted to rem */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section,
+.right-section {
+    width: 45%;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
