@@ -63,3 +63,69 @@ for (let i = 1; i <= 100; i++) {
 
     console.log(nextTerm);
 }
+
+const area = function(width, height) {
+    return width * height;
+  }
+  
+console.log((area(4, 5)));
+
+const balticStates = function(a, b, c) {
+    return a + b + c;
+  }
+console.log(balticStates("Estonia", "Latvia", "Lithuania"));
+
+
+function myName(name){
+    return name;
+}
+console.log(myName("Mantas"))
+
+function generateRandomNumber(){
+    return Math.floor(Math.random() * 100);
+}
+console.log(generateRandomNumber())
+
+
+function textLength (text1, text2){
+    let textFull = text1.length + text2.length;
+    return textFull;
+}
+console.log(textLength("Hello", "World"))
+
+const alphabetArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+function alphabet(){
+    for (let i =0; i < alphabetArr.length; i++){
+        console.log(`${[i]} => ${alphabetArr[i]}`)
+    }
+}
+alphabet()
+
+function getLettersByIndex(index){
+    return alphabetArr[index]
+}
+console.log(getLettersByIndex(5))
+
+function someCalculation(a, b, operation) {
+   switch (operation) {
+      case '+':
+         return a + b
+      case '-':
+         return a - b
+      case '*':
+         return a * b
+      case '/':
+         return a / b
+      default:
+         return 'Invalid operation'
+   }
+}
+
+console.log(someCalculation(5, 5, '*'))
+
+function squareNum(num){
+    return Math.pow(num, 2)
+}
+
+squareNum(generateRandomNumber())
+console.log(squareNum(generateRandomNumber()))
