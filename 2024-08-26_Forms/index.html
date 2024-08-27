@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMS</title>
+  <meta name="description" content="A brief description of the page content">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Template">
+  <meta name="author" content="Aldas">
+
+  <!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+
+<body>
+    <form id="contacts-form" action="./" novalidate>
+        <div class="form-group">
+            <label for="name">Vardas</label>
+            <input type="text" id="name" name="name" required value="Aldas">
+        </div>
+
+        <div class="form-group">
+            <label for="sur-name">Pavarde</label>
+            <input type="text" id="sur-name" name="sur-name" required value="SUn">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Amzius</label>
+            <input type="number" id="age" name="age" required value="36">
+        </div>
+
+        <div class="form-group">
+            <label for="email">El. pastas</label>
+            <input type="email" id="email" name="email" required value="your@mail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Telefono numeris</label>
+            <input type="tel" id="phone" name="phone" value="0654855446" required >
+        </div>
+
+        <div class="form-group">
+            <label for="range">IT zinios</label>
+            <input type="range" id="range" name="range" min="1" max="10" required value="7">
+            <span id="rangeOutput">7</span>
+        </div>
+        
+        <fieldset>
+            <legend>Grupes numeris</legend>
+            <input type="radio" id="radio1" name="group" value="FEU_10" checked>
+            <input type="radio" id="radio2" name="group" value="FEU_11">
+            <input type="radio" id="radio3" name="group" value="FEU_12">
+            <input type="radio" id="radio4" name="group" value="FEU_13">
+            <input type="radio" id="radio5" name="group" value="FEU_14">
+        </fieldset>
+
+        <fieldset>
+            <legend>Programavimo kalbos</legend>
+            <input type="checkbox" id="checkbox1" name="lang" value="JS">
+            <input type="checkbox" id="checkbox2" name="lang" value="PHP">
+            <input type="checkbox" id="checkbox3" name="lang" value="Python">
+            <input type="checkbox" id="checkbox4" name="lang" value="Java"> 
+        </fieldset>
+
+        <button type="submit">SUBMiT</button>
+    </form>
+
+    <div id="students-list"></div>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
