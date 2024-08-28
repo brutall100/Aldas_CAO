@@ -272,64 +272,52 @@ function maskString(str, startLen = 2, endLen = 2) {
 }
 
 
-// PIRMA DALIS:
-// Sukurti kontaktų formą.
-// 1. Kontaktų formoje turi būti šie laukeliai:
-//     1. Tekstinis laukelis vardui (privalomas).
-//     2. Tekstinis laukelis pavardei (privalomas).
-//     3. Skaičiaus laukelis amžiui (privalomas).
-//     4. Laukelis įvesti telefono numerį (neprivalomas).
-//     5. Laukelis įvesti el. paštą (privalomas).
-//     6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams.
-//     7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 10gr. iki FEU 20gr.
-//     8. Checkbox tipo laukeliai, kuriuose galima pasirinkti dominančias programavimo kalbas (bent 4 skirtingi checkbox elementai).
-//     9. Šalia kiekvieno įvesties (input) elemento, pridėti label elementą, kuris žymi laukelio pavadinimą.
+// Pirma dalis: Kontaktų formos kūrimas
+// Pradėkite nuo HTML failo – atsidarykite HTML failą ir įterpkite <form> elementą.
+// Pridėkite vardą – sukurkite <input> elementą, skirtą vardui įvesti. Pridėkite atributą required, kad šis laukas būtų privalomas.
+// Pridėkite pavardę – sukurkite dar vieną <input> elementą pavardei įvesti, taip pat su atributu required.
+// Amžiaus laukelis – pridėkite <input> elementą, kur galima įvesti amžių (skaičių). Taip pat su required atributu.
+// Telefono numeris – pridėkite <input> laukelį telefono numeriui, bet šis nėra privalomas.
+// El. paštas – pridėkite <input> laukelį el. paštui su atributu required.
+// IT žinių vertinimas – pridėkite <input type="range"> laukelį su reikšmėmis nuo 1 iki 10 ir šalia sukurkite elementą <span>, kuris rodys pasirinktos vertės reikšmę.
+// Grupės pasirinkimas – pridėkite kelis <input type="radio"> elementus, kad būtų galima pasirinkti grupės numerį nuo FEU 10gr. iki FEU 20gr.
+// Programavimo kalbos – pridėkite bent keturis <input type="checkbox"> elementus, kuriuose vartotojas galės pasirinkti jam įdomias programavimo kalbas.
+// Pridėkite etiketes (labels) – prie kiekvieno įvesties laukelio pridėkite <label> elementą, kad vartotojui būtų aišku, ką reikia įvesti.
+// Antra dalis: Studentų sąrašo kūrimas
+// Sukurkite studentų sąrašą – pridėkite <div> elementą su id="students-list".
+// Naujo studento pridėjimas – parašykite JavaScript kodą, kuris įvyksta paspaudus „Submit“ mygtuką formoje. Šis kodas sukurs naują <div> elementą su klase „student-item“ ir pridės jį į sąrašo pradžią.
+// Rodykite duomenis – įdėkite studento duomenis į naujai sukurtą „student-item“ elementą.
+// Pranešimas apie sukurtą studentą – sukurkite <span> elementą, kuris rodys žinutę „Sukurtas studentas (Vardas Pavardė)“, o po 5 sekundžių jis turėtų dingti.
+// Rodomas diapazono vertė – sukurkite mechanizmą, kad „range“ laukelyje pasirinkta reikšmė būtų rodoma šalia esančiame <span> elemente.
+// Trečia dalis: Asmens duomenų rodymas/slėpimas
+// Užmaskuokite duomenis – rodydami el. paštą ir tel. numerį, vietoje jų parodykite tik „****“.
+// Pridėkite mygtuką – kiekviename „student-item“ elemente sukurkite mygtuką „Rodyti asmens duomenis“.
+// Rodymo/slėpimo logika:
+// Paspaudus mygtuką, parodykite tikrus duomenis (el. paštą ir tel. numerį).
+// Pakeiskite mygtuko tekstą į „Slėpti asmens duomenis“.
+// Jei duomenys rodomi, paspaudus mygtuką, juos vėl užmaskuokite ir pakeiskite mygtuko tekstą atgal į „Rodyti asmens duomenis“.
+// Ketvirta dalis: Studentų ištrynimas
+// Pridėkite mygtuką „Ištrinti“ – kiekviename „student-item“ elemente sukurkite mygtuką „Ištrinti studentą“.
+// Ištrynimo logika – parašykite JavaScript kodą, kuris paspaudus šį mygtuką ištrins atitinkamą studento elementą iš DOM.
+// Pranešimas apie ištrynimą – rodykite pranešimą „Studentas (Vardas Pavardė) sėkmingai ištrintas“, kuris po 5 sekundžių dings.
+// Penkta dalis: Formos validacija naudojant JavaScript
+// Patikrinkite ar privalomi laukeliai užpildyti – įdėkite JavaScript kodą, kuris tikrina, ar visi privalomi laukeliai yra užpildyti prieš formos pateikimą.
+// Rodykite klaidas – jei laukeliai neužpildyti, rodykite raudoną tekstą ir apveskite tuos laukelius raudonu rėmeliu.
+// Papildoma dalis: Išplėstinė formos validacija
+// Patikrinkite specifines taisykles:
+// Vardas ir pavardė turi būti bent 3 simboliai.
+// Amžius turi būti teigiamas ir ne didesnis nei 120 metų.
+// Telefonas turi būti nuo 9 iki 12 simbolių.
+// El. paštas turi būti bent 8 simboliai ir turėti @ bei . simbolius.
+// Šešta dalis: Pradiniai duomenys
+// Sukurkite pradinį masyvą – sukurkite JavaScript masyvą su 5 studentų objektais.
+// Rodykite studentus – parašykite funkciją, kuri rodo šiuos studentus iš karto, kai puslapis užkraunamas.
+// Aštunta dalis: LocalStorage naudojimas
+// Išsaugokite įvestus duomenis – įdėkite JavaScript kodą, kuris išsaugo įvestus duomenis į localStorage.
+// Atkurkite duomenis – perkrovus puslapį, atkurkite laukelius iš localStorage.
+// Išvalykite duomenis – sukūrus studentą, išvalykite localStorage.
 
-// ANTRA DALIS:
-// 1. Sukurti div elementą, kuris turės id „students-list".
-// 2. Kiekvieną kartą pridavus formą (submit), turi būti sukurtas naujas div elementas su klase „student-item" ir pridedamas į „students-list" elemento pradžią.
-// 3. Duomenys apie studentą turi būti įdėti į „student-item" elementą.
 
-// 4. Sukūrus studentą, turi iššokti <span> elementas, kuris informuoja apie studento sukūrimą: „Sukurtas studentas (Vardas Pavardė)". Šis span elementas dingsta po 5 sekundžių.
-// 5. Šalia range tipo laukelio, sukurti span (arba output) elementą ir jame atvaizduoti range laukelio reikšmę jam keičiantis.
 
-// TREČIA DALIS:
-// 1. Vietoje el. pašto ir tel. numerio rodyti tik žvaigždutes „****".
-// 2. Kiekviename „student-item" elemente sukurti mygtuką „Rodyti asmens duomenis".
-// 3. Paspaudus šį mygtuką:
-//     3.1. Parodyti to studento el. paštą ir tel. numerį.
-//     3.2. Pakeist mygtuko tekstą į „Slėpti asmens duomenis".
-// 4. Jeigu asmens duomenys yra rodomi, tai paspaudus mygtuką:
-//     4.1. Paslėpti asmens el. paštą ir tel. numerį.
-//     4.2. Mygtuko tekstą pakeisti į „Rodyti asmens duomenis".
 
-// KETVIRTA DALIS (studento ištrynimas):
-// 1. Prie kiekvieno sukurti studento elemento pridėti mygtuką „Ištrinti studentą".
-// 2. Paspaudus šį mygtuką, studento elementas yra ištrinamas.
-// 3. Ištrynus studentą, turi iššokti <span> elementas, kuris informuoja apie studento ištrynimą: „Studentas (Vardas Pavardė) sėkmingai ištrintas.". Šis span elementas dingsta po 5 sekundžių.
 
-// PENKTA UŽDUOTIS (formos validacija naudojant JavaScript):
-// 1. Priduodant formą (submit) patikrinti ar privalomi laukeliai nėra tušti.
-// 2. Jeigu bent vienas privalomas formos laukelis yra tuščias:
-//     2.1. Formos alert žinutėje reikia parašyti, jog ne visi laukeliai yra užpildyti. Šis tekstas turi būti raudonos spalvos.
-//     2.2. Kiekvienas privalomas input laukelis, kuris nėra užpildytas:
-//         2.2.1. Turi būti apvestas raudonu rėmeliu.
-//         2.2.2. Šalia laukelio turi būti parašytas raudonas tekstas: „Šis laukelis yra privalomas".
-
-// PAPILDOMA UŽDUOTIS (formos validacija naudojant JavaScript):
-// Papildyti formos validaciją. Jeigu:
-// 1. Vardas yra trumpesnis nei 3 simboliai, parašyti: „Vardas privalo būti bent 3 simbolių ilgumo".
-// 2. Pavardė yra trumpesnė nei 3 simboliai, parašyti: „Pavardė privalo būti bent 3 simbolių ilgumo".
-// 3. Amžius yra neigamas, parašyti: „Amžius privalo būti teigiamas skaičius".
-// 4. Amžius yra daugiau nei 120 metų, parašyti: „Įvestas amžius yra per didelis".
-// 5. Telefono numeris yra mažiau nei 9 arba daugiau nei 12 simbolių, parašyti: „Įvestas telefono numeris yra neteisingas".
-// 6. Elektroninis paštas yra trumpesnis nei 8 simboliai ir jame nėra panaudotas @ ir . simboliai, parašyti: „Įvestas elektroninis paštas yra neteisingas".
-
-// ŠEŠTA UŽDUOTIS:
-// 1. Sukurti pradinius duomenų masyvą, kuriame būtų bent 5 studentų duomenys (objektų formatu).
-// 2. Sukurti funkciją, kuri priima šiuos duomenis ir užkrovus puslapį į ekraną iškart išveda duomenis iš šio masyvo.
-
-// AŠTUNTA UŽDUOTIS (local storage):
-// 1. Vedamą tekstą į input elementus išsaugoti į localStorage.
-// 2. Perkrovus puslapį localStorage esančiomis reikšmėmis užpildyti input elementus.
-// 3. Jeigu sukuriamas studentas, tai localStorage esančias reikšmes reikia išvalyti.
