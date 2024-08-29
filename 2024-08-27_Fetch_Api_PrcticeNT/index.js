@@ -2,7 +2,8 @@ async function fetchData() {
     try {
         const response = await fetch('https://robust-safe-crafter.glitch.me/');
         const data = await response.json();
-        processData(data); // Call the non-async function with the fetched data
+        processData(data);
+        setupFilterButtons(data); 
     } catch (error) {
         console.log('Error:', error);
     }
@@ -11,22 +12,12 @@ async function fetchData() {
 fetchData();
 
 const cardContainer = document.querySelector('.card-container');
-cardContainer.textContent = 'Loading...'; // Show loading text
+cardContainer.textContent = 'Loading...';
 
 function processData(data) {
-    // Clear the card container before adding new content
     cardContainer.textContent = '';
 
     data.forEach((ntObj, index) => {
-		console.log(`id ${index + 1}:`)//
-		console.log(`City: ${ntObj.city}`)//
-		console.log(`Price: ${ntObj.price}`)//
-		console.log(`Description: ${ntObj.description}`)//
-		console.log(`Image URL: ${ntObj.image}`)//
-		console.log('--------------------------')//
-
-
-        const id = index + 1;
         const city = ntObj.city;
         const price = ntObj.price;
         const description = ntObj.description;
@@ -43,28 +34,56 @@ function processData(data) {
         const cardContent = document.createElement('div');
         cardContent.className = 'card-content';
 
-        const cardTitle = document.createElement('h2');
+        const cardTitle = document.createElement('h5');
         cardTitle.textContent = city;
         cardTitle.className = 'card-title';
 
         const cardPrice = document.createElement('p');
-        cardPrice.textContent = `Price: $${price}`;
+        cardPrice.textContent = `€${price}`;
         cardPrice.className = 'card-price';
 
         const cardDescription = document.createElement('p');
         cardDescription.textContent = description;
         cardDescription.className = 'card-description';
 
-        // Append elements to the cardContent div
-        cardContent.appendChild(cardTitle);
         cardContent.appendChild(cardPrice);
+        cardContent.appendChild(cardTitle);
         cardContent.appendChild(cardDescription);
 
-        // Append the image and content to the card
         card.appendChild(cardImage);
         card.appendChild(cardContent);
 
-        // Append the card to the cardContainer
-        cardContainer.appendChild(card);
+        cardContainer.append(card);
     });
+}
+
+function setupFilterButtons(data) {
+    const main = document.querySelector('main');
+    const filterButtonsElement = document.createElement('div');
+    filterButtonsElement.className = 'filter-buttons-element';
+    main.prepend(filterButtonsElement);
+
+    const filterButtons = ['Visi miestai', 'Vilnius', 'Kaunas', 'Klaipeda'];
+
+    filterButtons.forEach((city) => {
+        const filterButton = document.createElement('button');
+        filterButton.textContent = city;
+        filterButton.className = 'filter-button';
+        filterButton.addEventListener('click', () => filterByCity(city, data));
+        filterButtonsElement.append(filterButton);
+    });
+
+    const filterText = document.createElement('h3');
+    filterText.textContent = 'Filter by city:';
+    filterText.className = 'filter-text';
+    filterButtonsElement.prepend(filterText);
+}
+
+function filterByCity(cityName, data) {
+    console.log("Filtering by city:", cityName);
+
+    const filteredData = cityName === 'Visi miestai' ? data : data.filter(item => item.city === cityName);
+
+
+    processData(filteredData);
 }
