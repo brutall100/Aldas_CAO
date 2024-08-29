@@ -156,6 +156,12 @@ function addStudentToDOM(student) {
 			spanMessage.remove()
 		}, 3000)
 	})
+
+	const editButton = document.createElement('button');
+	editButton.textContent = 'Edit student';
+	editButton.setAttribute('data-id', id); // Assign student ID
+	studentItem.append(editButton);
+
 }
 
 displayInitialData(dataFromLocal)
@@ -294,6 +300,134 @@ function maskString(str, startLen = 2, endLen = 2) {
 	const maskedSection = '*'.repeat(str.length - startLen - endLen)
 	return str.substring(0, startLen) + maskedSection + str.substring(str.length - endLen)
 }
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const editButtons = document.querySelectorAll('.student-item button[data-id]');
+    
+    editButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const studentId = event.target.getAttribute('data-id');
+            
+            // Find the student data by ID
+            const studentData = JSON.parse(localStorage.getItem('studentData')).find(student => student.id == studentId);
+
+            // Populate the form with the student data for editing
+            if (studentData) {
+                contactsForm.name.value = studentData.name;
+                contactsForm['sur-name'].value = studentData.surname;
+                contactsForm.age.value = studentData.age;
+                contactsForm.phone.value = studentData.phone;
+                contactsForm.email.value = studentData.email;
+                contactsForm.range.value = studentData.itKnowledge;
+                contactsForm.group.value = studentData.group;
+
+                contactsForm.querySelectorAll('[name="lang"]').forEach(langCheckbox => {
+                    langCheckbox.checked = studentData.interests.includes(langCheckbox.value);
+                });
+
+                // Check if "Change Data" button already exists; if not, create it
+                let changeDataButton = document.querySelector('#change-data');
+                if (!changeDataButton) {
+                    changeDataButton = document.createElement('button');
+                    changeDataButton.id = 'change-data';
+                    changeDataButton.textContent = 'Change Data';
+                    contactsForm.appendChild(changeDataButton);
+                }
+
+                // Add event listener to the "Change Data" button
+                changeDataButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    // Validate the form as usual
+                    let isValid = validateForm();
+
+                    if (isValid) {
+                        // Update the student data in localStorage
+                        studentData.name = contactsForm.name.value.trim();
+                        studentData.surname = contactsForm['sur-name'].value.trim();
+                        studentData.age = parseInt(contactsForm.age.value.trim());
+                        studentData.phone = contactsForm.phone.value.trim();
+                        studentData.email = contactsForm.email.value.trim();
+                        studentData.itKnowledge = contactsForm.range.value;
+                        studentData.group = contactsForm.group.value;
+                        studentData.interests = Array.from(contactsForm.querySelectorAll('[name="lang"]:checked')).map((lang) => lang.value);
+
+                        // Save the updated data to localStorage
+                        const students = JSON.parse(localStorage.getItem('studentData'));
+                        const updatedStudents = students.map(student => student.id == studentId ? studentData : student);
+                        localStorage.setItem('studentData', JSON.stringify(updatedStudents));
+
+                        // Update the DOM
+                        studentsList.innerHTML = '';  // Clear the student list
+                        displayInitialData(updatedStudents);  // Re-display updated student list
+
+                        showSuccess(contactsForm, 'Student data successfully updated!');
+                    }
+                });
+            }
+        });
+    });
+});
+
+function validateForm() {
+    clearMessages(contactsForm);
+
+    const name = contactsForm.name.value.trim();
+    const surname = contactsForm['sur-name'].value.trim();
+    const age = parseInt(contactsForm.age.value.trim());
+    const email = contactsForm.email.value.trim();
+    const phone = contactsForm.phone.value.trim();
+
+    let isValid = true;
+
+    if (name.length < 3) {
+        showError(contactsForm.name, 'Name must be at least 3 characters long');
+        isValid = false;
+    }
+
+    if (surname.length < 3) {
+        showError(contactsForm['sur-name'], 'Surname must be at least 3 characters long');
+        isValid = false;
+    }
+
+    if (age < 0) {
+        showError(contactsForm.age, 'Age must be a positive number');
+        isValid = false;
+    } else if (age > 120) {
+        showError(contactsForm.age, 'Entered age is too high');
+        isValid = false;
+    }
+
+    if (phone.length < 9 || phone.length > 12) {
+        showError(contactsForm.phone, 'Invalid phone number');
+        isValid = false;
+    }
+
+    if (email.length < 8 || !email.includes('@') || !email.includes('.')) {
+        showError(contactsForm.email, 'Invalid email address');
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
