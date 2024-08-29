@@ -3,6 +3,7 @@ const studentsList = document.querySelector('#students-list')
 
 const INITIAL_DATA = [
 	{
+		id: 0,
 		name: 'Sam',
 		surname: 'Buca',
 		age: 24,
@@ -13,7 +14,8 @@ const INITIAL_DATA = [
 		group: 'FEUA-10',
 	},
 	{
-		name: 'Kick',
+		id: 1,
+		name: 'Kicck',
 		surname: 'Ass',
 		age: 22,
 		phone: '+37069268973',
@@ -23,6 +25,7 @@ const INITIAL_DATA = [
 		group: 'FEUA-14',
 	},
 	{
+		id: 2,
 		name: 'Bil',
 		surname: 'Asde',
 		age: 20,
@@ -33,6 +36,7 @@ const INITIAL_DATA = [
 		group: 'FEU 12',
 	},
 	{
+		id: 3,
 		name: 'Alus',
 		surname: 'Sula',
 		age: 30,
@@ -43,6 +47,7 @@ const INITIAL_DATA = [
 		group: 'FEU 11',
 	},
 	{
+		id: 4,
 		name: 'Sam',
 		surname: 'Buca',
 		age: 24,
@@ -54,18 +59,25 @@ const INITIAL_DATA = [
 	},
 ]
 
-// Function to display initial data
+if (!localStorage.getItem('studentData')) {
+	localStorage.setItem('studentData', JSON.stringify(INITIAL_DATA))
+}
+
+const dataFromLocal = JSON.parse(localStorage.getItem('studentData'))
+console.log(dataFromLocal)
+
 function displayInitialData(data) {
 	data.forEach((student) => {
 		addStudentToDOM(student)
 	})
 }
-// Function to add student data to the DOM
+
 function addStudentToDOM(student) {
-	const { name, surname, age, phone, email, itKnowledge, interests, group } = student
+	const { id, name, surname, age, phone, email, itKnowledge, interests, group } = student
 
 	const studentItem = document.createElement('div')
 	studentItem.classList.add('student-item')
+	studentItem.setAttribute('data-id', id) 
 	studentsList.prepend(studentItem)
 
 	const studentData = document.createElement('div')
@@ -135,6 +147,9 @@ function addStudentToDOM(student) {
 
 		studentItem.insertAdjacentElement('beforebegin', spanMessage)
 
+		const updatedStudents = JSON.parse(localStorage.getItem('studentData')).filter((s) => s.id !== id)
+		localStorage.setItem('studentData', JSON.stringify(updatedStudents))
+
 		studentItem.remove()
 
 		setTimeout(() => {
@@ -142,79 +157,86 @@ function addStudentToDOM(student) {
 		}, 3000)
 	})
 }
-// Display the initial data when the page loads
-displayInitialData(INITIAL_DATA)
+
+displayInitialData(dataFromLocal)
 
 
-const inputs = document.querySelectorAll('input');
 
-// Retrieve and set each input's value from localStorage
-inputs.forEach((input) => {
-    const storedValue = localStorage.getItem(input.name);
-    if (storedValue) {
-        input.value = storedValue;
+// Save form input values to localStorage as the user types
+const formElements = contactsForm.elements;
+
+for (let element of formElements) {
+    if (element.name) {
+        element.addEventListener('input', () => {
+            localStorage.setItem(`form_${element.name}`, element.value);
+        });
     }
+}
 
-    // Add an input event listener to store the value in localStorage as the user types
-    input.addEventListener('input', (event) => {
-        localStorage.setItem(input.name, event.target.value);
-    });
+// Populate form with saved values on page load
+window.addEventListener('DOMContentLoaded', () => {
+    for (let element of formElements) {
+        if (element.name && localStorage.getItem(`form_${element.name}`)) {
+            element.value = localStorage.getItem(`form_${element.name}`);
+        }
+    }
 });
 
+
+
+
 contactsForm.addEventListener('submit', (event) => {
-	event.preventDefault();
-	const form = event.target;
+	event.preventDefault()
+	const form = event.target
 
-	// Išvalome ankstesnes klaidas ir sėkmės pranešimus
-	clearMessages(form);
+	clearMessages(form)
 
-	const name = form.name.value.trim();
-	const surname = form['sur-name'].value.trim();
-	const age = parseInt(form.age.value.trim());
-	const email = form.email.value.trim();
-	const phone = form.phone.value.trim();
-	const itKnowledge = form.range.value;
-	const group = form.group.value;
-	const interests = Array.from(form.querySelectorAll('[name="lang"]:checked')).map((lang) => lang.value);
+	const name = form.name.value.trim()
+	const surname = form['sur-name'].value.trim()
+	const age = parseInt(form.age.value.trim())
+	const email = form.email.value.trim()
+	const phone = form.phone.value.trim()
+	const itKnowledge = form.range.value
+	const group = form.group.value
+	const interests = Array.from(form.querySelectorAll('[name="lang"]:checked')).map((lang) => lang.value)
 
-	let isValid = true;
+	let isValid = true
 
-	// Validate name
 	if (name.length < 3) {
-		showError(form.name, 'Vardas privalo būti bent 3 simbolių ilgumo');
-		isValid = false;
+		showError(form.name, 'Vardas privalo būti bent 3 simbolių ilgumo')
+		isValid = false
 	}
 
-	// Validate surname
 	if (surname.length < 3) {
-		showError(form['sur-name'], 'Pavardė privalo būti bent 3 simbolių ilgumo');
-		isValid = false;
+		showError(form['sur-name'], 'Pavardė privalo būti bent 3 simbolių ilgumo')
+		isValid = false
 	}
 
-	// Validate age
 	if (age < 0) {
-		showError(form.age, 'Amžius privalo būti teigiamas skaičius');
-		isValid = false;
+		showError(form.age, 'Amžius privalo būti teigiamas skaičius')
+		isValid = false
 	} else if (age > 120) {
-		showError(form.age, 'Įvestas amžius yra per didelis');
-		isValid = false;
+		showError(form.age, 'Įvestas amžius yra per didelis')
+		isValid = false
 	}
 
-	// Validate phone
 	if (phone.length < 9 || phone.length > 12) {
-		showError(form.phone, 'Įvestas telefono numeris yra neteisingas');
-		isValid = false;
+		showError(form.phone, 'Įvestas telefono numeris yra neteisingas')
+		isValid = false
 	}
 
-	// Validate email
 	if (email.length < 8 || !email.includes('@') || !email.includes('.')) {
-		showError(form.email, 'Įvestas elektroninis paštas yra neteisingas');
-		isValid = false;
+		showError(form.email, 'Įvestas elektroninis paštas yra neteisingas')
+		isValid = false
 	}
 
-	// If all validations pass, add the student
 	if (isValid) {
+		const existingStudents = JSON.parse(localStorage.getItem('studentData')) || []
+
+		const newId = existingStudents.length ? Math.max(...existingStudents.map((s) => s.id)) + 1 : 0
+
 		const newStudent = {
+			id: newId,
 			name,
 			surname,
 			age,
@@ -223,101 +245,101 @@ contactsForm.addEventListener('submit', (event) => {
 			itKnowledge,
 			interests,
 			group,
-		};
+		}
 
-		// Add the new student data to the DOM
-		addStudentToDOM(newStudent);
+		existingStudents.push(newStudent)
+		localStorage.setItem('studentData', JSON.stringify(existingStudents))
 
-		// Rodyti sėkmės pranešimą
-		showSuccess(form, 'Studentas sėkmingai pridėtas!');
+		  for (let element of formElements) {
+            if (element.name) {
+                localStorage.removeItem(`form_${element.name}`);
+            }
+        }
 
-		localStorage.clear();
-		form.reset();
+		addStudentToDOM(newStudent)
+
+		showSuccess(form, 'Studentas sėkmingai pridėtas!')
+
+		form.reset()
 	}
-});
+})
 
-// Function to clear previous error and success messages
 function clearMessages(form) {
-	const messages = form.querySelectorAll('.error-message, .success-message');
-	messages.forEach((msg) => msg.remove());
+	const messages = form.querySelectorAll('.error-message, .success-message')
+	messages.forEach((msg) => msg.remove())
 }
 
-// Function to show error message next to input
 function showError(inputElement, errorMessage) {
-	let error = document.createElement('span');
-	error.className = 'error-message';
-	error.textContent = errorMessage;
-	error.style.color = 'red'; // Klaidos pranešimai bus raudoni
-	inputElement.insertAdjacentElement('afterend', error);
+	let error = document.createElement('span')
+	error.className = 'error-message'
+	error.textContent = errorMessage
+	error.style.color = 'red' // Klaidos pranešimai bus raudoni
+	inputElement.insertAdjacentElement('afterend', error)
 }
 
-// Function to show success message at the top of the form
 function showSuccess(form, successMessage) {
-	let success = document.createElement('span');
-	success.className = 'success-message';
-	success.textContent = successMessage;
-	success.style.color = 'green'; // Sėkmės pranešimas bus žalias
-	form.insertAdjacentElement('afterbegin', success);
+	let success = document.createElement('span')
+	success.className = 'success-message'
+	success.textContent = successMessage
+	success.style.color = 'green' // Sėkmės pranešimas bus žalias
+	form.insertAdjacentElement('afterbegin', success)
 }
 
 setTimeout(() => {
-    const successMessages = document.querySelectorAll('.success-message');
-    successMessages.forEach((msg) => msg.remove());
-}, 3000);
+	const successMessages = document.querySelectorAll('.success-message')
+	successMessages.forEach((msg) => msg.remove())
+}, 3000)
 
-// Function to partially mask a string
 function maskString(str, startLen = 2, endLen = 2) {
-	const maskedSection = '*'.repeat(str.length - startLen - endLen);
-	return str.substring(0, startLen) + maskedSection + str.substring(str.length - endLen);
+	const maskedSection = '*'.repeat(str.length - startLen - endLen)
+	return str.substring(0, startLen) + maskedSection + str.substring(str.length - endLen)
 }
 
 
-// Pirma dalis: Kontaktų formos kūrimas
-// Pradėkite nuo HTML failo – atsidarykite HTML failą ir įterpkite <form> elementą.
-// Pridėkite vardą – sukurkite <input> elementą, skirtą vardui įvesti. Pridėkite atributą required, kad šis laukas būtų privalomas.
-// Pridėkite pavardę – sukurkite dar vieną <input> elementą pavardei įvesti, taip pat su atributu required.
-// Amžiaus laukelis – pridėkite <input> elementą, kur galima įvesti amžių (skaičių). Taip pat su required atributu.
-// Telefono numeris – pridėkite <input> laukelį telefono numeriui, bet šis nėra privalomas.
-// El. paštas – pridėkite <input> laukelį el. paštui su atributu required.
-// IT žinių vertinimas – pridėkite <input type="range"> laukelį su reikšmėmis nuo 1 iki 10 ir šalia sukurkite elementą <span>, kuris rodys pasirinktos vertės reikšmę.
-// Grupės pasirinkimas – pridėkite kelis <input type="radio"> elementus, kad būtų galima pasirinkti grupės numerį nuo FEU 10gr. iki FEU 20gr.
-// Programavimo kalbos – pridėkite bent keturis <input type="checkbox"> elementus, kuriuose vartotojas galės pasirinkti jam įdomias programavimo kalbas.
-// Pridėkite etiketes (labels) – prie kiekvieno įvesties laukelio pridėkite <label> elementą, kad vartotojui būtų aišku, ką reikia įvesti.
-// Antra dalis: Studentų sąrašo kūrimas
-// Sukurkite studentų sąrašą – pridėkite <div> elementą su id="students-list".
-// Naujo studento pridėjimas – parašykite JavaScript kodą, kuris įvyksta paspaudus „Submit“ mygtuką formoje. Šis kodas sukurs naują <div> elementą su klase „student-item“ ir pridės jį į sąrašo pradžią.
-// Rodykite duomenis – įdėkite studento duomenis į naujai sukurtą „student-item“ elementą.
-// Pranešimas apie sukurtą studentą – sukurkite <span> elementą, kuris rodys žinutę „Sukurtas studentas (Vardas Pavardė)“, o po 5 sekundžių jis turėtų dingti.
-// Rodomas diapazono vertė – sukurkite mechanizmą, kad „range“ laukelyje pasirinkta reikšmė būtų rodoma šalia esančiame <span> elemente.
-// Trečia dalis: Asmens duomenų rodymas/slėpimas
-// Užmaskuokite duomenis – rodydami el. paštą ir tel. numerį, vietoje jų parodykite tik „****“.
-// Pridėkite mygtuką – kiekviename „student-item“ elemente sukurkite mygtuką „Rodyti asmens duomenis“.
-// Rodymo/slėpimo logika:
-// Paspaudus mygtuką, parodykite tikrus duomenis (el. paštą ir tel. numerį).
-// Pakeiskite mygtuko tekstą į „Slėpti asmens duomenis“.
-// Jei duomenys rodomi, paspaudus mygtuką, juos vėl užmaskuokite ir pakeiskite mygtuko tekstą atgal į „Rodyti asmens duomenis“.
-// Ketvirta dalis: Studentų ištrynimas
-// Pridėkite mygtuką „Ištrinti“ – kiekviename „student-item“ elemente sukurkite mygtuką „Ištrinti studentą“.
-// Ištrynimo logika – parašykite JavaScript kodą, kuris paspaudus šį mygtuką ištrins atitinkamą studento elementą iš DOM.
-// Pranešimas apie ištrynimą – rodykite pranešimą „Studentas (Vardas Pavardė) sėkmingai ištrintas“, kuris po 5 sekundžių dings.
-// Penkta dalis: Formos validacija naudojant JavaScript
-// Patikrinkite ar privalomi laukeliai užpildyti – įdėkite JavaScript kodą, kuris tikrina, ar visi privalomi laukeliai yra užpildyti prieš formos pateikimą.
-// Rodykite klaidas – jei laukeliai neužpildyti, rodykite raudoną tekstą ir apveskite tuos laukelius raudonu rėmeliu.
-// Papildoma dalis: Išplėstinė formos validacija
-// Patikrinkite specifines taisykles:
-// Vardas ir pavardė turi būti bent 3 simboliai.
-// Amžius turi būti teigiamas ir ne didesnis nei 120 metų.
-// Telefonas turi būti nuo 9 iki 12 simbolių.
-// El. paštas turi būti bent 8 simboliai ir turėti @ bei . simbolius.
-// Šešta dalis: Pradiniai duomenys
-// Sukurkite pradinį masyvą – sukurkite JavaScript masyvą su 5 studentų objektais.
-// Rodykite studentus – parašykite funkciją, kuri rodo šiuos studentus iš karto, kai puslapis užkraunamas.
-// Aštunta dalis: LocalStorage naudojimas
-// Išsaugokite įvestus duomenis – įdėkite JavaScript kodą, kuris išsaugo įvestus duomenis į localStorage.
-// Atkurkite duomenis – perkrovus puslapį, atkurkite laukelius iš localStorage.
-// Išvalykite duomenis – sukūrus studentą, išvalykite localStorage.
 
-
-
-
-
+// PIRMAS ŽINGSNIS: Baziniai kontaktų formos elementai
+// Sukurti kontaktų formą:
+// Sukurkite HTML formą.
+// Pridėkite tekstinius laukelius vardui ir pavardei (abu privalomi).
+// Pridėkite skaičiaus laukelį amžiui (privalomas).
+// Pridėkite laukelį telefono numeriui (neprivalomas).
+// Pridėkite laukelį el. paštui (privalomas).
+// Pridėkite label elementus prie kiekvieno įvesties laukelio.
+// ANTRAS ŽINGSNIS: Pridėti sudėtingesnius formos elementus
+// Išplėsti kontaktų formą:
+// Pridėkite range tipo laukelį IT žinioms įvertinti (nuo 1 iki 10).
+// Pridėkite radio tipo laukelius grupės numeriui pasirinkti (nuo FEU 10gr. iki FEU 20gr.).
+// Pridėkite checkbox tipo laukelius dominančioms programavimo kalboms pasirinkti (bent 4 skirtingi checkbox elementai).
+// Sukurkite span arba output elementą, kuris rodytų pasirinkto range reikšmę (kai keičiama reikšmė, span atsinaujina).
+// TREČIAS ŽINGSNIS: Dinaminis sąrašas ir studentų kūrimas
+// Sąrašo valdymas:
+// Sukurkite div elementą su id „students-list“.
+// Pridavus formą, sukurkite naują div elementą su klase „student-item“ ir pridėkite jį į „students-list“ elemento pradžią.
+// Pridėkite funkcionalumą, kad naujai sukurtame „student-item“ elemente būtų rodomi studento duomenys.
+// Po studento sukūrimo rodykite span elementą su pranešimu „Sukurtas studentas (Vardas Pavardė)“, kuris dingsta po 5 sekundžių.
+// KETVIRTAS ŽINGSNIS: Pradinis duomenų apdorojimas
+// Pradiniai studentų duomenys:
+// Sukurkite pradinius duomenų masyvą su bent 5 studentų duomenimis.
+// Parašykite funkciją, kuri priima šiuos duomenis ir iškart užkrauna juos į ekraną.
+// PENKTAS ŽINGSNIS: Formos validacija ir saugumas
+// Formos validacija naudojant JavaScript:
+// Patikrinkite, ar visi privalomi laukeliai užpildyti. Jei ne – rodoma raudona žinutė ir privalomi laukeliai apvesti raudonu rėmeliu.
+// Patikrinkite, ar:
+// Vardas ir pavardė turi bent 3 simbolius.
+// Amžius yra teigiamas skaičius ir ne didesnis nei 120.
+// Telefonas turi 9-12 simbolių.
+// El. paštas turi tinkamą formatą (@ ir .).
+// Jei kuri nors sąlyga neįvykdyta, rodoma atitinkama klaidos žinutė.
+// ŠEŠTAS ŽINGSNIS: Studentų redagavimas ir trynimas
+// Studentų duomenų valdymas:
+// Pridėkite mygtuką „Rodyti asmens duomenis“, kuris leidžia rodyti/paslėpti el. paštą ir telefoną.
+// Prie kiekvieno studento pridėkite mygtuką „Ištrinti studentą“. Paspaudus šį mygtuką, studentas ištrinamas ir rodomas span su pranešimu apie sėkmingą trynimą.
+// SEPTINTAS ŽINGSNIS: Duomenų saugojimas ir atkūrimas
+// LocalStorage naudojimas:
+// Vedamą tekstą į input elementus saugokite į localStorage.
+// Perkrovus puslapį, localStorage esančiomis reikšmėmis užpildykite input elementus.
+// Jei sukuriamas studentas, localStorage reikšmes išvalykite.
+// AŠTUNTAS ŽINGSNIS: Studentų redagavimas ir filtravimas
+// Studentų redagavimas ir filtravimas:
+// Pridėkite mygtuką prie kiekvieno studento, kad būtų galima redaguoti jo duomenis. Pakeitus duomenis, parodykite pranešimą apie sėkmingą pakeitimą.
+// Sukurkite naują formą, skirtą studentų sąrašo filtravimui pagal pasirinktą atributą (vardas, pavardė, grupė ir pan.).
