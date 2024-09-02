@@ -1,0 +1,9 @@
+#phone{
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    text-align: center;
+}
