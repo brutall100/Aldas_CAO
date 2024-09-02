@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --accent-color: #00D1AD;
+    --accent-color-hover: #00b49d;
+    --text-color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);  
+}
+
+.container {
+    max-width: 1300px;
+}
+
+.cs-navbar {
+    padding: 2em;
+    background-color: var(--accent-color);
+
+}
+
+.navbar-brand {
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: var(--text-color);
+}
+
+.navbar-brand span {
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: normal;
+    display: block;
+}
+
+.navbar-brand span:hover {
+    color: var(--text-color);
+}
+
+form{
+    margin-top: 2em;
+}
+
+form .form-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left: 0.4em;
+}
+
+.form-control {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.85em;
+}
+
+.form-control label {
+    font-weight: bold;
+}
+
+.form-control input,
+.form-control textarea, 
+.form-control select {
+    padding: 0.5em;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+button {
+    padding: 0.5em;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: var(--accent-color-hover);
+    color: var(--bg-color);
+}
