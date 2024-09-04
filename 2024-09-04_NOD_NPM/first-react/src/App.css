@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #d0d0d0;
+  --primary-color: #212121;
+  --accent-color: #ff5722;
+  --text-color: #333333;
+  --spacing: 30px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1600px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+
+
+
+
+/* aside {
+  width: calc(30% - (var(--spacing) * 0.3));
+} */
+
+
