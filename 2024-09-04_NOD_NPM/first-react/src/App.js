@@ -1,12 +1,15 @@
-import './App.css'
+import logo from './img/log.jpg';
+import './App.css';
 
 function App() {
 	return (
 		<div className='App'>
-      <div className='container'>
+	  <div className='container'>
 			<header>
 				<div className='header-top'>
-					<div className='logo-el'></div>
+					<div className='logo-el'>
+						<img src={logo} alt='logo' />
+					</div>
 					<div className='nav-el'>
 						<ul>
 							<li>Home</li>
@@ -18,7 +21,7 @@ function App() {
 				</div>
 
 				<div className='header-bottom'>
-					<div className='header-image'></div>
+					<div className='header-image'>Header Image</div>
 				</div>
 			</header>
 
@@ -27,22 +30,24 @@ function App() {
 					<div>
 						<h2>About</h2>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis nobis tempore, quidem reprehenderit recusandae
-							nisi aspernatur at amet dolorum!
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 						</p>
 					</div>
 					<div>
 						<h2>Company</h2>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis nobis tempore, quidem reprehenderit recusandae
-							nisi aspernatur at amet dolorum!
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 						</p>
 					</div>
 					<div>
 						<h2>Services</h2>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis nobis tempore, quidem reprehenderit recusandae
-							nisi aspernatur at amet dolorum!
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 						</p>
 					</div>
 				</section>
@@ -51,17 +56,19 @@ function App() {
 						<div className='content-title'>
 							<h2>Content</h2>
 							<p>
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis nobis tempore, quidem reprehenderit
-								recusandae nisi aspernatur at amet dolorum!
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 							</p>
 						</div>
 						<div className='content-sub-header'>
-							<h2>Sub Header</h2>
+							<h3>Sub Header</h3>
 							<p>
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis nobis tempore, quidem reprehenderit
-								recusandae nisi aspernatur at amet dolorum!
-                Dolores corporis nobis tempore, quidem reprehenderit
-								recusandae nisi aspernatur at amet dolorum!
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 							</p>
 						</div>
 					</div>
@@ -78,7 +85,7 @@ function App() {
 					</div>
 				</section>
 			</main>
-      </div>
+	  </div>
 		</div>
 	)
 }

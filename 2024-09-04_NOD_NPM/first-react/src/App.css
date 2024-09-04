@@ -1,11 +1,14 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
   --bg-color: #d0d0d0;
-  --primary-color: #212121;
-  --accent-color: #ff5722;
+  --site-color: #ffffff;
+  --accent-color: #1A3441;
+  --primary-color: #AEC43B;
   --text-color: #333333;
   --spacing: 30px;
 }
@@ -16,21 +19,135 @@ body {
 }
 
 .container {
-  max-width: 1600px;
-  min-height: 100vh;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+
+  /* padding-left: 1em; */
+  /* padding-right: 1em; */
+  /* min-height: 100vh; */
 }
 
 
+/* Header */
+header {
+  color: var(--site-color);
+}
 
+/*// Header-top */
+.header-top {
+  background-color: var(--site-color);
+  height: 100px;
 
+}
 
+.header-top .logo-el {
+  background-color: var(--site-color);
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: .51em;
 
-/* aside {
-  width: calc(30% - (var(--spacing) * 0.3));
-} */
+}
 
+.header-top .logo-el img {
+  height: 100%;
+  width: 150px;  /* Speceliai istemptas */
+  border-radius: 5em;
+  padding: .2em;
+}
+
+.header-top .nav-el {
+  background-color: var(--accent-color);
+  height: 50%;
+}
+
+.header-top .nav-el ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header-top .nav-el ul li {
+  margin-left: 1.5em;
+}
+
+/*// Header-bottom */
+.header-bottom {
+  margin-top: 1em;
+  background-color: var(--primary-color);
+  height: 300px;
+}
+
+.header-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 2em;
+  opacity: 0.4;
+}
+
+/* Main */
+/* // First section */
+main {
+ margin-top: 1em;
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.main-section div{
+  background-color: var(--site-color);
+  padding: .5em;
+  border-radius: .1em;
+  width: 32%;
+}
+
+.main-section div h2{
+  margin: 0;
+}
+
+/* // Second section */
+.content-section {
+  background-color: var(--site-color);
+  padding: 1em;
+  border-radius: .1em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+.content-section .left-side {
+  width: 70%;
+  padding-right: 1em;
+ 
+}
+.content-section .right-side {
+  width: 30%;
+  padding-left: 1em;
+}
+
+.content-section .right-side menu {
+  background-color: var(--bg-color);
+  list-style: none;
+  line-height: 3.5;
+  padding-left: .5em;
+}
+
+.content-section .right-side menu ul {
+  list-style: none;
+  padding: 0;
+}
 
