@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartuvių Žaidimas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Kartuvių Žaidimas</h1>
+    <p id="wordDisplay" class="word-display">_ _ _ _ _</p>
+    <p class="guesses-left">Liko spėjimų: <span id="guessesLeft">6</span></p>
+    
+    <input type="text" id="letterInput" maxlength="1" placeholder="Įveskite raidę">
+    <button onclick="spetiRaide()">Spėti raidę</button>
+    
+    <p id="message" class="message"></p>
+    <p class="spetos-raides">Spėtos raidės: <span id="spetosRaides"></span></p>
+    
+    <button onclick="naujasZaidimas()">Naujas žodis</button>
+
+
+<script src="index.js"></script>
+</body>
+</html>
+

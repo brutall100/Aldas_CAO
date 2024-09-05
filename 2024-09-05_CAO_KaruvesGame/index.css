@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.word-display {
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 20px 0;
+}
+.message {
+    font-size: 18px;
+    color: red;
+    margin: 10px 0;
+}
+input {
+    font-size: 18px;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+}
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.guesses-left {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.spetos-raides {
+    margin-top: 10px;
+}
