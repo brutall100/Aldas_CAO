@@ -1,14 +1,13 @@
-import ContentSection from './MainSection';
-import MainSection from './ContentSection';
+import MainSection from './MainSection'
+import ContentSection from './ContentSection'
 
 const PageContent = () => {
-  return (
-    <main>
-      <ContentSection />
-      <MainSection />
-    </main>
-  );
-};
+	return (
+		<main>
+			<MainSection />
+			<ContentSection />
+		</main>
+	)
+}
 
-export default PageContent;
-
+export default PageContent
