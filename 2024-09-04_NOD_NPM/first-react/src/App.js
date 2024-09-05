@@ -4,13 +4,11 @@ import './App.css'
 
 function App() {
 	return (
-		
-			<div className='container'>
-				<PageHeader />
+		<div className='container'>
+			<PageHeader />
 
-				<PageContent />
-			</div>
-		
+			<PageContent />
+		</div>
 	)
 }
 

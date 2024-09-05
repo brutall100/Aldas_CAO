@@ -1,11 +1,11 @@
-import MainSection from './TopSection';
-import ContentSection from './BottomSection';
+import ContentSection from './MainSection';
+import MainSection from './ContentSection';
 
 const PageContent = () => {
   return (
     <main>
-      <MainSection />
       <ContentSection />
+      <MainSection />
     </main>
   );
 };
