@@ -26,9 +26,6 @@ function calculateTicketPrice(e) {
 document.querySelector('#militaryForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-     console.log(e);          
-     console.log(e.target);   
-
     const age2 = document.querySelector('#age2').value;
 
 
