@@ -1,19 +1,20 @@
-const EventItem = () => {
+const EventItem = (props) => {
+  const { url, imgSrc, imgAlt, day, month, location, eventTitle } = props
   return (
     <div className="event-item">
-        <a href="/#">
+        <a href={url}>
             <div className="event-item-image-wrapp">
-            <img src="https://codeacademy.lt/wp-content/uploads/2024/06/0530_CA_event-768x432.png" alt="" className="event-item-image" />
+            <img src={imgSrc} alt={imgAlt} className="event-item-image" />
             </div>
     
             <div className="event-item-content-wrapper">
             <div className="event-date">
-                <span className="event-day">30</span>
-                <span className="event-month">Geg</span>
+                <span className="event-day">{day}</span>
+                <span className="event-month">{month}</span>
             </div>
             <div className="event-item-content">
-                <span className="event-location">Upės g. 21, Greenhall 1, 10 aukštas ir Online </span>
-                <h3 className="event-title">CodeAcademy galimybės verslui</h3>
+                <span className="event-location">{location}</span>
+                <h3 className="event-title">{eventTitle}</h3>
             </div>
             </div>
         </a>
@@ -22,3 +23,4 @@ const EventItem = () => {
 }
 
 export default EventItem
+
