@@ -1,0 +1,25 @@
+header {
+    background-color: #ab1b1b;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #14323897;
+}
+
+p {
+    color: #666;
+}
+
+button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f5f;
+}
