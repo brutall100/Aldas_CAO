@@ -3,13 +3,13 @@
 }
 
 :root {
-  --bg-color: #ffffff;
-  --primary-color: #212121;
-  --accent-color: #ff5722;
+  --bg-color: #cfe7f2;
   --text-color: #333333;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
 }

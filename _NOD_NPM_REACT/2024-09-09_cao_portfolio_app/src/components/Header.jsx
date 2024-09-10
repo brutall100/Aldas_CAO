@@ -1,15 +1,17 @@
-import '../css/Header.css';
-
+import '../css/Header.css'
+import HeaderContent from './HeaderContent.jsx';
 
 const Header = () => {
-    return (
-        <header>
-            <h1>Title</h1>
-            <p>Paragraph</p>
-            <p>Paragraph</p>
-            <button>Button</button>
-        </header>
-    );
-};
+	return (
+		<header>
+			<HeaderContent 
+                title = "Welcome to our site!"
+                paragraph1 = "This is a paragraph."
+                paragraph2 = "This is another paragraph."
+                buttonText = "Click me!"
+             />
+		</header>
+	)
+}
 
-export default Header;
+export default Header

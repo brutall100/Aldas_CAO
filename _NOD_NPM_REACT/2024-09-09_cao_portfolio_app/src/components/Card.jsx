@@ -1,4 +1,5 @@
-import React from 'react';
+import '../css/Card.css';
+
 const Card = (props) => {
     const { imgUrl, imgAlt, title } = props;
     return (
