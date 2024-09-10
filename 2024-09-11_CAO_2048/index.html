@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Žaidimas</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 10px;
+            justify-content: center;
+        }
+        .tile {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .score {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2048 Žaidimas</h1>
+    <div class="grid" id="grid"></div>
+    <div class="score">
+        <span>Taškai: </span><span id="score">0</span>
+        <br>
+        <span>Geriausias rezultatas: </span><span id="bestScore">0</span>
+    </div>  
+    <script src="2048.js"></script>
+</body>
+</html>
