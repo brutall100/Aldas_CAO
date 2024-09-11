@@ -7,7 +7,6 @@ const NewsSection = () => {
             <div className="main-news">
                 <NewsItem 
                     title="Sėkmės istorija – įsidarbinimas į Asteri" 
-                    date="2024-05-23" 
                     category="Sėkmės istorija 2" 
                     url="/#" 
                     imageSrc="https://codeacademy.lt/wp-content/uploads/2024/05/nauja-pauliaus-ft.png" 
@@ -18,7 +17,7 @@ const NewsSection = () => {
                     date="2024-07-23" 
                     category="Sėkmės istorija" 
                     url="/#" 
-                    imageSrc="https://codeacademy.lt/wp-content/uploads/2024/05/nauja-pauliaus-ft.png" 
+                    
                 />
             </div>
 
@@ -27,11 +26,9 @@ const NewsSection = () => {
                     title="Sėkmės istorija – įsidarbinimas į Asteri!" 
                     date="2024-05-23" 
                     category="Sėkmės istorija" 
-                    url="/#" 
                     imageSrc="https://codeacademy.lt/wp-content/uploads/2024/05/nauja-pauliaus-ft.png" 
                 />
                 <NewsItem
-                    title="Sėkmės istorija – įsidarbinimas į Asteri" 
                     date="2024-05-23" 
                     category="Sėkmės istorija" 
                     url="/#" 
@@ -39,21 +36,16 @@ const NewsSection = () => {
                 />
                 <NewsItem
                     title="Sėkmės istorija – įsidarbinimas į Asteri" 
-                    date="2024-05-23" 
-                    category="Sėkmės istorija" 
                     url="/#" 
                     imageSrc="https://codeacademy.lt/wp-content/uploads/2024/05/nauja-pauliaus-ft.png" 
                 />
                 <NewsItem
                     title="Sėkmės istorija – įsidarbinimas į Asteri" 
-                    date="2024-05-23" 
-                    category="Sėkmės istorija" 
-                    url="/#" 
                     imageSrc="https://codeacademy.lt/wp-content/uploads/2024/05/nauja-pauliaus-ft.png" 
                 />
             </div>
 
-            <LargeLink url="/#">
+            <LargeLink url="/#" classes="news-klase antra-news-klase">
                 <span>Visos</span> naujienos
             </LargeLink>
         </section>

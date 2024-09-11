@@ -10,22 +10,18 @@ const PodcastsSection = () => {
               title="Pojūčius pirštų galiukams sugrąžinti gali smegenų implantas"
               date="2021-09-02"
               length="7:55"
-              image="https://codeacademy.lt/wp-content/uploads/2021/09/Spotify-300x300.png"
             />
             <PodcastItem
               title="Pojūčius pirštų galiukams sugrąžinti gali smegenų implantas"
               date="2021-09-02"
-              length="7:55"
               image="https://codeacademy.lt/wp-content/uploads/2021/09/Spotify-300x300.png"
             />
             <PodcastItem
               title="Pojūčius pirštų galiukams sugrąžinti gali smegenų implantas"
-              date="2021-09-02"
               length="7:55"
               image="https://codeacademy.lt/wp-content/uploads/2021/09/Spotify-300x300.png"
             />
             <PodcastItem
-              title="Pojūčius pirštų galiukams sugrąžinti gali smegenų implantas"
               date="2024-09-02"
               length="7:55"
               image="https://codeacademy.lt/wp-content/uploads/2021/09/Spotify-300x300.png"
