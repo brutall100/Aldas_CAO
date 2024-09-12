@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 const App = () => {
   return (
     <Hero
-      title=""
+      title="s"
       subtitle="This is a subtitle"
     />
    
