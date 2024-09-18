@@ -32,8 +32,8 @@ const Counter = () => {
   };
 
   const addGrade = () => {
-    const gradeColor = COLORS[count]; // Get the color based on the current count
-    const newGrade = { grade: count, color: gradeColor }; // Store the grade and its color
+    const gradeColor = COLORS[count]; 
+    const newGrade = { grade: count, color: gradeColor }; 
     setGrades((prevGrades) => [...prevGrades, newGrade]);
   };
 
@@ -56,7 +56,7 @@ const Counter = () => {
   return (
     <div>
       <input type="number" min={0} max={10} value={count} onChange={(e) => input(Number(e.target.value))} />
-      <p style={{ color: COLORS[count] }}>Count: {count}</p>  {/* Use the corresponding color from COLORS */}
+      <p style={{ color: COLORS[count] }}>Count: {count}</p> 
       <button onClick={() => changeCount(1)} disabled={count >= 10}>+1</button>
       <button onClick={() => changeCount(2)} disabled={count >= 10}>+2</button>
       <button onClick={() => changeCount(5)} disabled={count >= 10}>+5</button>
