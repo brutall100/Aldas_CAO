@@ -1,0 +1,10 @@
+{
+	"prettier.printWidth": 130,
+	"prettier.insertPragma": false,
+	"prettier.experimentalTernaries": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.bracketSameLine": true,
+	"prettier.enableDebugLogs": true,
+	"prettier.singleAttributePerLine": true,
+	"prettier.singleQuote": true
+}
