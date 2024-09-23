@@ -13,12 +13,12 @@ function PersonsForm() {
     courses: [],
   });
 
-  const [submittedDataList, setSubmittedDataList] = useState([]); // Store multiple submissions
+  const [submittedDataList, setSubmittedDataList] = useState([]); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmittedDataList((prevDataList) => [...prevDataList, formData]); // Add new form data to the array
-    resetForm(); // Reset form after submission
+    setSubmittedDataList((prevDataList) => [...prevDataList, formData]); 
+    resetForm(); 
   };
 
   const handleInputChange = (e) => {
@@ -54,17 +54,16 @@ function PersonsForm() {
       group: 'group1',
       courses: [],
     });
-    setRangeValue(50); // Reset range
+    setRangeValue(50); 
   };
 
   const handleDeleteAll = () => {
-    setSubmittedDataList([]); // Clear the list of students
+    setSubmittedDataList([]); 
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        {/* Form Inputs */}
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -120,7 +119,7 @@ function PersonsForm() {
         />
         <span>{rangeValue}</span>
         <br />
-        {/* Radio buttons and checkboxes */}
+
         <fieldset>
           <legend>Chose your Group</legend>
           <input
@@ -188,15 +187,15 @@ function PersonsForm() {
         </fieldset>
 
         <button type="submit">Add new student</button>
-        <button type="button" onClick={resetForm}>Reset Form</button> {/* Reset button */}
-        <button type="button" onClick={handleDeleteAll}>Delete All Students</button> {/* Delete all button */}
+        <button type="button" onClick={resetForm}>Reset Form</button>
+        <button type="button" onClick={handleDeleteAll}>Delete All Students</button> 
       </form>
 
       {submittedDataList.map((data, index) => (
         <DisplayData
           key={index}
           data={data}
-          onDelete={() => handleDelete(index)} // Pass the delete handler
+          onDelete={() => handleDelete(index)} 
         />
       ))}
     </div>
