@@ -1,0 +1,14 @@
+ul {
+    padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+ul li:hover {
+    background-color: #f1f1f1;
+}
