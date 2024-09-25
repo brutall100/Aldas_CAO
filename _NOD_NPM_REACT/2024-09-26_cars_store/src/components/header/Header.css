@@ -1,0 +1,29 @@
+/* Header.css */
+
+header {
+    background-color: #928c8c;
+    color: rgb(225, 212, 212);
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}

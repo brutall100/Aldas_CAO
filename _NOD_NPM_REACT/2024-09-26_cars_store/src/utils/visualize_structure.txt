@@ -1,0 +1,34 @@
+my-react-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Button.jsx
+│   │   └── CarItem.jsx          // Component for individual car display
+│   ├── forms/
+│   │   ├── LoginForm.jsx
+│   │   ├── SignupForm.jsx
+│   │   └── CarForm.jsx          // Form to input car details
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   └── CarList.jsx          // Page to display list of cars
+│   ├── App.jsx
+│   ├── index.js
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── carStyles.css        // Styles related to the car form and list
+│   ├── utils/
+│   │   ├── api.js
+│   │   └── priceUtils.js        // Helper functions for price calculations
+│   └── services/
+│       └── carService.js        // Car-related logic and services (e.g., final price calculation)
+├── .gitignore
+├── package.json
+└── README.md
+
