@@ -28,20 +28,6 @@ li p {
     color: #666;
 }
 
-li button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    align-self: flex-end;
-}
-
-li button:hover {
-    background-color: #d32f2f;
-}
-
 li input[type="checkbox"] {
     margin-right: 10px;
     cursor: pointer;

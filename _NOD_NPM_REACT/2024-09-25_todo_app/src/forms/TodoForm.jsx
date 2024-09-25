@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './TodoForm.css';
+import Button from '../components/x_button/Button';  
 
 const TodoForm = ({ addTodo }) => {
     const [title, setTitle] = useState('');
@@ -51,7 +52,7 @@ const TodoForm = ({ addTodo }) => {
                 placeholder="Days until deadline"
                 required
             />
-            <button type="submit">Add Task</button>
+            <Button type="submit">Add Task</Button>   
         </form>
     );
 };
