@@ -1,38 +1,50 @@
-import React from 'react';
+import './CarsList.css';
 
 const CarsList = ({ cars }) => {
   return (
-    <div>
-      <h3>List of Cars</h3>
-      <ul>
+    <section className="cars-list-container">
+      <h2 className="cars-list-title">Automobilių Sąrašas</h2>
+      <div className="cars-list">
         {cars.map((car, index) => (
-          <li key={index}>
-            <h4>{car.brand} - {car.model}</h4>
-            <p>1. Bazinė kaina: €{car.basePrice}</p>
+          <article key={index} className="car-item">
+            <header className="car-header">
+              <h3 className="car-heading">{car.brand} - {car.model}</h3>
+              <p className="base-price">Bazinė kaina: <span>€{car.basePrice}</span></p>
+            </header>
             
-            <p>2. Papildomos paslaugos:</p>
-            <p>2.1. Variklio tipas: {car.engineType} (€{car.additionalCost})</p>
-            <p>2.2. Spalva: {car.color} (€{car.colorCost})</p>
-            <p>2.3. Viso už papildomas paslaugas: €{car.additionalCost + car.colorCost}</p>
+            <section className="additional-services">
+              <h4>Papildomos paslaugos:</h4>
+              <ul>
+                <li>Variklio tipas: {car.engineType} <span>+€{car.additionalCost}</span></li>
+                <li>Spalva: {car.color} <span>+€{car.colorCost}</span></li>
+              </ul>
+              <p className="total-additional">Viso už papildomas paslaugas: <span>+€{car.additionalCost + car.colorCost}</span></p>
+            </section>
             
-            <p>3. Kainos sumažėjimas:</p>
-            <p>3.1. Dėl kilometražo: -€{car.kmDiscountAmount}</p>
-            <p>3.2. Nuolaida: -€{car.formDiscountAmount}</p>
-            <p>3.3. Viso kainos sumažėjimas: -€{car.kmDiscountAmount + car.formDiscountAmount}</p>
-            
-            <p>4. Galutinė kaina: €{car.finalPrice}</p>
-            
-            <p>5. PVM (21%): €{car.VAT}</p>
-            
-            <p>6. Galutinė kaina su PVM: €{car.finalPriceWithVAT}</p>
-          </li>
+            <section className="discounts">
+              <h4>Nuolaidos:</h4>
+              <ul>
+                <li>Kilometražas: <span>-€{car.kmDiscountAmount}</span></li>
+                <li>Spec nuolaida: <span>-€{car.formDiscountAmount}</span></li>
+              </ul>
+              <p className="total-discount">Visa nuolaida: <span>-€{car.kmDiscountAmount + car.formDiscountAmount}</span></p>
+            </section>
+
+            <section className="final-price">
+              <p>Galutinė kaina be PVM: <span>€{car.finalPrice}</span></p>
+              <p>PVM (21%): <span>€{car.VAT}</span></p>
+              <p className="final-price-vat">Galutinė kaina su PVM: <span>€{car.finalPriceWithVAT}</span></p>
+            </section>
+          </article>
         ))}
-      </ul>
-    </div>
+      </div>
+    </section>
   );
 };
 
 export default CarsList;
+
+
 
 
 

@@ -1,0 +1,113 @@
+/* CSS for CarsList component */
+
+.cars-list-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cars-list-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .cars-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }  
+  
+  .car-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+  }
+  
+  .car-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .car-header {
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .car-heading {
+    font-size: 22px;
+    color: #2980b9;
+  }
+  
+  .base-price {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .base-price span {
+    color: #27ae60;
+  }
+  
+  .additional-services, .discounts, .final-price {
+    margin-top: 15px;
+  }
+  
+  .additional-services h4, .discounts h4 {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 8px;
+  }
+  
+  .additional-services ul, .discounts ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .additional-services ul li, .discounts ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #2c3e50;
+  }
+  
+  .additional-services ul li span, .discounts ul li span {
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .total-additional, .total-discount {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e67e22;
+  }
+  
+  .final-price p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .final-price span {
+    font-weight: bold;
+    color: #2980b9;
+  }
+  
+  .final-price-vat {
+    font-size: 18px;
+    color: #c0392b;
+    margin-top: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cars-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  

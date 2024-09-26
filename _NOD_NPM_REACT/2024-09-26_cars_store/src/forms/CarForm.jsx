@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import './CarForm.css'; // Import CSS file
 
 const CarForm = ({ addCar }) => {
   const [carData, setCarData] = useState({
     brand: '',
     model: '',
-    engineType: '',
-    basePrice: '',
-    km: '',
-    color: '',
-    otherColor: '', 
+    engineType: 'petrol',
+    basePrice: '0',
+    km: '0',
+    color: 'black',
+    otherColor: '',
     imageUrl: '',
-    discount: '' 
+    discount: '0'
   });
 
   const handleChange = (e) => {
@@ -23,25 +24,25 @@ const CarForm = ({ addCar }) => {
     const finalCarData = {
       ...carData,
       color: carData.color === 'other' ? carData.otherColor : carData.color,
-      discount: carData.discount || '0' 
+      discount: carData.discount || '0'
     };
-    addCar(finalCarData); 
+    addCar(finalCarData);
     setCarData({
       brand: '',
       model: '',
       engineType: '',
       basePrice: '',
       km: '',
-      color: '',
-      otherColor: '', 
+      color: 'black',
+      otherColor: '',
       imageUrl: '',
-      discount: '' 
+      discount: ''
     });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className="car-form" onSubmit={handleSubmit}>
+      <div className="form-group">
         <label>Brand</label>
         <input
           type="text"
@@ -49,10 +50,11 @@ const CarForm = ({ addCar }) => {
           value={carData.brand}
           onChange={handleChange}
           required
+          className="form-input"
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label>Model</label>
         <input
           type="text"
@@ -60,16 +62,18 @@ const CarForm = ({ addCar }) => {
           value={carData.model}
           onChange={handleChange}
           required
+          className="form-input"
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label>Engine Type</label>
         <select
           name="engineType"
           value={carData.engineType}
           onChange={handleChange}
           required
+          className="form-select"
         >
           <option value="">Select engine type</option>
           <option value="electric">Electric</option>
@@ -79,7 +83,7 @@ const CarForm = ({ addCar }) => {
         </select>
       </div>
 
-      <div>
+      <div className="form-group">
         <label>Base Price</label>
         <input
           type="number"
@@ -87,10 +91,11 @@ const CarForm = ({ addCar }) => {
           value={carData.basePrice}
           onChange={handleChange}
           required
+          className="form-input"
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label>Kilometers (km)</label>
         <input
           type="number"
@@ -99,16 +104,18 @@ const CarForm = ({ addCar }) => {
           onChange={handleChange}
           placeholder="Enter kilometers"
           required
+          className="form-input"
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label>Color</label>
         <select
           name="color"
           value={carData.color}
           onChange={handleChange}
           required
+          className="form-select"
         >
           <option value="">Select color</option>
           <option value="black">Black</option>
@@ -122,7 +129,7 @@ const CarForm = ({ addCar }) => {
       </div>
 
       {carData.color === 'other' && (
-        <div>
+        <div className="form-group">
           <label>Specify Color</label>
           <input
             type="text"
@@ -131,21 +138,23 @@ const CarForm = ({ addCar }) => {
             onChange={handleChange}
             placeholder="Enter color"
             required
+            className="form-input"
           />
         </div>
       )}
 
-      <div>
+      <div className="form-group">
         <label>Image Link</label>
         <input
           type="text"
           name="imageUrl"
-          value={carData.imageUrl}
+          value={carData.imageUrl || 'https://via.placeholder.com/150'}
           onChange={handleChange}
+          className="form-input"
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label>Discount</label>
         <input
           type="number"
@@ -153,15 +162,17 @@ const CarForm = ({ addCar }) => {
           value={carData.discount}
           onChange={handleChange}
           placeholder="Enter discount (%)"
+          className="form-input"
         />
       </div>
 
-      <button type="submit">Add Car</button>
+      <button type="submit" className="form-button">Add Car</button>
     </form>
   );
 };
 
 export default CarForm;
+
 
 
 

@@ -1,7 +1,4 @@
-
-
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CarForm from '../../forms/CarForm';
 import CarsList from '../CarsList';
 import './Main.css';
@@ -9,13 +6,11 @@ import './Main.css';
 const Main = () => {
   const [cars, setCars] = useState([]);
 
-  // Calculate final price when a new car is added
   const calculateFinalPrice = (car) => {
     let additionalCost = 0;
     const basePrice = parseFloat(car.basePrice);
     let discountPercentage = 0;
 
-    // Additional cost based on engine type
     switch (car.engineType) {
       case 'electric':
         additionalCost += 10000;
@@ -36,7 +31,6 @@ const Main = () => {
 
     let priceAfterAdditions = basePrice + additionalCost;
 
-    // Apply km-based discount
     const km = parseFloat(car.km);
     if (km > 400000) {
       discountPercentage = 50;
@@ -53,11 +47,10 @@ const Main = () => {
     const kmDiscountAmount = (priceAfterAdditions * discountPercentage) / 100;
     let finalPrice = priceAfterAdditions - kmDiscountAmount;
 
-    // Apply color adjustment
     let colorCost = 0;
     if (car.color === 'special blue') {
       colorCost = 500;
-      finalPrice += 500; // Add 500€ for 'special blue'
+      finalPrice += 500; 
     } else if (
       car.color !== 'black' &&
       car.color !== 'red' &&
@@ -66,16 +59,14 @@ const Main = () => {
       car.color !== 'white'
     ) {
       colorCost = 3000;
-      finalPrice += 3000; // Add 3000€ for any color that's not in the default list
+      finalPrice += 3000; 
     }
 
-    // Apply discount from form (if provided)
     const formDiscount = car.discount ? parseFloat(car.discount) : 0;
     const formDiscountAmount = (finalPrice * formDiscount) / 100;
 
-    finalPrice -= formDiscountAmount; // Subtract form discount if it exists
+    finalPrice -= formDiscountAmount;
 
-    // Calculate VAT (PVM)
     const VAT = finalPrice * 0.21;
     const finalPriceWithVAT = finalPrice + VAT;
 
@@ -93,13 +84,12 @@ const Main = () => {
   };
 
   const addCar = (newCar) => {
-    const carWithPrice = calculateFinalPrice(newCar); // Calculate price when adding
+    const carWithPrice = calculateFinalPrice(newCar); 
     setCars([...cars, carWithPrice]);
   };
 
   return (
     <main>
-      <h2>Car Management</h2>
       <CarForm addCar={addCar} />
       <CarsList cars={cars} />
     </main>
