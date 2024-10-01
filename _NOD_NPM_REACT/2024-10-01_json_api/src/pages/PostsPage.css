@@ -18,6 +18,7 @@ h1 {
 /* List styles */
 ol {
     padding: 0;
+    margin: 2em ;
 }
 
 /* Individual post container */
