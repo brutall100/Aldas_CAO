@@ -1,0 +1,26 @@
+my-react-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── Button.jsx
+│   ├── forms/
+│   │   ├── LoginForm.jsx
+│   │   └── SignupForm.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx
+│   ├── index.js
+│   ├── styles/
+│   │   └── global.css
+│   └── utils/
+│       └── api.js
+├── .gitignore
+├── package.json
+└── README.md

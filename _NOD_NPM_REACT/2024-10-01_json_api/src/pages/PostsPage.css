@@ -1,0 +1,44 @@
+/* div {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+} */
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* List styles */
+ol {
+    padding: 0;
+}
+
+/* Individual post container */
+li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Post title */
+h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Post body */
+p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+}
