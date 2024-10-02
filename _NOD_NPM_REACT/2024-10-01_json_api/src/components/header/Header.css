@@ -24,6 +24,6 @@ header {
   font-weight: bold;
 }
 
-.active-link {
-  color: red; /* Style for active link */
+.active {
+  background-color: green;
 }
