@@ -39,3 +39,6 @@ function App() {
 
 export default App;
 
+// npx json-server db.json
+// npm start
+

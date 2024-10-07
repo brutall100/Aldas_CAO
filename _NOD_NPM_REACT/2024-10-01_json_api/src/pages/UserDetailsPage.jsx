@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
+import API_ROUTE from '../utils/ApiRoute';
 
 const UserDetailsPage = () => {
   const { id } = useParams();
@@ -8,7 +9,7 @@ const UserDetailsPage = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:3000/users/${id}?_embed=posts`,
+      `${API_ROUTE}/users/${id}?_embed=posts`,
     )
       .then((response) => response.json())
       .then((data) => {
