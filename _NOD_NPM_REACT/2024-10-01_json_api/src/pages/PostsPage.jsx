@@ -17,7 +17,7 @@ const PostsPage = () => {
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
-        setLoading(false); // Set loading to false once data is fetched
+        setLoading(false); 
       });
   }, []);
 

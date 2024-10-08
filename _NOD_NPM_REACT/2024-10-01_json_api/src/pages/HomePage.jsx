@@ -1,67 +1,40 @@
-import React, { useState } from 'react';
-import API_ROUTE from '../utils/ApiRoute';
+import React from 'react';
+import UserForm from '../forms/UserCreateForm';
+import CarCreateForm from '../forms/CarCreateForm';
+import CityCreateForm from '../forms/CityCreateForm';
 
 const HomePage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const newUser = {
-      name,
-      email,
-      posts: [] // Assuming posts is required and starting empty
+    const handleUserCreated = (userName) => {
+        console.log(`User created: ${userName}`);
     };
 
-    fetch(`${API_ROUTE}/users`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newUser),
-    })
-    .then(response => response.json())
-    .then(() => {
-      setMessage(`User ${name} was successfully created!`);
-      setName('');
-      setEmail('');
-    })
-    .catch(() => {
-      setMessage('Error creating user.');
-    });
-  };
+    const handleCarCreated = (carName) => {
+        console.log(`Car created: ${carName}`);
+    };
 
-  return (
-    <div>
-      <h1>This is the main Home page</h1>
-      {message && <h2 style={{ color: 'green' }}>{message}</h2>}
-      <form onSubmit={handleSubmit}>
+    const handleCityCreated = (cityName) => {
+        console.log(`City created: ${cityName}`);
+    };
+
+    return (
+      <>
+        <h1>This is the main Home page</h1>
         <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
+            <h2>Create a New User</h2>
+            <UserForm onUserCreated={handleUserCreated} />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+            <h2>Create a New Car</h2>
+            <CarCreateForm onCarCreated={handleCarCreated} />
         </div>
-        <button type="submit">Create User</button>
-      </form>
-    </div>
-  );
+        <div>
+            <h2>Create a New City</h2>
+            <CityCreateForm onCityCreated={handleCityCreated} />
+        </div>
+      </>
+    );
 };
 
 export default HomePage;
+
+
