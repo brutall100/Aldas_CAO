@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import API_ROUTE from '../utils/ApiRoute';
+import axios from 'axios'
 
 const CarDetailsPage = () => {
     const { carId } = useParams();
@@ -8,13 +9,7 @@ const CarDetailsPage = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        fetch(`${API_ROUTE}/cars/${carId}`)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch car details');
-                }
-                return response.json();
-            })
+        axios.get(`${API_ROUTE}/cars/${carId}`)
             .then((data) => {
                 setCar(data);
             })

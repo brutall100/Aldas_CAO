@@ -16,6 +16,7 @@ import CarsPage from './pages/CarsPage';
 import CarDetailsPage from './pages/CarDetailsPage';
 import CitiesPage from './pages/CitiesPage';
 import CityDetailsPage from './pages/CityDetailsPage';
+import TodosPage from './pages/TodosPage'
 
 function App() {
   return (
@@ -37,6 +38,10 @@ function App() {
         <Route path="/users" element={<UsersPage />} />
         <Route path="/users/:id" element={<UserDetailsPage />} />
         <Route path="*" element={<ErrorPage />} />
+
+        <Route path="todos" element={<TodosPage /> }/>
+
+
       </Routes>
     </>
   );

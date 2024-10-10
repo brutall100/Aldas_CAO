@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import API_ROUTE from '../utils/ApiRoute';
 
 const AlbumsPage = () => {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/albums?_embed=user')
-      .then((response) => response.json())
-      .then((data) => setAlbums(data));
+    axios(`${API_ROUTE}/albums?_embed=user`)
+      .then((response) => setAlbums(response.data))
+      .catch((error) => console.error('Error fetching albums:', error));
   }, []);
 
   return (

@@ -14,6 +14,7 @@ const Header = () => {
                     <li><NavLink to="/comments" activeClassName="active-link">Comments</NavLink></li>
                     <li><NavLink to="/albums" activeClassName="active-link">Albums</NavLink></li>
                     <li><NavLink to="/photos" activeClassName="active-link">Photos</NavLink></li>
+                    <li><NavLink to="/todos" activeClassName="active-link">Todos</NavLink></li>
                 </ul>
             </nav>
         </header>

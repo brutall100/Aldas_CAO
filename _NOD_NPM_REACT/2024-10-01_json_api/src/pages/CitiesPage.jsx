@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import API_ROUTE from '../utils/ApiRoute';
+import axios from 'axios';
 
 const CitiesPage = () => {
     const [cities, setCities] = useState([]);
     const [error, setError] = useState('');
 
     useEffect(() => {
-        fetch(`${API_ROUTE}/cities`)
+        axios.get(`${API_ROUTE}/cities`)
             .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch cities');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setCities(data);
+                setCities(response.data);
             })
             .catch((err) => {
                 setError(err.message);
@@ -23,16 +18,8 @@ const CitiesPage = () => {
     }, []);
 
     const handleDelete = (cityId) => {
-        fetch(`${API_ROUTE}/cities/${cityId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to delete city');
-                }
+        axios.delete(`${API_ROUTE}/cities/${cityId}`)
+            .then(() => {
                 setCities((prevCities) => prevCities.filter((city) => city.id !== cityId));
             })
             .catch((err) => {

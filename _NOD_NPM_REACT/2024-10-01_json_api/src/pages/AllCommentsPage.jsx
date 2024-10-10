@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -6,12 +7,9 @@ const AllCommentsPage = () => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    // Fetch all comments for the post
-    fetch(
-      `http://localhost:3000/posts/${postId}/comments`,
-    )
-      .then((response) => response.json())
-      .then((data) => setComments(data));
+   axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+      .then((response) => setComments(response.data))
+      .catch((error) => console.error('Error fetching comments:', error));
   }, [postId]);
 
   if (comments.length === 0) {

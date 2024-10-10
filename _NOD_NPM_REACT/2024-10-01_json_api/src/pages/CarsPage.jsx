@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import API_ROUTE from '../utils/ApiRoute';
 
 const CarsPage = () => {
@@ -7,15 +8,9 @@ const CarsPage = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        fetch(`${API_ROUTE}/cars`)
+        axios.get(`${API_ROUTE}/cars`)
             .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch cars');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setCars(data);
+                setCars(response.data);
             })
             .catch((err) => {
                 setError(err.message);
@@ -23,16 +18,8 @@ const CarsPage = () => {
     }, []);
 
     const handleDelete = (carId) => {
-        fetch(`${API_ROUTE}/cars/${carId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to delete car');
-                }
+        axios.delete(`${API_ROUTE}/cars/${carId}`)
+            .then(() => {
                 setCars((prevCars) => prevCars.filter((car) => car.id !== carId));
             })
             .catch((err) => {

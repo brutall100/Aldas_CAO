@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import API_ROUTE from '../utils/ApiRoute';
+import axios from 'axios';
 
 const CityDetailsPage = () => {
     const { cityId } = useParams();
@@ -9,19 +10,14 @@ const CityDetailsPage = () => {
    
 
     useEffect(() => {
-        fetch(`${API_ROUTE}/cities/${cityId}`)
+        axios(`${API_ROUTE}/cities/${cityId}`)
             .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch city details');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setCity(data);
+                setCity(response.data);
             })
             .catch((err) => {
                 setError(err.message);
             });
+       
     }, [cityId]);
 
     if (error) {
