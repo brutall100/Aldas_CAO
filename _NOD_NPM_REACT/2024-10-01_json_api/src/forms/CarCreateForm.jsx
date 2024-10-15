@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import API_ROUTE from '../utils/ApiRoute'; // Assuming API_ROUTE is defined similarly to your UserForm
+import API_ROUTE from '../utils/ApiRoute';
+import styles from './CarCreateForm.module.css';
 
 const CarCreateForm = ({ onCarCreated }) => {
     const [formData, setFormData] = useState({
@@ -50,56 +51,61 @@ const CarCreateForm = ({ onCarCreated }) => {
     };
 
     return (
-        <div>
+        <div className={styles.formContainer}>
             {message && <h2 style={{ color: message.includes('Error') ? 'red' : 'green' }}>{message}</h2>}
             <form onSubmit={handleSubmit}>
-                <label htmlFor="carName">Car Name:</label>
+                <label htmlFor="carName" className={styles.label}>Car Name:</label>
                 <input
                     type="text"
                     name="carName"
                     id="carName"
+                    className={styles.input}
                     value={formData.carName}
                     onChange={handleInputChange}
                 />
                 <br />
 
-                <label htmlFor="carModel">Car Model:</label>
+                <label htmlFor="carModel" className={styles.label}>Car Model:</label>
                 <input
                     type="text"
                     name="carModel"
                     id="carModel"
+                    className={styles.input}
                     value={formData.carModel}
                     onChange={handleInputChange}
                 />
                 <br />
 
-                <label htmlFor="carYear">Car Year:</label>
+                <label htmlFor="carYear" className={styles.label}>Car Year:</label>
                 <input
                     type="number"
                     name="carYear"
                     id="carYear"
+                    className={styles.input}
                     value={formData.carYear}
                     onChange={handleInputChange}
                 />
                 <br />
 
-                <label htmlFor="carColor">Car Color:</label>
+                <label htmlFor="carColor" className={styles.label}>Car Color:</label>
                 <input
                     type="text"
                     name="carColor"
                     id="carColor"
+                    className={styles.input}
                     value={formData.carColor}
                     onChange={handleInputChange}
                 />
                 <br />
 
-                <button type="submit" disabled={!isFormComplete}>Submit</button>
+                <button type="submit" className={styles.button} disabled={!isFormComplete}>Submit</button>
             </form>
         </div>
     );
 }
 
 export default CarCreateForm;
+
 
 
 

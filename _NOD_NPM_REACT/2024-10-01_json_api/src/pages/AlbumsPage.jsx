@@ -4,6 +4,29 @@ import axios from 'axios';
 import API_ROUTE from '../utils/ApiRoute';
 import styled from 'styled-components';
 
+const StyledDiv = styled.div`
+  background-color: #83b7e3;
+  padding: 20px;
+  border-radius: 10px;
+`;
+
+const StyledH1 = styled.h1`
+  font-size: 2.5em;
+  color: #004080; 
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
+const StyledH2 = styled.h2`
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+`;
+
+const RedSpan = styled.span`
+  color: red;
+`;
+
 const StyledAlbum = styled.li`
   margin-bottom: 20px;
   padding: 20px;
@@ -28,28 +51,6 @@ const StyledAlbum = styled.li`
   }
 `;
 
-const StyledDiv = styled.div`
-  background-color: #83b7e3;
-  padding: 20px;
-  border-radius: 10px;
-`;
-
-const StyledH1 = styled.h1`
-  font-size: 2.5em;
-  color: #004080; 
-  text-align: center;
-  margin-bottom: 20px;
-`;
-
-const StyledH2 = styled.h2`
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: 700;
-`;
-
-const RedSpan = styled.span`
-  color: red;
-`;
 
 const AlbumsPage = () => {
   const [albums, setAlbums] = useState([]);
