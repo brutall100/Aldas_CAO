@@ -1,12 +1,62 @@
 import React, { useState } from 'react';
 import API_ROUTE from '../utils/ApiRoute';
-import styles from './CityCreateForm.module.css';
+import styled from 'styled-components';
+
+const FormContainer = styled.div`
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+`;
+
+const Label = styled.label`
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+`;
+
+const Input = styled.input`
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid ${props => props.showError ? 'red' : '#ccc'};
+    background-color: ${props => props.showError ? '#ffe6e6' : 'white'};
+    border-radius: 4px;
+`;
+
+const Button = styled.button`
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:disabled {
+        background-color: #ccc;
+    }
+`;
+
+const Message = styled.h2`
+    color: ${props => (props.isError ? 'red' : 'green')};
+`;
 
 const CityCreateForm = ({ onCityCreated }) => {
     const [cityName, setCityName] = useState('');
     const [population, setPopulation] = useState('');
     const [country, setCountry] = useState('');
     const [message, setMessage] = useState('');
+    const [touched, setTouched] = useState({
+        cityName: false,
+        population: false,
+        country: false
+    });
+
+    const handleBlur = (field) => {
+        setTouched({
+            ...touched,
+            [field]: true
+        });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,8 +80,13 @@ const CityCreateForm = ({ onCityCreated }) => {
                 setCityName('');
                 setPopulation('');
                 setCountry('');
+                setTouched({
+                    cityName: false,
+                    population: false,
+                    country: false
+                });
                 if (onCityCreated) {
-                    onCityCreated(data); 
+                    onCityCreated(data);
                 }
             })
             .catch(() => {
@@ -39,50 +94,56 @@ const CityCreateForm = ({ onCityCreated }) => {
             });
     };
 
+    const isFormInvalid = !cityName.trim() || !population.trim() || !country.trim();
+
     return (
-        <div className={styles.formContainer}>
-            {message && <h2 style={{ color: message.includes('Error') ? 'red' : 'green' }}>{message}</h2>}
+        <FormContainer>
+            {message && <Message isError={message.includes('Error')}>{message}</Message>}
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="cityName" className={styles.label}>City Name:</label>
-                    <input
+                    <Label htmlFor="cityName">City Name:</Label>
+                    <Input
                         type="text"
                         id="cityName"
-                        className={styles.input}
                         value={cityName}
                         onChange={(e) => setCityName(e.target.value)}
+                        onBlur={() => handleBlur('cityName')}
+                        showError={touched.cityName && !cityName.trim()}
                         required
                     />
                 </div>
                 <div>
-                    <label htmlFor="population" className={styles.label}>Population:</label>
-                    <input
+                    <Label htmlFor="population">Population:</Label>
+                    <Input
                         type="number"
                         id="population"
-                        className={styles.input}
                         value={population}
                         onChange={(e) => setPopulation(e.target.value)}
+                        onBlur={() => handleBlur('population')}
+                        showError={touched.population && !population.trim()}
                         required
                     />
                 </div>
                 <div>
-                    <label htmlFor="country" className={styles.label}>Country:</label>
-                    <input
+                    <Label htmlFor="country">Country:</Label>
+                    <Input
                         type="text"
                         id="country"
-                        className={styles.input}
                         value={country}
                         onChange={(e) => setCountry(e.target.value)}
+                        onBlur={() => handleBlur('country')}
+                        showError={touched.country && !country.trim()}
                         required
                     />
                 </div>
-                <button type="submit" className={styles.button} disabled={!cityName.trim() || !population.trim() || !country.trim()}>
+                <Button type="submit" disabled={isFormInvalid}>
                     Create City
-                </button>
+                </Button>
             </form>
-        </div>
+        </FormContainer>
     );
 };
 
 export default CityCreateForm;
+
 
