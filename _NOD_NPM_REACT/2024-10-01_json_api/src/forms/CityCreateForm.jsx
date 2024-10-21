@@ -19,7 +19,7 @@ const Input = styled.input`
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
-    border: 1px solid ${props => props.showError ? 'red' : '#ccc'};
+    border: 1px solid ${props => props.showError ? 'red' : 'rgb(204, 204, 204)'};
     background-color: ${props => props.showError ? '#ffe6e6' : 'white'};
     border-radius: 4px;
 `;
