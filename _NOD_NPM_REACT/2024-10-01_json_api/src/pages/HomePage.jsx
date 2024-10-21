@@ -2,7 +2,9 @@ import React from 'react';
 import UserForm from '../forms/UserCreateForm';
 import CarCreateForm from '../forms/CarCreateForm';
 import CityCreateForm from '../forms/CityCreateForm';
+import SearchInput from '../components/SearchInput'; // Import the new SearchInput component
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const StyledPage = styled.div`
   padding: 20px;
@@ -35,6 +37,8 @@ const StyledH2 = styled.h2`
 `;
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   const handleUserCreated = (userName) => {
     console.log(`User created: ${userName}`);
   };
@@ -47,9 +51,16 @@ const HomePage = () => {
     console.log(`City created: ${cityName}`);
   };
 
+  const handleSearch = (query) => {
+    navigate(`/search?q=${query}`);
+  };
+
   return (
     <StyledPage>
       <StyledH1>This is the main Home page</StyledH1>
+      <Section>
+        <SearchInput onSearch={handleSearch} />
+      </Section>
       <Section>
         <StyledH2>Create a New User</StyledH2>
         <UserForm onUserCreated={handleUserCreated} />
@@ -67,6 +78,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
 
 
 

@@ -17,6 +17,7 @@ import CarDetailsPage from './pages/CarDetailsPage';
 import CitiesPage from './pages/CitiesPage';
 import CityDetailsPage from './pages/CityDetailsPage';
 import TodosPage from './pages/TodosPage'
+import SearchResultPage from './pages/SearchResultPage'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<SearchResultPage />} />
         <Route path="/cars" element={<CarsPage />} />
         <Route path="/cars/:carId" element={<CarDetailsPage />} />
         <Route path="/cities" element={<CitiesPage />} />
